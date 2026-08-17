@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=1920, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Sembilan Tahun Berkarya — Portofolio Rochman Ramadhani</title>
 <meta name="description" content="Portofolio Rochman Ramadhani Chiefto Irawan — Product Owner & Tech Founder. Linimasa 2017–2026: sepuluh produk, konsultansi, dan pengajaran, lengkap dengan buktinya.">
 <meta name="author" content="Rochman Ramadhani Chiefto Irawan">
@@ -858,6 +858,41 @@ body.edit-mode [contenteditable="true"]:focus{outline:2px solid var(--yellow);ba
    ============================================================ */
 .pos{position:absolute;left:var(--x,110px);top:var(--y,140px);
   width:var(--w,auto);height:var(--h,auto);}
+
+/* Kartu yang sekaligus tautan: tampilannya sama persis, cuma dapat afordans hover.
+   Penanganan klik di #deckStage sudah berhenti di <a>, jadi mengklik kartu tidak
+   ikut memindahkan slide. */
+a.card{text-decoration:none;color:inherit;cursor:pointer;
+  transition:transform .18s ease, box-shadow .18s ease;}
+a.card:hover{box-shadow:0 0 0 2px var(--accent), 0 18px 40px rgba(0,0,0,.42);}
+a.card:focus-visible{outline:3px solid var(--yellow);outline-offset:4px;}
+
+/* ============================================================
+   24b. PETUNJUK PUTAR LAYAR (hanya ponsel, orientasi potret)
+   Panggung 16:9 di layar potret memang jadi kecil — itu konsekuensi
+   desain panggung tetap, bukan kerusakan. Tapi tanpa penjelasan,
+   pengunjung mengira decknya rusak. Murni CSS, tanpa JS.
+   ============================================================ */
+.rotate-hint{display:none;}
+@media (max-width:860px) and (orientation:portrait){
+  .rotate-hint{
+    display:flex;align-items:center;gap:9px;
+    position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:80;
+    padding:9px 16px 10px;border-radius:22px;
+    background:rgba(20,35,28,.94);border:1px solid rgba(242,239,228,.22);
+    box-shadow:0 8px 26px rgba(0,0,0,.5);
+    font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:12px;
+    letter-spacing:.06em;color:rgba(242,239,228,.82);
+    animation:hintIn .5s ease-out .8s both, hintOut .6s ease-in 7s both;
+  }
+  .rotate-hint .ic{
+    width:13px;height:19px;flex:0 0 auto;border:2px solid var(--yellow);border-radius:3px;
+    animation:hintTurn 2.6s ease-in-out 1.4s infinite;}
+}
+@keyframes hintIn{from{opacity:0;transform:translateX(-50%) translateY(8px);}to{opacity:1;transform:translateX(-50%) translateY(0);}}
+@keyframes hintOut{to{opacity:0;visibility:hidden;}}
+@keyframes hintTurn{0%,55%{transform:rotate(0);}75%,100%{transform:rotate(90deg);}}
+@media print{.rotate-hint{display:none !important;}}
 
 /* ============================================================
    25. TAMBAHAN KECIL
@@ -2050,7 +2085,7 @@ body.edit-mode [contenteditable="true"]:focus{outline:2px solid var(--yellow);ba
     <div class="photoframe pos rvbox d6" style="--x:1252px;--y:170px;--pw:420px;--ph:747px;--rot:1.4deg">
       <span class="tape"></span>
       <img src="assets/hegemoni-01.jpg" alt="Pertemuan bersama tim Hegemoni Group">
-      <span class="cap">pertemuan di Cikarang</span>
+      <span class="cap">Interaksi Kopi, Bekasi</span>
     </div>
   </div>
 </section>
@@ -2370,14 +2405,18 @@ body.edit-mode [contenteditable="true"]:focus{outline:2px solid var(--yellow);ba
     </a>
 
     <div class="cards n4 pos" style="--x:110px;--y:686px">
-      <div class="card ac-t rvbox d5"><div class="card-title sm">Email</div>
-        <div class="card-text">rochmanramadhani12<br>@gmail.com</div></div>
-      <div class="card ac-y rvbox d6"><div class="card-title sm">LinkedIn</div>
-        <div class="card-text">@rochmanramadhani</div></div>
-      <div class="card ac-c rvbox d7"><div class="card-title sm">GitHub</div>
-        <div class="card-text">@rochmanramadhani</div></div>
-      <div class="card ac-t rvbox d8"><div class="card-title sm">Instagram</div>
-        <div class="card-text">@rochmanramadhanii<br><span class="dim" style="font-size:20px">yang ini dua huruf i</span></div></div>
+      <a class="card ac-t rvbox d5" href="mailto:rochmanramadhani12@gmail.com">
+        <div class="card-title sm">Email</div>
+        <div class="card-text">rochmanramadhani12<br>@gmail.com</div></a>
+      <a class="card ac-y rvbox d6" href="https://www.linkedin.com/in/rochmanramadhani/" target="_blank" rel="noopener">
+        <div class="card-title sm">LinkedIn</div>
+        <div class="card-text">@rochmanramadhani</div></a>
+      <a class="card ac-c rvbox d7" href="https://github.com/rochmanramadhani/" target="_blank" rel="noopener">
+        <div class="card-title sm">GitHub</div>
+        <div class="card-text">@rochmanramadhani</div></a>
+      <a class="card ac-t rvbox d8" href="https://www.instagram.com/rochmanramadhanii/" target="_blank" rel="noopener">
+        <div class="card-title sm">Instagram</div>
+        <div class="card-text">@rochmanramadhanii<br><span class="dim" style="font-size:20px">yang ini dua huruf i</span></div></a>
     </div>
 
     <div class="cover-by rv d9" style="top:928px;width:1700px">
@@ -2392,6 +2431,7 @@ body.edit-mode [contenteditable="true"]:focus{outline:2px solid var(--yellow);ba
 </div>
 </div>
 
+<div class="rotate-hint" aria-hidden="true"><span class="ic"></span>Putar layar untuk tampilan penuh</div>
 <div class="edit-hotzone" id="editHotzone" aria-hidden="true"></div>
 <button class="edit-toggle" id="editToggle" type="button">Edit</button>
 
@@ -2428,13 +2468,26 @@ var enteredByAlias = false;
 
 /* ---------- fixed-stage scaling ---------- */
 function fit(){
-  var f = Math.min(window.innerWidth / STAGE_W, window.innerHeight / STAGE_H);
-  var tx = (window.innerWidth  - STAGE_W * f) / 2;
-  var ty = (window.innerHeight - STAGE_H * f) / 2;
+  /* visualViewport melaporkan area yang BENAR-BENAR terlihat — di iOS Safari itu
+     berubah saat bilah alamat menyusut, dan innerHeight tidak selalu menyusul. */
+  var vv = window.visualViewport;
+  var w  = (vv && vv.width)  || window.innerWidth;
+  var hgt= (vv && vv.height) || window.innerHeight;
+  if (!w || !hgt) return;
+  var f = Math.min(w / STAGE_W, hgt / STAGE_H);
+  var tx = (w   - STAGE_W * f) / 2;
+  var ty = (hgt - STAGE_H * f) / 2;
   stage.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + f + ')';
 }
 fit();
 window.addEventListener('resize', fit);
+window.addEventListener('orientationchange', function(){ setTimeout(fit, 120); });
+if (window.visualViewport){
+  window.visualViewport.addEventListener('resize', fit);
+  window.visualViewport.addEventListener('scroll', fit);
+}
+/* Bilah alamat mobile kadang baru menetap setelah render pertama. */
+window.addEventListener('load', function(){ setTimeout(fit, 60); });
 
 /* ---------- video control ---------- */
 function videosIn(el){ return Array.prototype.slice.call(el.querySelectorAll('video')); }
