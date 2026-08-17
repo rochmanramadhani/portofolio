@@ -1,0 +1,128 @@
+/* ============================================================
+   CV — Rochman Ramadhani Chiefto Irawan
+   Satu kolom, teks asli, tanpa tabel layout dan tanpa gambar teks.
+   Dirender lewat Chrome headless --print-to-pdf (lihat build.sh).
+
+   Aturan yang dipegang di sini:
+   - Satu kolom penuh. Parser ATS membaca dua kolom secara acak.
+   - Semua tautan dicetak sebagai URL yang terlihat, bukan anchor text.
+     Parser membuang href dan menyimpan teksnya — CV lama menghasilkan
+     literal "linkedin" tanpa alamat sama sekali.
+   - Font di-embed lokal. Jangan pakai <link> Google Fonts: headless
+     Chrome bisa mencetak sebelum webfont selesai dimuat, dan PDF-nya
+     diam-diam beda dari preview di browser.
+   ============================================================ */
+
+@font-face{font-family:'Familjen Grotesk';font-style:normal;font-weight:400 700;font-display:block;
+  src:url(../assets/fonts/familjen-grotesk.woff2) format('woff2');}
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:400 800;font-display:block;
+  src:url(../assets/fonts/bricolage-grotesque.woff2) format('woff2');}
+
+@page{size:A4;margin:12mm 13mm 11mm;}
+
+:root{
+  --ink:#15201B;
+  --ink-soft:#3C4A43;
+  --ink-mute:#66736C;
+  --rule:#C9D2CC;
+  --accent:#1F6F5C;
+}
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  font-family:'Familjen Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:9.4pt;
+  line-height:1.38;
+  color:var(--ink);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;
+}
+
+/* ---------- kepala ---------- */
+h1{
+  margin:0 0 .8mm;
+  font-family:'Bricolage Grotesque','Familjen Grotesk',sans-serif;
+  font-size:20pt;font-weight:800;letter-spacing:-.02em;line-height:1.05;
+}
+.role{
+  margin:0 0 1.9mm;
+  font-size:10.4pt;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--accent);
+}
+.contact{margin:0;font-size:9.3pt;line-height:1.6;color:var(--ink-soft);}
+.contact a{color:var(--ink-soft);text-decoration:none;}
+.contact a.portfolio{color:var(--ink);font-weight:700;}
+/* Anchor lain di badan dokumen tetap tampak seperti teks biasa —
+   yang penting bisa diklik, bukan tampil biru bergaris bawah. */
+a{color:inherit;text-decoration:none;}
+.contact .sep{color:var(--rule);padding:0 1.5mm;}
+.portfolio{font-weight:700;color:var(--ink);}
+
+/* ---------- judul bagian ---------- */
+h2{
+  margin:5mm 0 2.2mm;
+  padding-bottom:.8mm;
+  border-bottom:1.1pt solid var(--ink);
+  font-family:'Bricolage Grotesque','Familjen Grotesk',sans-serif;
+  font-size:10pt;font-weight:800;letter-spacing:.055em;text-transform:uppercase;
+  break-after:avoid;page-break-after:avoid;
+}
+
+/* ---------- profil ---------- */
+.profil{margin:0;font-size:9.5pt;line-height:1.38;color:var(--ink-soft);}
+.profil b{color:var(--ink);font-weight:700;}
+
+/* ---------- dampak utama ---------- */
+.dampak{margin:0;padding:0;list-style:none;}
+.dampak li{
+  position:relative;padding-left:4.6mm;margin-bottom:1.2mm;
+  font-size:9.4pt;line-height:1.36;color:var(--ink-soft);
+}
+.dampak li::before{
+  content:"";position:absolute;left:0;top:1.35mm;
+  width:2.3mm;height:2.3mm;border-radius:.6mm;background:var(--accent);
+}
+.dampak b{color:var(--ink);font-weight:700;}
+
+/* ---------- entri pengalaman ---------- */
+.entry{margin-bottom:3mm;break-inside:avoid;page-break-inside:avoid;}
+.entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:6mm;}
+.entry-org{font-size:10pt;font-weight:700;color:var(--ink);}
+.entry-when{flex:0 0 auto;font-size:8.7pt;font-weight:600;color:var(--ink-mute);white-space:nowrap;}
+.entry-role{margin:.3mm 0 1.1mm;font-size:9.1pt;font-weight:600;color:var(--accent);}
+.entry-role .mode{font-weight:400;color:var(--ink-mute);}
+
+.entry ul{margin:0;padding:0 0 0 4.2mm;list-style:none;}
+.entry li{position:relative;margin-bottom:.9mm;font-size:9.4pt;line-height:1.36;color:var(--ink-soft);}
+.entry li::before{
+  content:"";position:absolute;left:-3.2mm;top:1.55mm;
+  width:1.35mm;height:1.35mm;border-radius:50%;background:var(--rule);
+}
+.entry li b{color:var(--ink);font-weight:700;}
+
+/* satu baris tanpa bullet, untuk peran-peran awal */
+.entry .oneline{font-size:9.4pt;line-height:1.36;color:var(--ink-soft);}
+
+/* ---------- catatan kecil di bawah judul bagian ---------- */
+.note{
+  margin:0 0 2.6mm;font-size:8.9pt;line-height:1.38;color:var(--ink-mute);font-style:italic;
+}
+
+/* ---------- kompetensi & stack ---------- */
+.rows{margin:0;}
+.row{margin-bottom:1.1mm;font-size:9.2pt;line-height:1.36;color:var(--ink-soft);}
+.row .k{font-weight:700;color:var(--ink);}
+.row .k::after{content:" · ";color:var(--rule);font-weight:400;}
+
+/* ---------- pendidikan ---------- */
+.edu{display:flex;justify-content:space-between;align-items:baseline;gap:6mm;margin-bottom:1.8mm;}
+.edu .what{font-size:9.4pt;color:var(--ink-soft);}
+.edu .what b{font-size:9.9pt;color:var(--ink);font-weight:700;}
+.edu .when{flex:0 0 auto;font-size:8.7pt;font-weight:600;color:var(--ink-mute);white-space:nowrap;}
+
+/* ---------- kaki ---------- */
+.tail{
+  margin-top:3mm;padding-top:1.6mm;border-top:.8pt solid var(--rule);
+  font-size:8.6pt;color:var(--ink-mute);
+}
+.tail b{color:var(--ink);}

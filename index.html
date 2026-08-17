@@ -1,0 +1,2820 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1920, initial-scale=1">
+<title>Sembilan Tahun Berkarya — Portofolio Rochman Ramadhani</title>
+<meta name="description" content="Portofolio Rochman Ramadhani Chiefto Irawan — Product Owner & Tech Founder. Linimasa 2017–2026: sepuluh produk, konsultansi, dan pengajaran, lengkap dengan buktinya.">
+<meta name="author" content="Rochman Ramadhani Chiefto Irawan">
+<meta name="theme-color" content="#14231C">
+<link rel="canonical" href="https://oman-porto.skolain.id/">
+
+<!-- Favicon: SVG untuk peramban modern, PNG sebagai cadangan, 180px untuk layar utama iOS -->
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180">
+
+<!-- Kartu pratinjau tautan. Nama berkasnya diberi -v2 dengan sengaja: scraper
+     WhatsApp, LinkedIn, dan Slack menyimpan gambar per-URL dan tidak memeriksa
+     ulang berkas yang namanya sama, jadi mengganti isinya saja tidak cukup. -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Portofolio Rochman Ramadhani">
+<meta property="og:locale" content="id_ID">
+<meta property="og:title" content="Sembilan Tahun Berkarya — Portofolio Rochman Ramadhani">
+<meta property="og:description" content="Product Owner & Tech Founder. Linimasa 2017–2026: sepuluh produk, konsultansi, dan pengajaran, lengkap dengan buktinya.">
+<meta property="og:url" content="https://oman-porto.skolain.id/">
+<meta property="og:image" content="https://oman-porto.skolain.id/assets/cover-v2.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sampul deck: Sembilan Tahun Berkarya — Rochman Ramadhani Chiefto Irawan, Product Owner & Tech Founder">
+<meta property="profile:first_name" content="Rochman">
+<meta property="profile:last_name" content="Ramadhani Chiefto Irawan">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sembilan Tahun Berkarya — Portofolio Rochman Ramadhani">
+<meta name="twitter:description" content="Product Owner & Tech Founder. Linimasa 2017–2026: sepuluh produk, konsultansi, dan pengajaran, lengkap dengan buktinya.">
+<meta name="twitter:image" content="https://oman-porto.skolain.id/assets/cover-v2.jpg">
+<meta name="twitter:image:alt" content="Sampul deck: Sembilan Tahun Berkarya">
+
+<style>
+/* ============================================================
+   Self-hosted fonts — latin subset only (~128 KB total).
+   Deliberately NOT Google Fonts CDN: the deck must render
+   identically offline, on a blocked network, and in headless
+   Chrome (which can print before a webfont resolves).
+   Bricolage & Familjen are variable fonts, one file each.
+   ============================================================ */
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:400 800;font-display:block;
+  src:url(assets/fonts/bricolage-grotesque.woff2) format('woff2');}
+@font-face{font-family:'Familjen Grotesk';font-style:normal;font-weight:400 700;font-display:block;
+  src:url(assets/fonts/familjen-grotesk.woff2) format('woff2');}
+@font-face{font-family:'Kalam';font-style:normal;font-weight:400;font-display:block;
+  src:url(assets/fonts/kalam-400.woff2) format('woff2');}
+@font-face{font-family:'Kalam';font-style:normal;font-weight:700;font-display:block;
+  src:url(assets/fonts/kalam-700.woff2) format('woff2');}
+
+/* ============================================================
+   PAPAN TULIS — deck shell
+   Fixed stage 1920x1080. All slide measurements in px.
+   Safe content band: y = 140 .. 960.  Left/right margin 110px.
+   ============================================================ */
+
+/* ===== MANDATORY FIXED-STAGE ARCHITECTURE ===== */
+html,body{width:100%;height:100%;margin:0;overflow:hidden;background:var(--stage-bg,#000);}
+.deck-viewport{position:fixed;inset:0;overflow:hidden;background:var(--stage-bg,#000);}
+.deck-stage{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;transform-origin:0 0;background:var(--slide-bg,#fff);}
+.slide{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;display:block;visibility:hidden;opacity:0;pointer-events:none;background:var(--slide-bg,#fff);}
+.slide.active,.slide.visible{visibility:visible;opacity:1;pointer-events:auto;z-index:1;}
+img,video,canvas,svg{max-width:100%;max-height:100%;}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.2s !important;}}
+
+/* ===== THEME (LOCKED — do not edit) ===== */
+:root{
+  --stage-bg:#080D0B;
+  --slide-bg:#14231C;
+  --board:#14231C;
+  --board-deep:#0D1712;
+  --board-lift:#1D3227;
+  --tray:#0B1310;
+  --chalk:#F2EFE4;
+  --chalk-soft:rgba(242,239,228,.72);
+  --chalk-mute:rgba(242,239,228,.46);
+  --chalk-faint:rgba(242,239,228,.20);
+  --yellow:#E8C547;
+  --coral:#E86A5C;
+  --teal:#6FB3A8;
+
+  --display:"Bricolage Grotesque","Familjen Grotesk",sans-serif;
+  --body:"Familjen Grotesk",sans-serif;
+  --hand:"Kalam",cursive;
+
+  --dust:0 0 1px rgba(242,239,228,.55), 0 1px 0 rgba(9,16,13,.45);
+  --dust-strong:0 0 2px rgba(242,239,228,.40), 0 0 12px rgba(242,239,228,.10), 0 2px 0 rgba(9,16,13,.5);
+  --hand-radius:255px 15px 225px 15px/15px 225px 15px 255px;
+  --hand-radius-b:15px 225px 15px 255px/225px 15px 255px 15px;
+
+  --m-left:110px;
+  --m-right:110px;
+}
+*{box-sizing:border-box;}
+
+/* ===== BOARD SURFACE (LOCKED) ===== */
+.slide{
+  font-family:var(--body);
+  color:var(--chalk);
+  background:
+    radial-gradient(1200px 720px at 22% 18%, rgba(120,180,155,.10), transparent 62%),
+    radial-gradient(980px 620px at 82% 78%, rgba(232,197,71,.055), transparent 66%),
+    radial-gradient(1500px 900px at 50% 46%, rgba(255,255,255,.045), transparent 70%),
+    linear-gradient(168deg, #17281F 0%, #14231C 44%, #101C16 100%);
+}
+/* chalk dust + eraser sweep texture */
+.slide::before{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    repeating-radial-gradient(circle at 13% 22%, rgba(242,239,228,.055) 0 1px, transparent 1px 5px),
+    repeating-radial-gradient(circle at 68% 61%, rgba(242,239,228,.042) 0 1px, transparent 1px 8px),
+    repeating-radial-gradient(circle at 40% 85%, rgba(242,239,228,.035) 0 1px, transparent 1px 11px),
+    repeating-linear-gradient(107deg, rgba(242,239,228,.030) 0 2px, transparent 2px 13px),
+    repeating-linear-gradient(-14deg, rgba(9,16,13,.20) 0 3px, transparent 3px 26px);
+  opacity:.85;
+}
+/* smeared eraser arcs + vignette */
+.slide::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(760px 220px at 30% 70%, rgba(242,239,228,.045), transparent 70%),
+    radial-gradient(620px 190px at 74% 30%, rgba(242,239,228,.035), transparent 72%),
+    radial-gradient(1400px 980px at 50% 50%, transparent 52%, rgba(6,11,9,.55) 100%);
+}
+.layer{position:absolute;inset:0;z-index:2;}
+
+/* ===== CHROME (LOCKED) ===== */
+.chrome-top{position:absolute;left:var(--m-left);top:46px;width:1700px;height:34px;display:flex;align-items:center;justify-content:space-between;}
+.chip{display:flex;align-items:center;gap:14px;}
+.chip .nub{width:16px;height:16px;background:var(--yellow);border-radius:9px 3px 8px 3px/3px 8px 3px 9px;transform:rotate(-6deg);box-shadow:0 0 10px rgba(232,197,71,.35);}
+.chip .txt{font-family:var(--body);font-weight:700;font-size:19px;letter-spacing:.30em;text-transform:uppercase;color:var(--chalk-soft);text-shadow:var(--dust);}
+.chrome-top .sect{font-family:var(--body);font-weight:600;font-size:18px;letter-spacing:.26em;text-transform:uppercase;color:var(--chalk-mute);text-shadow:var(--dust);}
+.rule-top{position:absolute;left:var(--m-left);top:98px;width:1700px;height:3px;
+  background:repeating-linear-gradient(90deg, rgba(242,239,228,.34) 0 26px, rgba(242,239,228,.05) 26px 40px);
+  border-radius:2px;opacity:.75;}
+
+.tray{position:absolute;left:0;bottom:0;width:1920px;height:56px;background:linear-gradient(180deg,#0F1A15 0%, var(--tray) 100%);border-top:2px solid rgba(242,239,228,.14);}
+.tray .sticks{position:absolute;left:var(--m-left);top:20px;display:flex;gap:14px;}
+.tray .stick{width:58px;height:15px;border-radius:8px 4px 7px 4px/4px 7px 4px 8px;box-shadow:inset 0 -3px 0 rgba(9,16,13,.28), inset 0 2px 0 rgba(255,255,255,.28);}
+.tray .s1{background:var(--yellow);transform:rotate(-1.6deg);}
+.tray .s2{background:var(--coral);transform:rotate(1.1deg);}
+.tray .s3{background:var(--teal);transform:rotate(-.7deg);}
+.pageno{position:absolute;right:var(--m-right);top:8px;display:flex;align-items:baseline;gap:8px;}
+.pageno .n{font-family:var(--display);font-weight:800;font-size:34px;line-height:1;color:var(--chalk);text-shadow:var(--dust);}
+.pageno .d{font-family:var(--body);font-weight:600;font-size:17px;letter-spacing:.18em;color:var(--chalk-mute);}
+
+/* ===== TYPE (LOCKED) ===== */
+.hand{font-family:var(--hand);font-weight:400;}
+.kick{display:flex;align-items:center;gap:14px;}
+.kick .tick{width:34px;height:4px;background:var(--coral);border-radius:3px;transform:rotate(-3deg);}
+.kick .t{font-family:var(--hand);font-size:34px;line-height:1.2;color:var(--yellow);text-shadow:var(--dust);}
+
+h1.head{margin:0;font-family:var(--display);font-weight:800;font-size:138px;line-height:1.03;letter-spacing:-.028em;color:var(--chalk);text-shadow:var(--dust-strong);}
+.circled{position:relative;display:inline-block;padding:0 12px;}
+.circled::before{content:"";position:absolute;left:-12px;right:-14px;top:2px;bottom:8px;border:4px solid var(--coral);border-radius:52% 48% 49% 51%/50% 52% 48% 50%;transform:rotate(-1.6deg);opacity:.92;}
+.circled::after{content:"";position:absolute;left:-6px;right:-18px;top:9px;bottom:1px;border:2px solid rgba(232,106,92,.45);border-radius:49% 51% 52% 48%/48% 50% 50% 52%;transform:rotate(1.9deg);}
+
+/* ============================================================
+   1. PLACEMENT UTILITIES
+   .pos  — universal absolute placement driven by inline custom
+           properties: --x (left), --y (top), --w (width),
+           --h (height), --rot (rotation).
+   .slot-* — named presets so 26 slides stay aligned.
+   ============================================================ */
+.pos{position:absolute;left:var(--x,110px);top:var(--y,140px);width:var(--w,auto);height:var(--h,auto);transform:rotate(var(--rot,0deg));}
+
+.slot-head{position:absolute;left:var(--m-left);top:126px;width:1700px;}      /* content headline */
+.slot-head-hi{position:absolute;left:var(--m-left);top:150px;width:1700px;}   /* headline, no eyebrow above */
+.slot-sub{position:absolute;left:var(--m-left);top:246px;width:1560px;}       /* one-line subhead */
+.slot-body{position:absolute;left:var(--m-left);top:312px;width:1700px;height:604px;}      /* main content well */
+.slot-body-tall{position:absolute;left:var(--m-left);top:262px;width:1700px;height:668px;} /* when there is no subhead */
+.slot-body-mid{position:absolute;left:var(--m-left);top:340px;width:1700px;height:520px;}  /* short content, optical centre */
+.slot-note{position:absolute;left:var(--m-left);top:872px;width:1700px;}      /* hand annotation above foot */
+
+/* horizontal centring of a fixed-width block inside the 1700px column */
+.center-col{margin-left:auto;margin-right:auto;}
+
+/* ===== flex helpers ===== */
+.hstack{display:flex;flex-direction:row;align-items:flex-start;}
+.vstack{display:flex;flex-direction:column;align-items:stretch;}
+.hstack.mid,.vstack.mid{align-items:center;}
+.hstack.bottom{align-items:flex-end;}
+.hstack.stretch{align-items:stretch;}
+.hstack.center,.vstack.center{justify-content:center;}
+.hstack.between,.vstack.between{justify-content:space-between;}
+.gap-12{gap:12px;} .gap-16{gap:16px;} .gap-20{gap:20px;} .gap-24{gap:24px;}
+.gap-32{gap:32px;} .gap-40{gap:40px;} .gap-48{gap:48px;} .gap-64{gap:64px;} .gap-80{gap:80px;}
+.grow{flex:1 1 0;min-width:0;}
+.fixed-w{flex:0 0 auto;}
+.fill{height:100%;}          /* make a block fill its .slot-* parent height */
+.pad-t24{padding-top:24px;} .pad-t40{padding-top:40px;}
+.mt-16{margin-top:16px;} .mt-24{margin-top:24px;} .mt-32{margin-top:32px;} .mt-48{margin-top:48px;}
+
+/* ============================================================
+   2. SHARED TYPE VOCABULARY
+   ============================================================ */
+.eyebrow{display:flex;align-items:center;gap:14px;}
+.eyebrow .tick{flex:0 0 auto;width:38px;height:4px;background:var(--accent,var(--coral));border-radius:3px;transform:rotate(-3deg);}
+.eyebrow .t{font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent,var(--coral));text-shadow:var(--dust);}
+
+.head-lg{margin:0;font-family:var(--display);font-weight:800;font-size:92px;line-height:1.04;letter-spacing:-.025em;color:var(--chalk);text-shadow:var(--dust-strong);}
+.head-md{margin:0;font-family:var(--display);font-weight:800;font-size:72px;line-height:1.06;letter-spacing:-.022em;color:var(--chalk);text-shadow:var(--dust-strong);}
+.head-sm{margin:0;font-family:var(--display);font-weight:800;font-size:54px;line-height:1.1;letter-spacing:-.018em;color:var(--chalk);text-shadow:var(--dust-strong);}
+.head-lg .circled,.head-md .circled,.head-sm .circled,h1.head .circled{margin:0 10px;}
+
+.subhead{font-family:var(--hand);font-size:29px;line-height:1.4;color:var(--teal);text-shadow:var(--dust);}
+.lead{margin:0;font-size:35px;line-height:1.48;font-weight:400;color:var(--chalk-soft);text-shadow:var(--dust);}
+
+.tx-s{font-size:23px;line-height:1.42;color:var(--chalk-soft);text-shadow:var(--dust);}
+.tx-m{font-size:27px;line-height:1.40;color:var(--chalk-soft);text-shadow:var(--dust);}
+.tx-l{font-size:32px;line-height:1.36;color:var(--chalk);text-shadow:var(--dust);}
+.tx-xl{font-size:38px;line-height:1.34;color:var(--chalk);text-shadow:var(--dust);}
+
+.dim{color:var(--chalk-mute);}
+.dimmer{color:var(--chalk-faint);}
+.bright{color:var(--chalk);}
+.c-y{color:var(--yellow);} .c-t{color:var(--teal);} .c-c{color:var(--coral);}
+.bg-y{background:var(--yellow);} .bg-t{background:var(--teal);} .bg-c{background:var(--coral);}
+.bg-n{background:rgba(242,239,228,.75);}
+
+/* chalk underline inside running text */
+.mark{color:var(--chalk);border-bottom:3px solid var(--coral);padding-bottom:2px;}
+.mark-y{color:var(--chalk);border-bottom:4px solid var(--yellow);padding-bottom:3px;}
+.mark-t{color:var(--chalk);border-bottom:3px solid var(--teal);padding-bottom:2px;}
+
+/* dashed chalk divider — use inside boxes or between stacked blocks */
+.divider{height:3px;margin:16px 0;border-radius:2px;background:repeating-linear-gradient(90deg, rgba(242,239,228,.30) 0 12px, transparent 12px 22px);}
+.divider.vert{width:3px;height:auto;align-self:stretch;margin:0 20px;background:repeating-linear-gradient(180deg, rgba(242,239,228,.26) 0 14px, transparent 14px 26px);}
+
+/* double chalk underline (cover) */
+.uline{position:relative;width:520px;height:14px;}
+.uline i{position:absolute;left:0;height:4px;background:var(--yellow);border-radius:4px;display:block;}
+.uline i:nth-child(1){top:0;width:100%;transform:rotate(-.35deg);opacity:.95;}
+.uline i:nth-child(2){top:9px;width:83%;height:3px;transform:rotate(.5deg);opacity:.55;}
+
+/* pill / tag labels */
+.pill{display:inline-flex;align-items:center;gap:10px;padding:8px 20px 9px;border:2px solid var(--accent,var(--chalk-mute));
+  border-radius:22px 8px 20px 8px/8px 20px 8px 22px;font-family:var(--body);font-weight:700;font-size:19px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--accent,var(--chalk-soft));text-shadow:var(--dust);}
+.pill.solid{background:var(--accent,var(--yellow));color:#101C16;border-color:transparent;text-shadow:none;}
+.tag{font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent,var(--teal));text-shadow:var(--dust);}
+
+/* category rule + label (LOCKED) */
+.cat-rule{width:70px;height:7px;border-radius:6px 3px 5px 3px/3px 5px 3px 6px;background:var(--accent,var(--yellow));}
+.cat-label{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.20em;text-transform:uppercase;margin-top:16px;text-shadow:var(--dust);color:var(--accent,var(--chalk));}
+.cat-label.big{font-size:33px;letter-spacing:.13em;}
+
+/* checkbox bullet list (LOCKED) */
+.items{margin-top:20px;}
+.item{display:flex;gap:13px;align-items:flex-start;margin-bottom:14px;}
+.item .bx{flex:0 0 auto;width:12px;height:12px;margin-top:9px;border:2px solid var(--chalk-mute);border-radius:4px 2px 4px 2px/2px 4px 2px 4px;transform:rotate(-8deg);}
+.item .tx{font-size:25px;line-height:1.32;color:var(--chalk-soft);text-shadow:var(--dust);}
+.items.lg .item{margin-bottom:18px;}
+.items.lg .item .tx{font-size:30px;color:var(--chalk);}
+.items.lg .item .bx{width:14px;height:14px;margin-top:11px;border-color:var(--accent,var(--yellow));}
+
+/* .listrow — heavier list row: marker + title/body + optional trailing note */
+.listrow{display:flex;align-items:flex-start;gap:22px;padding:14px 0 15px;border-bottom:2px solid rgba(242,239,228,.10);}
+.listrow:last-child{border-bottom:none;}
+.listrow .n{flex:0 0 auto;width:52px;font-family:var(--display);font-weight:800;font-size:34px;line-height:1.1;color:var(--accent,var(--yellow));text-shadow:var(--dust);}
+.listrow .t{flex:1 1 auto;font-size:29px;line-height:1.36;color:var(--chalk);text-shadow:var(--dust);}
+.listrow .t b{font-weight:700;color:var(--chalk);}
+.listrow .side{flex:0 0 auto;font-family:var(--hand);font-size:26px;line-height:1.3;color:var(--chalk-mute);text-align:right;}
+
+/* footer strip (LOCKED) */
+.foot{position:absolute;left:var(--m-left);top:968px;width:1700px;display:flex;align-items:center;gap:18px;}
+.foot .mk{width:16px;height:16px;background:var(--coral);border-radius:9px 3px 8px 3px/3px 8px 3px 9px;transform:rotate(6deg);}
+.foot .ft{font-size:34px;font-weight:500;color:var(--chalk);text-shadow:var(--dust);}
+.foot .ft b{font-weight:700;color:var(--yellow);}
+.foot .ft em{font-style:normal;color:var(--chalk-mute);}
+
+/* hand-written annotation with a lead-in arrow */
+.annot{font-family:var(--hand);font-size:30px;line-height:1.38;color:var(--chalk-mute);text-shadow:var(--dust);}
+.annot .arw{display:block;width:118px;height:3px;margin-bottom:16px;background:var(--chalk-faint);border-radius:2px;position:relative;transform:rotate(2deg);}
+.annot .arw::after{content:"";position:absolute;right:-2px;top:-6px;width:14px;height:14px;border-top:3px solid var(--chalk-faint);border-right:3px solid var(--chalk-faint);transform:rotate(45deg);}
+
+/* ============================================================
+   3. ARROW CONNECTORS
+   .arrow            → horizontal, head on the right, --len sets length
+   .arrow.left       → head on the left
+   .arrow.down       → vertical, head at the bottom
+   .arrow.strong     → uses --accent instead of faint chalk
+   ============================================================ */
+.arrow{position:relative;display:block;flex:0 0 auto;width:var(--len,120px);height:3px;border-radius:2px;background:var(--chalk-faint);}
+.arrow::after{content:"";position:absolute;right:-2px;top:-6px;width:14px;height:14px;border-top:3px solid var(--chalk-faint);border-right:3px solid var(--chalk-faint);transform:rotate(45deg);}
+.arrow.left::after{right:auto;left:-2px;border-top:none;border-right:none;border-bottom:3px solid var(--chalk-faint);border-left:3px solid var(--chalk-faint);}
+.arrow.down{width:3px;height:var(--len,90px);}
+.arrow.down::after{right:auto;top:auto;left:-6px;bottom:-2px;border-top:none;border-right:3px solid var(--chalk-faint);border-bottom:3px solid var(--chalk-faint);}
+.arrow.strong{background:var(--accent,var(--yellow));}
+.arrow.strong::after{border-color:var(--accent,var(--yellow));}
+.arrow.dashed{background:repeating-linear-gradient(90deg, rgba(242,239,228,.34) 0 12px, transparent 12px 22px);}
+
+/* ============================================================
+   4. HAND-DRAWN BOX  (.hbox) — the universal chalk container.
+   Double stroke: real border + inset ::after ghost stroke.
+   Accent colour comes from --accent (.ac-y/.ac-t/.ac-c/.ac-n).
+   ============================================================ */
+.hbox,.card,.quotebox,.stepbox,.linkcard.boxed{
+  --accent:var(--yellow);
+  position:relative;padding:26px 28px 28px;
+  border:3px solid var(--accent);border-radius:var(--hand-radius);
+  background:linear-gradient(160deg, rgba(242,239,228,.055), rgba(242,239,228,.015));
+  transform:rotate(-1.3deg);
+}
+.hbox::after,.card::after,.quotebox::after,.stepbox::after,.linkcard.boxed::after{
+  content:"";position:absolute;left:5px;right:5px;top:6px;bottom:4px;
+  border:2px solid var(--accent);border-radius:var(--hand-radius-b);opacity:.30;pointer-events:none;}
+.hbox>*,.card>*,.quotebox>*,.stepbox>*{position:relative;z-index:1;}
+
+.hbox.alt,.card.alt,.quotebox.alt{border-radius:var(--hand-radius-b);}
+.hbox.alt::after,.card.alt::after,.quotebox.alt::after{border-radius:var(--hand-radius);left:6px;right:6px;top:5px;bottom:7px;}
+.hbox.glow,.card.glow,.quotebox.glow{box-shadow:inset 0 0 160px -70px var(--accent);}
+.rot-0{transform:none;} .rot-l{transform:rotate(-1.3deg);} .rot-l2{transform:rotate(-2.4deg);}
+.rot-r{transform:rotate(1.1deg);} .rot-r2{transform:rotate(2.2deg);}
+
+.hbox-title{font-family:var(--hand);font-size:29px;color:var(--accent,var(--yellow));text-shadow:var(--dust);margin-bottom:16px;}
+.hbox-tag{font-family:var(--body);font-weight:700;font-size:17px;letter-spacing:.22em;text-transform:uppercase;text-shadow:var(--dust);color:var(--accent);}
+.hbox-tag.bad{color:var(--coral);}
+.hbox-tag.good{color:var(--teal);}
+.hbox-quote{font-size:23px;line-height:1.42;color:var(--chalk);margin-top:7px;text-shadow:var(--dust);}
+.hbox-text{font-size:25px;line-height:1.40;color:var(--chalk-soft);text-shadow:var(--dust);margin-top:8px;}
+.hbox-res{font-family:var(--hand);font-size:24px;margin-top:6px;color:var(--chalk-mute);}
+.hbox-note{margin-top:auto;padding-top:26px;font-family:var(--hand);font-size:25px;line-height:1.36;color:var(--teal);}
+.hbox-badge{position:absolute;right:-16px;top:-46px;transform:rotate(4deg);font-family:var(--hand);font-size:26px;color:var(--accent,var(--yellow));z-index:2;}
+
+/* ---- ACCENT THEMING ------------------------------------------------------
+   Put .ac-y / .ac-t / .ac-c / .ac-n on ANY block (box, card, step, column,
+   eyebrow, pill, arrow, cat-rule …). It sets --accent, which every component
+   above reads. Declared here so it overrides the .hbox/.card default. */
+.ac-y{--accent:var(--yellow);}
+.ac-t{--accent:var(--teal);}
+.ac-c{--accent:var(--coral);}
+.ac-n{--accent:rgba(242,239,228,.62);}
+
+/* ============================================================
+   5. COVER ARCHETYPE
+   ============================================================ */
+.cover-kick{position:absolute;left:var(--m-left);top:186px;}
+.cover-head{position:absolute;left:var(--m-left);top:238px;width:1290px;}
+.cover-lead{position:absolute;left:var(--m-left);top:706px;width:1140px;}
+.cover-uline{position:absolute;left:var(--m-left);top:846px;width:520px;height:14px;}
+.cover-by{position:absolute;left:var(--m-left);top:882px;width:1140px;display:flex;align-items:center;gap:18px;}
+.cover-by .name{font-family:var(--display);font-weight:700;font-size:31px;letter-spacing:.01em;color:var(--chalk);text-shadow:var(--dust);}
+.cover-by .sep{width:9px;height:9px;background:var(--teal);border-radius:50%;}
+.cover-by .role{font-family:var(--body);font-weight:600;font-size:24px;letter-spacing:.20em;text-transform:uppercase;color:var(--teal);text-shadow:var(--dust);}
+.cover-note{position:absolute;left:1440px;top:272px;width:360px;}   /* put .hbox here */
+.cover-annot{position:absolute;left:1438px;top:768px;width:372px;transform:rotate(-1.4deg);}
+
+/* ============================================================
+   6. SECTION / QUESTION ARCHETYPE  ("coba tebak / angkat tangan")
+   Structure:  .layer > .q-veil (first) + .qblock + .qmark
+   The veil quiets the board so the beat reads as a pause.
+   ============================================================ */
+.q-veil{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(1500px 950px at 34% 48%, rgba(6,11,9,.20), transparent 60%),
+    linear-gradient(180deg, rgba(6,11,9,.52) 0%, rgba(6,11,9,.66) 60%, rgba(6,11,9,.74) 100%);}
+.q-veil::after{content:"";position:absolute;left:0;right:0;top:0;height:3px;
+  background:repeating-linear-gradient(90deg, rgba(242,239,228,.10) 0 26px, transparent 26px 40px);}
+
+.qblock{position:absolute;left:var(--m-left);top:250px;width:1330px;}
+.qblock.mid{top:296px;}
+.qnum{font-family:var(--display);font-weight:800;font-size:26px;letter-spacing:.30em;color:var(--chalk-faint);text-shadow:var(--dust);margin-bottom:18px;}
+.qhead{margin:26px 0 0;font-family:var(--display);font-weight:800;font-size:104px;line-height:1.05;letter-spacing:-.028em;color:var(--chalk);text-shadow:var(--dust-strong);}
+.qhead.two-line{font-size:112px;}
+.qhead.long{font-size:84px;line-height:1.08;}
+.qsub{margin:34px 0 0;width:1180px;font-size:38px;line-height:1.36;font-weight:400;color:var(--chalk-soft);text-shadow:var(--dust);}
+.qprompt{margin-top:46px;display:flex;align-items:center;gap:18px;}
+.qprompt .tick{flex:0 0 auto;width:44px;height:4px;background:var(--yellow);border-radius:3px;transform:rotate(-2deg);}
+.qprompt .t{font-family:var(--hand);font-size:34px;line-height:1.3;color:var(--yellow);text-shadow:var(--dust);}
+.qprompt.quiet .tick{background:var(--chalk-faint);}
+.qprompt.quiet .t{color:var(--chalk-mute);}
+/* giant watermark glyph on the right of a question slide */
+.qmark{position:absolute;right:96px;top:150px;font-family:var(--display);font-weight:800;font-size:560px;line-height:.82;
+  color:rgba(242,239,228,.055);text-shadow:none;transform:rotate(6deg);pointer-events:none;user-select:none;}
+/* the double chalk rule under a question headline */
+.qrule{margin-top:30px;width:420px;height:12px;position:relative;}
+.qrule i{position:absolute;left:0;height:4px;background:var(--coral);border-radius:4px;display:block;}
+.qrule i:nth-child(1){top:0;width:100%;transform:rotate(-.4deg);opacity:.9;}
+.qrule i:nth-child(2){top:8px;width:70%;height:3px;transform:rotate(.6deg);opacity:.5;}
+
+/* ============================================================
+   7. CARD GRID ARCHETYPE
+   .cards.n2 … .n6  → one row.   .cards.g2x2 → two rows of two.
+   Each .card: .card-num + .card-title + .card-text
+   ============================================================ */
+.cards{position:relative;display:flex;align-items:stretch;}
+.cards.n2{gap:48px;} .cards.n2>.card{width:826px;}
+.cards.n3{gap:40px;} .cards.n3>.card{width:540px;}
+.cards.n4{gap:32px;} .cards.n4>.card{width:401px;}
+.cards.n5{gap:26px;} .cards.n5>.card{width:319px;}
+.cards.n6{gap:22px;} .cards.n6>.card{width:265px;}
+.cards.g2x2{display:grid;grid-template-columns:826px 826px;gap:36px 48px;}
+.cards.g2x2>.card{width:auto;}
+.cards.g3x2{display:grid;grid-template-columns:540px 540px 540px;gap:32px 40px;}
+.cards.g3x2>.card{width:auto;}
+.cards>.card{flex:0 0 auto;display:flex;flex-direction:column;transform:rotate(-.4deg);}
+.cards>.card:nth-child(even){transform:rotate(.5deg);}
+.card{padding:28px 30px 30px;}
+.card-num{font-family:var(--display);font-weight:800;font-size:74px;line-height:.94;color:var(--accent,var(--yellow));text-shadow:var(--dust-strong);}
+.card-num.sm{font-size:56px;}
+.card-rule{width:64px;height:6px;margin:14px 0 16px;border-radius:6px 3px 5px 3px/3px 5px 3px 6px;background:var(--accent,var(--yellow));}
+.card-title{font-family:var(--display);font-weight:700;font-size:34px;line-height:1.14;letter-spacing:-.012em;color:var(--chalk);text-shadow:var(--dust);}
+.card-title.sm{font-size:29px;}
+.card-text{margin-top:12px;font-size:24px;line-height:1.40;color:var(--chalk-soft);text-shadow:var(--dust);}
+.card-foot{margin-top:auto;padding-top:18px;font-family:var(--hand);font-size:23px;line-height:1.32;color:var(--chalk-mute);}
+
+/* ============================================================
+   8. MAPPING TABLE ARCHETYPE  (left term → right term, ~7 rows)
+   ============================================================ */
+.maptable{position:relative;width:1700px;}
+.map-head{display:grid;grid-template-columns:700px 160px 700px;align-items:end;padding-bottom:14px;
+  border-bottom:3px solid rgba(242,239,228,.24);}
+.map-head .h{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:.22em;text-transform:uppercase;text-shadow:var(--dust);}
+.map-head .h.a{color:var(--coral);text-align:right;}
+.map-head .h.b{color:var(--teal);}
+.map-row{display:grid;grid-template-columns:700px 160px 700px;align-items:center;min-height:92px;
+  border-bottom:2px solid rgba(242,239,228,.10);}
+.map-row:last-child{border-bottom:none;}
+.map-a{font-size:30px;line-height:1.30;color:var(--chalk-soft);text-align:right;padding-right:6px;text-shadow:var(--dust);}
+.map-b{font-size:30px;line-height:1.30;color:var(--chalk);padding-left:6px;text-shadow:var(--dust);}
+.map-link{display:flex;align-items:center;justify-content:center;}
+.map-link .arrow{--len:104px;}
+.maptable.tight .map-row{min-height:80px;}
+.maptable.tight .map-a,.maptable.tight .map-b{font-size:27px;}
+.maptable.airy .map-row{min-height:106px;}   /* use for 6 rows to fill the band */
+
+/* ============================================================
+   9. COMPARISON TABLE ARCHETYPE  (row label + 2 columns, ~5 rows)
+   ============================================================ */
+.cmp{position:relative;width:1700px;}
+.cmp-head,.cmp-row{display:grid;grid-template-columns:480px 610px 610px;align-items:start;}
+.cmp-head{padding-bottom:16px;border-bottom:3px solid rgba(242,239,228,.24);}
+.cmp-head .h{font-family:var(--display);font-weight:800;font-size:26px;letter-spacing:.20em;text-transform:uppercase;text-shadow:var(--dust);padding:0 18px;}
+.cmp-head .h.label{color:var(--chalk-mute);padding-left:0;}
+.cmp-head .h.a{color:var(--coral);}
+.cmp-head .h.b{color:var(--teal);}
+.cmp-row{min-height:120px;padding:22px 0 20px;border-bottom:2px solid rgba(242,239,228,.10);}
+.cmp-row:last-child{border-bottom:none;}
+.cmp-label{font-family:var(--display);font-weight:700;font-size:29px;line-height:1.22;color:var(--chalk);text-shadow:var(--dust);padding-right:24px;}
+.cmp-a,.cmp-b{font-size:26px;line-height:1.36;color:var(--chalk-soft);text-shadow:var(--dust);padding:0 18px;}
+.cmp-b{border-left:2px solid rgba(242,239,228,.12);}
+/* tone helpers — usable on any text node, not just table cells.
+   NOTE: never use the bare class name "pos" as a modifier; .pos is the
+   absolute-placement utility. Use .tone-good / .tone-bad. */
+.tone-bad{color:rgba(232,106,92,.92);}
+.tone-good{color:rgba(111,179,168,.95);}
+.tone-flat{color:var(--chalk-soft);}
+.cmp.tight .cmp-row{min-height:98px;padding:16px 0 15px;}
+.cmp.tight .cmp-a,.cmp.tight .cmp-b{font-size:24px;}
+
+/* ============================================================
+   10. STEP FLOW ARCHETYPE  (3–7 steps in a chain)
+   .flow > (.step, .flow-arrow, .step, …)  + optional .loopback
+   ============================================================ */
+.flow{position:relative;display:flex;align-items:stretch;gap:0;width:1700px;}
+.step{flex:1 1 0;min-width:0;display:flex;flex-direction:column;padding:24px 22px 26px;}
+.stepbox{padding:24px 22px 26px;transform:rotate(-.4deg);}
+.flow>.stepbox:nth-child(4n+3){transform:rotate(.5deg);}
+.step-num{display:flex;align-items:center;gap:10px;}
+.step-num .n{font-family:var(--display);font-weight:800;font-size:48px;line-height:1;color:var(--accent,var(--yellow));text-shadow:var(--dust-strong);}
+.step-num .dot{width:10px;height:10px;border-radius:50%;background:var(--accent,var(--yellow));opacity:.6;}
+.step-title{margin-top:14px;font-family:var(--display);font-weight:700;font-size:30px;line-height:1.16;color:var(--chalk);text-shadow:var(--dust);}
+.step-text{margin-top:10px;font-size:22px;line-height:1.38;color:var(--chalk-soft);text-shadow:var(--dust);}
+.flow-arrow{flex:0 0 auto;width:60px;display:flex;align-items:center;justify-content:center;align-self:center;}
+.flow-arrow .arrow{--len:44px;}
+.flow.wide .flow-arrow{width:80px;}
+.flow.wide .flow-arrow .arrow{--len:60px;}
+/* loop-back note drawn under the chain */
+.loopback{position:relative;width:1700px;margin-top:26px;padding-top:30px;}
+.loopback::before{content:"";position:absolute;left:120px;right:120px;top:0;height:52px;
+  border:3px solid var(--chalk-faint);border-top:none;border-radius:0 0 40px 40px;}
+.loopback::after{content:"";position:absolute;left:116px;top:0;width:14px;height:14px;
+  border-top:3px solid var(--chalk-faint);border-left:3px solid var(--chalk-faint);transform:rotate(45deg);}
+.loopback .t{margin-top:44px;text-align:center;font-family:var(--hand);font-size:29px;line-height:1.32;color:var(--chalk-mute);text-shadow:var(--dust);}
+
+/* ============================================================
+   11. QUOTE / AMBIGUITY ARCHETYPE
+   ============================================================ */
+.quotebox{padding:44px 52px 46px;}
+.quote-mark{position:absolute;left:26px;top:-6px;font-family:var(--display);font-weight:800;font-size:130px;line-height:1;color:var(--accent,var(--yellow));opacity:.32;z-index:0;}
+.quote-text{position:relative;z-index:1;font-family:var(--hand);font-weight:700;font-size:64px;line-height:1.26;color:var(--chalk);text-shadow:var(--dust-strong);}
+.quote-text.sm{font-size:50px;}
+.quote-src{margin-top:22px;font-family:var(--body);font-weight:600;font-size:24px;letter-spacing:.20em;text-transform:uppercase;color:var(--accent,var(--yellow));text-shadow:var(--dust);}
+.quote-side{width:100%;}
+.quote-side .h{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.22em;text-transform:uppercase;color:var(--chalk-mute);text-shadow:var(--dust);margin-bottom:18px;}
+
+/* ============================================================
+   12. MEDIA — LINK CARD (16:9 thumbnail + CTA button)
+   ============================================================ */
+.linkcard{position:relative;display:flex;align-items:center;gap:56px;width:1700px;}
+.thumb{position:relative;flex:0 0 auto;width:900px;height:506px;overflow:hidden;
+  border:3px solid rgba(242,239,228,.42);border-radius:22px 8px 20px 8px/8px 20px 8px 22px;
+  background:var(--board-deep);box-shadow:0 18px 50px rgba(0,0,0,.45), 0 0 60px rgba(111,179,168,.10);}
+.thumb.md{width:760px;height:428px;}
+.thumb.sm{width:620px;height:349px;}
+.thumb img,.thumb video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit;max-width:none;max-height:none;}
+.thumb .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;
+  width:104px;height:104px;border:3px solid rgba(242,239,228,.75);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;background:rgba(9,16,13,.42);}
+.thumb .play i{display:block;width:0;height:0;margin-left:8px;border-left:30px solid rgba(242,239,228,.90);border-top:19px solid transparent;border-bottom:19px solid transparent;}
+.thumb .dur{position:absolute;right:14px;bottom:12px;z-index:2;padding:4px 12px 5px;border-radius:8px;background:rgba(9,16,13,.72);
+  font-family:var(--body);font-weight:700;font-size:19px;letter-spacing:.10em;color:var(--chalk-soft);}
+.link-body{flex:1 1 auto;min-width:0;}
+.link-kicker{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent,var(--teal));text-shadow:var(--dust);}
+.link-title{margin:16px 0 0;font-family:var(--display);font-weight:800;font-size:52px;line-height:1.10;letter-spacing:-.020em;color:var(--chalk);text-shadow:var(--dust-strong);}
+.link-desc{margin:18px 0 0;font-size:27px;line-height:1.42;color:var(--chalk-soft);text-shadow:var(--dust);}
+.link-url{margin-top:18px;font-family:var(--hand);font-size:26px;color:var(--chalk-mute);word-break:break-all;}
+.btn{display:inline-flex;align-items:center;gap:14px;margin-top:28px;padding:16px 30px 17px;
+  border:3px solid var(--accent,var(--yellow));border-radius:26px 10px 24px 10px/10px 24px 10px 26px;
+  font-family:var(--display);font-weight:800;font-size:26px;letter-spacing:.06em;color:var(--accent,var(--yellow));
+  text-decoration:none;text-shadow:var(--dust);background:linear-gradient(160deg, rgba(242,239,228,.06), rgba(242,239,228,.015));}
+.btn .ar{display:block;width:26px;height:3px;background:currentColor;border-radius:2px;position:relative;}
+.btn .ar::after{content:"";position:absolute;right:-1px;top:-5px;width:12px;height:12px;border-top:3px solid currentColor;border-right:3px solid currentColor;transform:rotate(45deg);}
+.btn.solid{background:var(--accent,var(--yellow));color:#101C16;border-color:transparent;text-shadow:none;}
+
+/* ============================================================
+   13. MEDIA — PHONE FRAME  (holds a real looping <video>)
+   .phone-slot  → wrapper that also carries the caption + tilt
+   .phone       → the frame;  size variants .ph-lg / .ph-md / .ph-sm
+   .phone-screen→ clipped inner surface, the <video> lives here
+   .phones      → two (or three) slots side by side, taped up
+   ============================================================ */
+.phones{display:flex;align-items:flex-start;gap:56px;}
+.phone-slot{display:flex;flex-direction:column;align-items:center;flex:0 0 auto;}
+.phones>.phone-slot:nth-child(1){transform:rotate(-2.2deg);}
+.phones>.phone-slot:nth-child(2){transform:rotate(1.8deg);}
+.phones>.phone-slot:nth-child(3){transform:rotate(-1.2deg);}
+
+.phone{position:relative;z-index:1;flex:0 0 auto;width:279px;height:605px;padding:11px;
+  border:3px solid rgba(242,239,228,.55);border-radius:46px;
+  background:
+    repeating-linear-gradient(0deg, rgba(242,239,228,.045) 0 2px, transparent 2px 9px),
+    linear-gradient(170deg, rgba(242,239,228,.10), rgba(242,239,228,.02) 48%, rgba(232,197,71,.07));
+  box-shadow:
+    inset 0 0 0 3px rgba(20,35,28,.55),
+    0 0 0 3px rgba(20,35,28,.35),
+    0 26px 60px rgba(0,0,0,.50),
+    0 0 90px rgba(111,179,168,.16);
+  display:flex;align-items:center;justify-content:center;}
+/* soft "lit screen" halo behind the frame */
+.phone::before{content:"";position:absolute;left:-26px;right:-26px;top:-22px;bottom:-22px;z-index:0;pointer-events:none;
+  border-radius:70px;background:radial-gradient(closest-side, rgba(242,239,228,.14), rgba(242,239,228,.03) 62%, transparent 78%);}
+.phone.ph-lg{width:430px;height:790px;border-radius:58px;padding:13px;}
+.phone.ph-md{width:330px;height:690px;border-radius:50px;padding:12px;}
+.phone.ph-sm{width:270px;height:585px;border-radius:44px;padding:10px;}
+
+.phone-screen{position:absolute;left:11px;right:11px;top:11px;bottom:11px;z-index:1;overflow:hidden;
+  border-radius:36px;background:var(--board-deep);
+  box-shadow:inset 0 0 0 2px rgba(9,16,13,.65), inset 0 0 40px rgba(9,16,13,.55);}
+.phone.ph-lg .phone-screen{left:13px;right:13px;top:13px;bottom:13px;border-radius:46px;}
+.phone.ph-md .phone-screen{left:12px;right:12px;top:12px;bottom:12px;border-radius:40px;}
+.phone.ph-sm .phone-screen{left:10px;right:10px;top:10px;bottom:10px;border-radius:35px;}
+.phone-screen video,.phone-screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit;
+  max-width:none;max-height:none;display:block;}
+
+/* chrome sits ABOVE the video */
+.phone .notch{position:absolute;top:18px;left:50%;transform:translateX(-50%);z-index:3;width:88px;height:9px;border-radius:6px;background:rgba(242,239,228,.42);}
+.phone .home{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);z-index:3;width:104px;height:5px;border-radius:4px;background:rgba(242,239,228,.30);}
+.phone.ph-lg .notch{width:130px;height:11px;top:26px;}
+.phone.ph-lg .home{width:150px;height:6px;bottom:26px;}
+.phone.ph-md .notch{width:104px;top:22px;}
+.phone.ph-md .home{width:122px;bottom:22px;}
+/* static poster / placeholder play glyph (no video) */
+.phone .play{position:relative;z-index:2;width:86px;height:86px;border:3px solid rgba(242,239,228,.55);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.phone .play i{display:block;width:0;height:0;margin-left:7px;border-left:26px solid rgba(242,239,228,.80);border-top:16px solid transparent;border-bottom:16px solid transparent;}
+
+/* taped-up look: a torn chalk tape strip across the top corner */
+.phone-slot.tape .phone .tape-strip{position:absolute;left:50%;top:-22px;z-index:4;width:132px;height:34px;
+  transform:translateX(-50%) rotate(-4deg);background:rgba(242,239,228,.16);
+  border-left:2px dashed rgba(242,239,228,.28);border-right:2px dashed rgba(242,239,228,.28);
+  box-shadow:0 2px 8px rgba(0,0,0,.35);}
+.phone-caption{margin-top:22px;max-width:420px;text-align:center;font-family:var(--hand);font-size:27px;line-height:1.32;
+  color:var(--chalk-mute);text-shadow:var(--dust);}
+.phone-caption b{color:var(--yellow);font-weight:400;}
+
+/* ============================================================
+   14. CLOSING STATEMENT ARCHETYPE
+   ============================================================ */
+.statement{position:absolute;left:var(--m-left);top:296px;width:1620px;margin:0;
+  font-family:var(--display);font-weight:800;font-size:108px;line-height:1.12;letter-spacing:-.028em;
+  color:var(--chalk);text-shadow:var(--dust-strong);}
+.statement.sm{font-size:88px;line-height:1.14;}
+.statement.hand{font-family:var(--hand);font-weight:700;font-size:92px;line-height:1.24;letter-spacing:0;}
+.closing-sub{position:absolute;left:var(--m-left);top:790px;width:1400px;font-size:34px;line-height:1.44;color:var(--chalk-soft);text-shadow:var(--dust);}
+.closing-mark{position:absolute;left:var(--m-left);top:236px;}
+
+/* ============================================================
+   15. REVEAL (LOCKED)
+   .rv   → chalk-in for text/inline blocks
+   .rvbox→ chalk-in with a slight rotate, for boxes/cards/phones
+   .d1…d9→ stagger delays
+   ============================================================ */
+@keyframes chalkIn{
+  from{opacity:0;transform:translateY(26px);filter:blur(9px);}
+  to{opacity:1;transform:translateY(0);filter:blur(0);}
+}
+@keyframes chalkBox{
+  from{opacity:0;transform:translateY(22px) rotate(-3deg);filter:blur(8px);}
+  to{opacity:1;filter:blur(0);}
+}
+@keyframes drawRule{from{opacity:0;transform:scaleX(0);}to{opacity:.75;transform:scaleX(1);}}
+.slide.active .rv{animation:chalkIn .78s cubic-bezier(.22,.8,.26,1) both;}
+.slide.active .rvbox{animation:chalkBox .9s cubic-bezier(.22,.8,.26,1) both;}
+.slide.active .rule-top{transform-origin:0 50%;animation:drawRule .8s ease-out both;}
+.d1{animation-delay:.06s;}.d2{animation-delay:.16s;}.d3{animation-delay:.28s;}.d4{animation-delay:.40s;}
+.d5{animation-delay:.52s;}.d6{animation-delay:.62s;}.d7{animation-delay:.72s;}.d8{animation-delay:.82s;}.d9{animation-delay:.92s;}
+
+/* ============================================================
+   16. DECK CONTROLS / EDIT MODE  (outside .deck-stage)
+   ============================================================ */
+.deck-controls{position:fixed;right:18px;bottom:14px;z-index:60;pointer-events:none;}
+.deck-progress{font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:.20em;color:rgba(242,239,228,.30);}
+
+.edit-hotzone{position:fixed;left:0;top:0;width:80px;height:80px;z-index:70;}
+.edit-toggle{position:fixed;left:16px;top:16px;z-index:71;
+  padding:8px 14px;border:1px solid rgba(242,239,228,.30);border-radius:8px;
+  background:rgba(9,16,13,.82);color:rgba(242,239,228,.78);
+  font-family:var(--body);font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  cursor:pointer;opacity:0;visibility:hidden;transition:opacity .18s ease;}
+.edit-toggle.is-visible{opacity:1;visibility:visible;}
+.edit-toggle.is-on{border-color:var(--yellow);color:var(--yellow);}
+body.edit-mode [contenteditable="true"]{outline:1px dashed rgba(232,197,71,.55);outline-offset:3px;}
+body.edit-mode [contenteditable="true"]:focus{outline:2px solid var(--yellow);background:rgba(232,197,71,.08);}
+
+/* ============================================================
+   17. PRINT — satu slide per halaman.
+   Tiga hal yang TIDAK ada di deck lama dan bikin PDF-nya salah:
+   1. Tanpa @page, Chrome jatuh ke Letter portrait dan menyusutkan
+      panggung 1920px ke dalam kotak bermargin.
+   2. Papan tulisnya 100% gradient CSS (.slide background + ::before
+      debu + ::after vignette + .tray + tiap bar aksen). Tanpa
+      print-color-adjust:exact, Chrome membuang semuanya dan PDF
+      keluar jadi teks hitam di atas putih.
+   3. Reset animasi harus mencakup komponen baru. Kalau .rail-done
+      terlewat, rail tercetak di scaleX(0) alias tak terlihat.
+   ============================================================ */
+@page{size:1920px 1080px;margin:0;}
+@media print{
+  html,body,.slide,.tray,.bar,.rail-done{
+    -webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  html,body{width:1920px;height:auto;margin:0;overflow:visible;background:#fff;}
+  .deck-viewport{position:static;inset:auto;overflow:visible;background:none;}
+  .deck-stage{position:static;width:1920px;height:auto;transform:none !important;overflow:visible;background:none;}
+  .slide{position:relative;inset:auto;width:1920px;height:1080px;visibility:visible;opacity:1;pointer-events:auto;
+    page-break-after:always;break-after:page;overflow:hidden;}
+  .slide:last-child{page-break-after:auto;break-after:auto;}
+  .deck-controls,.edit-hotzone,.edit-toggle{display:none !important;}
+  /* Cukup animation:none. Dengan fill-mode ikut mati, tiap elemen balik ke
+     CSS statisnya sendiri — .rail-done ke scaleX(1), .rvbox ke rotasi .rot-*
+     miliknya. Jangan tambahkan transform:none di sini: itu justru meratakan
+     semua kemiringan hand-drawn yang memang disengaja. */
+  .slide .rv,.slide .rvbox,.slide .rule-top,
+  .slide .rail-done,.slide .lane,.slide .lanes-axis{
+    animation:none !important;opacity:1 !important;filter:none !important;}
+}
+
+
+/* ============================================================
+   18. TIMELINE RAIL — enam bab, satu menyala.
+   Tinggi total 86px:  tahun 0–26 · nub tengah 44 · nama 60–84.
+   Segmen dibuat SAMA LEBAR (283,33px), bukan proporsional waktu.
+   Alasannya: pada skala sebenarnya Bab 4 cuma dapat 6,6% (112px)
+   dan tidak terbaca — padahal justru tahun-tahun padat itu yang
+   isinya paling banyak. Karena segmen diberi label rentang tanggal
+   aslinya, tidak ada klaim skala yang perlu dibantah. Grafik yang
+   benar-benar berskala ada di .lanes, tepat di bawahnya.
+   Isi rail digenerate JS dari array ERAS — 7 instance x 6 segmen
+   kalau ditulis tangan itu 42 elemen yang harus tetap seragam.
+   ============================================================ */
+.rail{position:relative;width:1700px;height:86px;}
+.rail-line{position:absolute;left:0;right:0;top:44px;height:4px;border-radius:3px;
+  background:repeating-linear-gradient(90deg, rgba(242,239,228,.26) 0 16px, transparent 16px 26px);}
+.rail-done{position:absolute;left:0;top:44px;height:4px;border-radius:3px;
+  background:var(--chalk-mute);width:calc((var(--i) + 1) * (100% / 6));transform-origin:0 50%;}
+.rail-seg{position:absolute;top:0;height:86px;text-align:center;
+  left:calc(var(--i) * (100% / 6));width:calc(100% / 6);}
+.rail-seg .yr{position:absolute;left:0;right:0;top:0;
+  font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:.10em;
+  color:var(--chalk-mute);text-shadow:var(--dust);}
+.rail-seg .nub{position:absolute;left:50%;top:38px;transform:translateX(-50%) rotate(-6deg);
+  width:16px;height:16px;background:var(--chalk-faint);
+  border-radius:9px 3px 8px 3px/3px 8px 3px 9px;}
+.rail-seg .nm{position:absolute;left:0;right:0;top:60px;
+  font-family:var(--body);font-weight:600;font-size:18px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--chalk-faint);text-shadow:var(--dust);}
+.rail-seg.on .yr{color:var(--chalk);}
+.rail-seg.on .nm{color:var(--accent,var(--yellow));}
+.rail-seg.on .nub{width:22px;height:22px;top:35px;background:var(--accent,var(--yellow));
+  box-shadow:0 0 16px rgba(232,197,71,.45);}
+.slide.active .rail-done{animation:drawRule .9s ease-out .30s both;}
+
+/* ============================================================
+   19. LANES — Gantt. Jendela waktunya di-set di CONTAINER:
+     .lanes{--from:2017;--to:2027;}
+   dan tiap bar bawa --y0 / --y1 dalam TAHUN DESIMAL
+   (--y0:2022.92 = Des 2022). Ditulis desimal supaya bisa dicek
+   mata waktu review, tidak seperti indeks bulan.
+   Konsekuensinya satu komponen melayani dua level zoom: slide peta
+   memakai jendela 10 tahun, slide bab memakai jendela ~1,3 tahun,
+   markup dan CSS-nya identik.
+   Lebar: gutter 320 + track 1380 = 1700 tepat.
+   ============================================================ */
+.lanes{--from:2017;--to:2027;--gutter:320px;--track:1380px;position:relative;width:1700px;}
+.lanes-axis{position:relative;height:34px;margin-left:var(--gutter);width:var(--track);}
+.lanes-axis .yr{position:absolute;transform:translateX(-50%);
+  left:calc((var(--y) - var(--from)) / (var(--to) - var(--from)) * 100%);
+  font-family:var(--body);font-weight:700;font-size:18px;letter-spacing:.14em;
+  color:var(--chalk-mute);text-shadow:var(--dust);white-space:nowrap;}
+.lanes-grid{position:absolute;left:var(--gutter);top:34px;bottom:0;width:var(--track);pointer-events:none;}
+.lanes-grid i{position:absolute;top:0;bottom:0;width:2px;
+  left:calc((var(--y) - var(--from)) / (var(--to) - var(--from)) * 100%);
+  background:repeating-linear-gradient(180deg, rgba(242,239,228,.16) 0 8px, transparent 8px 18px);}
+
+.lane{position:relative;display:flex;align-items:center;height:42px;margin-bottom:9px;}
+.lane-label{flex:0 0 var(--gutter);padding-right:22px;text-align:right;
+  font-family:var(--body);font-weight:600;font-size:21px;line-height:1.2;
+  color:var(--chalk-soft);text-shadow:var(--dust);}
+.lane-track{position:relative;flex:0 0 var(--track);height:42px;}
+
+.bar{position:absolute;top:7px;height:28px;
+  left:calc((var(--y0) - var(--from)) / (var(--to) - var(--from)) * 100%);
+  width:calc((var(--y1) - var(--y0)) / (var(--to) - var(--from)) * 100%);
+  background:var(--accent,var(--yellow));opacity:.88;
+  border-radius:14px 5px 12px 5px/5px 12px 5px 14px;
+  box-shadow:inset 0 -3px 0 rgba(9,16,13,.26), inset 0 2px 0 rgba(255,255,255,.24);}
+.bar .t{position:absolute;left:14px;top:4px;white-space:nowrap;
+  font-family:var(--body);font-weight:700;font-size:17px;letter-spacing:.04em;color:#101C16;}
+/* Bar di bawah ~0,9 tahun pada jendela 10 tahun terlalu sempit untuk label
+   di dalam (Telkom OCA = 0,5 thn = 69px, label 17px butuh ~110px).
+   .lbl-out memarkir labelnya di luar tepi kanan bar. */
+.bar.lbl-out .t{left:calc(100% + 12px);color:var(--chalk-soft);text-shadow:var(--dust);}
+/* Bar yang mepet tepi kanan panggung: labelnya dipasang di kiri titik mulai,
+   supaya tidak keluar dari 1920px. */
+.bar.lbl-left .t{left:auto;right:calc(100% + 12px);color:var(--chalk-soft);text-shadow:var(--dust);}
+.bar.ghost{background:none;border:3px dashed var(--accent);box-shadow:none;opacity:1;}
+.bar.ghost .t{color:var(--accent);}
+/* Dua penugasan yang benar-benar tumpang tindih di satu jalur (mis. Infobit dan Prima
+   Avza, Des 2022 – Feb 2024) akan saling menimpa karena semua .bar absolut di top:7px.
+   .up / .dn membelah tinggi lane jadi dua baris tipis — tumpang tindihnya jadi terlihat,
+   bukan tersembunyi. Itu justru isi ceritanya. */
+.bar.up,.bar.dn{height:19px;border-radius:10px 4px 9px 4px/4px 9px 4px 10px;}
+.bar.up{top:1px;} .bar.dn{top:22px;}
+.bar.up .t,.bar.dn .t{top:1px;left:11px;font-size:15px;}
+.bar.up.lbl-out .t,.bar.dn.lbl-out .t{left:calc(100% + 10px);}
+.bar.open::after{content:"";position:absolute;right:-13px;top:50%;transform:translateY(-50%);
+  width:0;height:0;border-left:13px solid var(--accent);
+  border-top:14px solid transparent;border-bottom:14px solid transparent;}
+
+/* kejadian titik di atas sebuah track */
+.moment{position:absolute;top:0;bottom:0;width:0;
+  left:calc((var(--y) - var(--from)) / (var(--to) - var(--from)) * 100%);}
+.moment i{position:absolute;left:-9px;top:50%;width:18px;height:18px;border-radius:4px;
+  transform:translateY(-50%) rotate(45deg);background:var(--accent,var(--coral));
+  box-shadow:0 0 14px rgba(232,106,92,.45);}
+.moment .t{position:absolute;left:18px;top:50%;transform:translateY(-50%);white-space:nowrap;
+  font-family:var(--hand);font-size:22px;color:var(--accent,var(--coral));text-shadow:var(--dust);}
+.moment.flip .t{left:auto;right:18px;}
+
+/* varian rapat untuk slide bab */
+.lanes.compact .lane{height:38px;margin-bottom:8px;}
+.lanes.compact .lane-label{font-size:19px;}
+
+/* Stagger lane pakai nth-of-type internal, BUKAN .d10+ — plafon
+   template memang .d9 (0,92s) dan tidak perlu digeser. */
+.slide.active .lanes-axis{animation:chalkIn .7s cubic-bezier(.22,.8,.26,1) .38s both;}
+.slide.active .lane{animation:chalkIn .62s cubic-bezier(.22,.8,.26,1) both;}
+.lanes .lane:nth-of-type(1){animation-delay:.46s;} .lanes .lane:nth-of-type(2){animation-delay:.52s;}
+.lanes .lane:nth-of-type(3){animation-delay:.58s;} .lanes .lane:nth-of-type(4){animation-delay:.64s;}
+.lanes .lane:nth-of-type(5){animation-delay:.70s;} .lanes .lane:nth-of-type(6){animation-delay:.76s;}
+.lanes .lane:nth-of-type(7){animation-delay:.82s;}
+
+/* ============================================================
+   20. PHOTOFRAME / PHOTOSTRIP — cetakan foto yang ditempel selotip.
+   Naik pangkat dari .g1-photo di deck lama, karena deck ini pakai
+   foto di enam slide, bukan satu.
+   ============================================================ */
+.photoframe{position:relative;padding:14px 14px 52px;
+  background:rgba(242,239,228,.055);border:2px solid rgba(242,239,228,.20);border-radius:6px;
+  box-shadow:0 22px 54px rgba(0,0,0,.48);}
+.photoframe img{display:block;width:var(--pw,470px);height:var(--ph,600px);object-fit:cover;
+  object-position:var(--pp,center);border-radius:3px;max-width:none;max-height:none;}
+.photoframe .tape{position:absolute;left:50%;top:-20px;width:150px;height:34px;
+  transform:translateX(-50%) rotate(-4deg);background:rgba(242,239,228,.16);
+  border-left:2px dashed rgba(242,239,228,.28);border-right:2px dashed rgba(242,239,228,.28);
+  box-shadow:0 2px 8px rgba(0,0,0,.35);}
+.photoframe .cap{position:absolute;left:16px;right:16px;bottom:14px;
+  font-family:var(--hand);font-size:23px;line-height:1.2;color:var(--chalk-mute);}
+
+.photostrip{display:flex;align-items:flex-start;gap:30px;}
+.photostrip>*{flex:0 0 auto;}
+.photostrip>*:nth-child(1){transform:rotate(-2.2deg);}
+.photostrip>*:nth-child(2){transform:rotate(1.6deg)  translateY(18px);}
+.photostrip>*:nth-child(3){transform:rotate(-1.2deg) translateY(6px);}
+.photostrip>*:nth-child(4){transform:rotate(2.4deg)  translateY(24px);}
+
+/* ============================================================
+   21. STAT — angka besar. .card-num cuma 34px dan .listrow .n 34px;
+   slide angka butuh yang jauh lebih keras.
+   Tinggi satu sel: 96*.92 + 14 + 22 + 10 + (23*1.38*2) ≈ 215px.
+   ============================================================ */
+.stat{display:flex;flex-direction:column;}
+.stat .n{font-family:var(--display);font-weight:800;font-size:96px;line-height:.92;
+  letter-spacing:-.03em;color:var(--accent,var(--yellow));text-shadow:var(--dust-strong);}
+.stat .n sup{font-size:.40em;vertical-align:super;letter-spacing:0;}
+.stat .u{margin-top:14px;font-family:var(--body);font-weight:700;font-size:21px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--chalk-mute);text-shadow:var(--dust);}
+.stat .c{margin-top:10px;font-size:23px;line-height:1.38;color:var(--chalk-soft);text-shadow:var(--dust);}
+
+/* ============================================================
+   22. CHATSHOT — screenshot percakapan.
+   .phone-screen TIDAK bisa dipakai: dia mengunci object-fit:cover,
+   yang memotong tengah screenshot chat yang tinggi — persis memotong
+   pesan yang mau dibaca. Di sini gambar dipasang lebar penuh dari
+   atas, tingginya mengalir, dan sisanya terpotong di bawah.
+   ============================================================ */
+.chatshot{position:relative;width:var(--cw,440px);height:var(--ch,300px);overflow:hidden;
+  border:3px solid rgba(242,239,228,.34);
+  border-radius:20px 8px 18px 8px/8px 18px 8px 20px;
+  background:var(--board-deep);box-shadow:0 18px 44px rgba(0,0,0,.45);}
+.chatshot img{position:absolute;left:0;top:var(--ct,0);width:100%;height:auto;
+  max-width:none;max-height:none;}
+.chatshot .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 18px 14px;
+  background:linear-gradient(180deg,transparent,rgba(9,16,13,.90) 46%);
+  font-family:var(--hand);font-size:22px;line-height:1.26;color:var(--chalk-soft);}
+
+/* ============================================================
+   23. COVER XL — .head-lg 92px terasa kekecilan untuk sampul
+   portofolio. 116px x 1.02 = 118px per baris; judul dua baris
+   mulai y=238 berakhir y=474, masih lega di atas .cover-lead (706).
+   ============================================================ */
+.cover-head-xl{margin:0;font-family:var(--display);font-weight:800;font-size:116px;
+  line-height:1.02;letter-spacing:-.030em;color:var(--chalk);text-shadow:var(--dust-strong);}
+
+/* ============================================================
+   24. PERBAIKAN KASKADE — .pos harus menang
+   .pos dideklarasikan di bagian 1, tapi HAMPIR SEMUA arketipe komponen
+   (.cards, .maptable, .cmp, .flow, .loopback, .linkcard, .hbox, .card,
+   .quotebox, .stepbox, .rail, .lanes, .photoframe, .chatshot) menyetel
+   position:relative di bagian-bagian setelahnya. Specificity-nya sama,
+   jadi yang belakangan menang dan .pos diam-diam kehilangan daya.
+   Akibatnya --x/--y berubah arti: bukan lagi koordinat dari tepi slide,
+   tapi geseran dari posisi aliran — dan width:auto ikut melar ke 1920px
+   alih-alih menyusut ke lebar isinya. Gejalanya menipu karena elemen
+   pertama di tiap slide tetap mendarat di tempat yang benar.
+   Baris ini, ditaruh setelah semua komponen, memulihkan artinya.
+
+   transform SENGAJA tidak ikut diulang. .hbox/.card/.stepbox memakai
+   transform untuk kemiringan hand-drawn-nya; kalau .pos ikut menyetel
+   transform di sini, semua kemiringan itu rata jadi 0deg. Untuk kotak
+   yang memang ingin lurus, pakai kelas .rot-0 yang sudah ada.
+   ============================================================ */
+.pos{position:absolute;left:var(--x,110px);top:var(--y,140px);
+  width:var(--w,auto);height:var(--h,auto);}
+
+/* ============================================================
+   25. TAMBAHAN KECIL
+   ============================================================ */
+/* .maptable versi delapan baris. .tight (80px) x 8 = 640 + kepala 46 = 686 dan
+   menembus band; .dense menurunkannya ke 74px -> 592 + 46 = 638, mulai y=300
+   berakhir y=938. */
+.maptable.dense .map-row{min-height:74px;}
+.maptable.dense .map-a,.maptable.dense .map-b{font-size:26px;line-height:1.26;}
+/* Sepuluh baris: 10 x 64 = 640 + kepala 46 = 686, mulai y=296 berakhir y=982. */
+.maptable.x10 .map-row{min-height:64px;}
+.maptable.x10 .map-a,.maptable.x10 .map-b{font-size:24px;line-height:1.22;}
+.maptable.x10 .map-link .arrow{--len:78px;}
+/* baris kredensial di bawah linkcard */
+.credit{font-family:var(--body);font-weight:600;font-size:20px;letter-spacing:.10em;
+  text-transform:uppercase;color:var(--chalk-mute);text-shadow:var(--dust);}
+/* kotak berbingkai putus-putus untuk catatan jujur/koreksi */
+.caveat{border:2px dashed rgba(242,239,228,.30);border-radius:10px;padding:18px 22px 20px;
+  font-family:var(--hand);font-size:25px;line-height:1.34;color:var(--chalk-mute);}
+.caveat b{font-family:var(--body);font-weight:700;font-size:21px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent,var(--yellow));display:block;margin-bottom:8px;}
+</style>
+</head>
+<body>
+<div class="deck-viewport">
+<div class="deck-stage" id="deckStage">
+
+<!-- ================= A · PEMBUKA ================= -->
+
+<!-- ===== 01 — COVER ===== -->
+<section class="slide active visible" data-sect="Portofolio" data-sid="cover">
+  <div class="layer">
+    <div class="cover-kick kick rv d1">
+      <span class="tick"></span><span class="t">2017 — 2026</span>
+    </div>
+    <h1 class="cover-head-xl pos rv d2" style="--x:110px;--y:238px;--w:1420px">
+      Sembilan Tahun<br><span class="circled">Berkarya</span>
+    </h1>
+    <div class="cover-uline uline rv d3" style="--y:560px"><i></i><i></i></div>
+    <p class="cover-lead lead rv d4">
+      Semua yang saya kerjakan sejak 2017 — sekolah, kontrak, produk yang saya pegang,
+      dan pekerjaan di luar jam kantor yang tidak muat di CV.
+    </p>
+    <div class="cover-by rv d5">
+      <span class="name">Rochman Ramadhani Chiefto Irawan, S.Kom.</span>
+      <span class="sep"></span>
+      <span class="role">Product Owner &amp; Tech Founder</span>
+    </div>
+    <div class="cover-annot annot rv d6">
+      <span class="arw"></span>
+      Tiap angka di CV saya, buktinya ada di sini.
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 — KENALAN ===== -->
+<section class="slide" data-sect="Kenalan" data-sid="kenalan">
+  <div class="layer">
+    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">Kenalan dulu</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:228px;--w:1120px">
+      Rochman Ramadhani<br>Chiefto Irawan, S.Kom.
+    </h2>
+    <div class="tx-m pos rv d3" style="--x:110px;--y:412px;--w:1060px">
+      Product Owner &amp; Tech Founder, Skolain — berangkat dari engineering.
+    </div>
+
+    <div class="hbox glow ac-y pos rvbox d4" style="--x:110px;--y:502px;--w:1060px">
+      <div class="hbox-tag">sama seperti banyak orang</div>
+      <div class="tx-l mt-16">Saya juga lulusan <span class="mark-y">SMK</span></div>
+      <div class="hbox-text">SMKN 26 Jakarta · Sistem Informatika Jaringan · 2017–2021</div>
+    </div>
+
+    <div class="hbox ac-t pos rvbox d5" style="--x:110px;--y:706px;--w:1060px">
+      <div class="hbox-tag good">8 Agustus 2026</div>
+      <div class="tx-l mt-16">S.Kom. — <span class="mark-t">Sistem Informasi</span></div>
+      <div class="hbox-text">Binus Online Learning · kuliah sambil kerja penuh waktu · IPK 3,85, Magna Cum Laude</div>
+    </div>
+
+    <div class="photoframe pos rvbox d6" style="--x:1300px;--y:222px;--pw:470px;--ph:600px;--rot:2deg">
+      <span class="tape"></span>
+      <img src="assets/rochman.jpg" alt="Foto Rochman Ramadhani">
+      <span class="cap">sembilan tahun berkarya</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= B · GARIS WAKTU ================= -->
+
+<!-- ===== 03 — PETA LENGKAP ===== -->
+<section class="slide" data-sect="Peta" data-sid="peta">
+  <div class="layer">
+    <div class="eyebrow ac-y pos rv d1" style="--x:110px;--y:196px">
+      <span class="tick"></span><span class="t">Peta</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:240px;--w:1700px">
+      Sembilan tahun, tidak ada tahun yang kosong.
+    </h2>
+
+    <div class="rail ac-y pos rv d3" style="--x:110px;--y:356px;--w:1700px" data-on="-1"></div>
+
+    <div class="lanes ac-y pos" style="--x:110px;--y:468px;--w:1700px;--from:2017;--to:2027">
+      <div class="lanes-axis">
+        <span class="yr" style="--y:2017">2017</span>
+        <span class="yr" style="--y:2019">2019</span>
+        <span class="yr" style="--y:2021">2021</span>
+        <span class="yr" style="--y:2023">2023</span>
+        <span class="yr" style="--y:2025">2025</span>
+        <span class="yr" style="--y:2026.63">sekarang</span>
+      </div>
+      <div class="lanes-grid">
+        <i style="--y:2018"></i><i style="--y:2019"></i><i style="--y:2020"></i>
+        <i style="--y:2021"></i><i style="--y:2022"></i><i style="--y:2023"></i>
+        <i style="--y:2024"></i><i style="--y:2025"></i><i style="--y:2026"></i>
+      </div>
+
+      <div class="lane ac-n"><div class="lane-label">Sekolah &amp; kuliah</div>
+        <div class="lane-track">
+          <span class="bar" style="--y0:2017.5;--y1:2021.5"><span class="t">SMKN 26 Jakarta</span></span>
+          <span class="bar" style="--y0:2022.0;--y1:2026.6"><span class="t">Binus — S.Kom.</span></span>
+        </div></div>
+
+      <div class="lane ac-n"><div class="lane-label">Awal karier</div>
+        <div class="lane-track">
+          <span class="bar lbl-out" style="--y0:2019.0;--y1:2020.75"><span class="t">Multi Cipta</span></span>
+        </div></div>
+
+      <div class="lane ac-c"><div class="lane-label">Startup &amp; agensi</div>
+        <div class="lane-track">
+          <span class="bar" style="--y0:2020.75;--y1:2022.92"><span class="t">Lumos — Lead Fullstack</span></span>
+          <span class="bar" style="--y0:2025.5;--y1:2026.33"><span class="t">Mastah</span></span>
+        </div></div>
+
+      <div class="lane ac-t"><div class="lane-label">BRI</div>
+        <div class="lane-track">
+          <span class="bar" style="--y0:2022.92;--y1:2023.92"><span class="t">NDS</span></span>
+          <span class="bar" style="--y0:2023.92;--y1:2024.58"><span class="t">QLOLA</span></span>
+          <span class="bar" style="--y0:2024.92;--y1:2025.92"><span class="t">NDS · Senior</span></span>
+        </div></div>
+
+      <div class="lane ac-y"><div class="lane-label">Telkom</div>
+        <div class="lane-track">
+          <span class="bar lbl-out" style="--y0:2024.58;--y1:2025.0"><span class="t">OCA — biaya turun 60%</span></span>
+        </div></div>
+
+      <div class="lane ac-n"><div class="lane-label">Freelance paruh waktu</div>
+        <div class="lane-track">
+          <span class="bar up" style="--y0:2022.92;--y1:2026.08"><span class="t">Infobit — Prima Super App</span></span>
+          <span class="bar dn" style="--y0:2023.08;--y1:2024.08"><span class="t">Prima Avza</span></span>
+        </div></div>
+
+      <div class="lane ac-c"><div class="lane-label">Konsultansi &amp; produk sendiri</div>
+        <div class="lane-track">
+          <span class="bar lbl-out" style="--y0:2024.0;--y1:2024.33"><span class="t">KLHK</span></span>
+          <span class="bar open lbl-left" style="--y0:2026.417;--y1:2026.63"><span class="t">Skolain — Tech Founder</span></span>
+        </div></div>
+    </div>
+
+    <div class="annot pos rv d9" style="--x:430px;--y:876px;--w:1380px">
+      Sejak akhir 2022 selalu ada lebih dari satu yang berjalan — satu kontrak utama onsite, ditambah freelance di luar jam kerja.
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 — ANGKA ===== -->
+<section class="slide" data-sect="Peta" data-sid="angka">
+  <div class="layer">
+    <div class="eyebrow ac-c pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">Sembilan tahun</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
+      Hasilnya dalam angka.
+    </h2>
+
+    <div class="cards g3x2 pos" style="--x:110px;--y:352px">
+      <div class="card stat ac-y rvbox d3">
+        <div class="n">9</div><div class="u">tahun</div>
+        <div class="c">Dari magang waktu SMK sampai memegang produk sendiri.</div>
+      </div>
+      <div class="card stat ac-t rvbox d4">
+        <div class="n">50.000<sup>+</sup></div><div class="u">pengguna aktif</div>
+        <div class="c">Sistem HRIS nasional PT PKSS, stabil saat absensi serentak.</div>
+      </div>
+      <div class="card stat ac-c rvbox d5">
+        <div class="n">60<sup>%</sup></div><div class="u">biaya turun</div>
+        <div class="c">Migrasi backend NestJS ke Golang di Telkom OCA.</div>
+      </div>
+      <div class="card stat ac-t rvbox d6">
+        <div class="n">7 → 30<sup>+</sup></div><div class="u">anggota tim</div>
+        <div class="c">Tim teknologi Lumos, ikut langsung hiring dan onboarding.</div>
+      </div>
+      <div class="card stat ac-y rvbox d7">
+        <div class="n">10</div><div class="u">produk digarap</div>
+        <div class="c">Sekolah, bank, rumah sakit, penerbangan, HR, filantropi, hiburan digital.</div>
+      </div>
+      <div class="card stat ac-n rvbox d8">
+        <div class="n">4</div><div class="u">sektor</div>
+        <div class="c">Kesehatan · Perbankan · Pemerintah · Layanan digital</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 — BAB 1 ===== -->
+<section class="slide" data-sect="Bab 1 · 2017–2020" data-sid="bab1">
+  <div class="layer">
+    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:196px">
+      <span class="tick"></span><span class="t">Bab 1 · 2017–2020</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:240px;--w:1700px">
+      Masuk SMK, langsung cari kerja.
+    </h2>
+    <div class="rail ac-t pos rv d3" style="--x:110px;--y:352px;--w:1700px" data-on="0"></div>
+
+    <div class="cards n2 pos" style="--x:110px;--y:486px">
+      <div class="card ac-t rvbox d4">
+        <div class="card-num sm">2017</div>
+        <div class="card-rule"></div>
+        <div class="card-title">SMKN 26 Jakarta</div>
+        <div class="card-text">Sistem Informatika Jaringan dan Aplikasi, 2017–2021.
+          Jurusan yang isinya jaringan dan pemrograman, bukan teori saja.</div>
+      </div>
+      <div class="card ac-y rvbox d5">
+        <div class="card-num sm">2019</div>
+        <div class="card-rule"></div>
+        <div class="card-title">PT Multi Cipta Manajemen</div>
+        <div class="card-text">Software Developer, magang lalu paruh waktu, sampai Oktober 2020.
+          Mengantar aplikasi web internal maupun klien dari antarmuka sampai integrasi API.</div>
+        <div class="card-foot">di sini saya belajar membaca kebutuhan langsung dari penggunanya, bukan dari tiket</div>
+      </div>
+    </div>
+
+    <div class="annot pos rv d6" style="--x:110px;--y:876px;--w:1300px">
+      Sekolah pagi, ngoding sore. Bekerja sebelum lulus itu bukan prestasi — cuma keputusan yang saya ambil lebih awal.
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 — BAB 2 ===== -->
+<section class="slide" data-sect="Bab 2 · 2020–2022" data-sid="bab2">
+  <div class="layer">
+    <div class="eyebrow ac-y pos rv d1" style="--x:110px;--y:196px">
+      <span class="tick"></span><span class="t">Bab 2 · 2020–2022</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:240px;--w:1700px">
+      Tim tujuh orang jadi tiga puluh.
+    </h2>
+    <div class="rail ac-y pos rv d3" style="--x:110px;--y:352px;--w:1700px" data-on="1"></div>
+
+    <div class="cards n2 pos" style="--x:110px;--y:486px">
+      <div class="card ac-y rvbox d4">
+        <div class="card-num sm">Okt 2020</div>
+        <div class="card-rule"></div>
+        <div class="card-title">PT Lumos Inisiatif Indonesia</div>
+        <div class="card-text">Lead Fullstack Developer sampai Desember 2022. Memimpin tim backend,
+          frontend, dan mobile mengantar ERP, SCM, dan CRM ke production (Golang, Flutter).</div>
+        <div class="card-foot">tim tumbuh dari 7 menjadi 30+ seiring perusahaannya tumbuh — saya ikut langsung di hiring dan onboarding</div>
+      </div>
+      <div class="card ac-t rvbox d5">
+        <div class="card-num sm">2022</div>
+        <div class="card-rule"></div>
+        <div class="card-title">Mulai kuliah di Binus</div>
+        <div class="card-text">Sistem Informasi, kelas online, sambil kerja penuh waktu.
+          Empat tahun berikutnya dijalani barengan dengan semua yang ada di halaman-halaman setelah ini.</div>
+      </div>
+    </div>
+
+    <div class="annot pos rv d6" style="--x:110px;--y:876px;--w:1300px">
+      Pertama kali saya mengurus orang, bukan cuma kode. FSD dan TSD jadi dokumen acuan supaya kebutuhan klien tidak hilang di tengah jalan.
+    </div>
+  </div>
+</section>
+
+<!-- ===== 07 — BAB 3 ===== -->
+<section class="slide" data-sect="Bab 3 · 2022–2023" data-sid="bab3">
+  <div class="layer">
+    <div class="eyebrow ac-c pos rv d1" style="--x:110px;--y:196px">
+      <span class="tick"></span><span class="t">Bab 3 · 2022–2023</span>
+    </div>
+    <h2 class="head-sm pos rv d2" style="--x:110px;--y:248px;--w:1700px">
+      Masuk bank. Tiga penugasan jalan bersamaan.
+    </h2>
+    <div class="rail ac-c pos rv d3" style="--x:110px;--y:344px;--w:1700px" data-on="2"></div>
+
+    <div class="lanes compact ac-c pos" style="--x:110px;--y:470px;--w:1700px;--from:2022.7;--to:2024.25">
+      <div class="lanes-axis">
+        <span class="yr" style="--y:2022.92">Des 2022</span>
+        <span class="yr" style="--y:2023.5">Jun 2023</span>
+        <span class="yr" style="--y:2023.92">Des 2023</span>
+      </div>
+      <div class="lanes-grid"><i style="--y:2023"></i><i style="--y:2023.5"></i><i style="--y:2024"></i></div>
+      <div class="lane ac-t"><div class="lane-label">BRI · onsite</div>
+        <div class="lane-track"><span class="bar" style="--y0:2022.92;--y1:2023.92"><span class="t">Backend Developer — NDS</span></span></div></div>
+      <div class="lane ac-n"><div class="lane-label">Infobit · freelance</div>
+        <div class="lane-track"><span class="bar open" style="--y0:2022.92;--y1:2024.25"><span class="t">Technical Lead — Prima Super App</span></span></div></div>
+      <div class="lane ac-y"><div class="lane-label">Prima Avza · freelance</div>
+        <div class="lane-track"><span class="bar" style="--y0:2023.08;--y1:2024.08"><span class="t">Backend Engineer — sektor pemerintahan</span></span></div></div>
+    </div>
+
+    <div class="pos" style="--x:110px;--y:684px;--w:1700px">
+      <div class="listrow ac-t rv d6"><div class="n">01</div><div class="t">
+        <b>New Delivery System (BRI).</b> Aplikasi yang dipakai frontliner unit kerja untuk melayani nasabah di konter —
+        microservices di atas OpenShift, dengan SAST dan DAST masuk siklus rilis.</div></div>
+      <div class="listrow ac-n rv d7"><div class="n">02</div><div class="t">
+        <b>Prima Super App (Infobit).</b> Mengantar produk melewati tiga fase mayor, jadi penerjemah antara permintaan klien
+        dan kemampuan sistem bersama Project Manager dan UI/UX Designer.</div></div>
+      <div class="listrow ac-y rv d8"><div class="n">03</div><div class="t">
+        <b>Sektor pemerintahan (Prima Avza).</b> Executive Information System untuk Kementerian Dalam Negeri,
+        E-Database dengan role-based access control, dan digitalisasi pengelolaan ZISWAF.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 08 — BAB 4 ===== -->
+<section class="slide" data-sect="Bab 4 · 2023–2024" data-sid="bab4">
+  <div class="layer">
+    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:196px">
+      <span class="tick"></span><span class="t">Bab 4 · 2023–2024</span>
+    </div>
+    <h2 class="head-sm pos rv d2" style="--x:110px;--y:248px;--w:1700px">
+      Bank, penerbangan, dan lingkungan hidup — dalam tahun yang sama.
+    </h2>
+    <div class="rail ac-t pos rv d3" style="--x:110px;--y:344px;--w:1700px" data-on="3"></div>
+
+    <div class="lanes compact ac-t pos" style="--x:110px;--y:470px;--w:1700px;--from:2023.85;--to:2024.75">
+      <div class="lanes-axis">
+        <span class="yr" style="--y:2023.92">Des 2023</span>
+        <span class="yr" style="--y:2024.25">Apr 2024</span>
+        <span class="yr" style="--y:2024.58">Ags 2024</span>
+      </div>
+      <div class="lanes-grid"><i style="--y:2024"></i><i style="--y:2024.25"></i><i style="--y:2024.5"></i></div>
+      <div class="lane ac-t"><div class="lane-label">BRI · onsite</div>
+        <div class="lane-track"><span class="bar" style="--y0:2023.92;--y1:2024.58"><span class="t">Backend Developer — QLOLA</span></span></div></div>
+      <div class="lane ac-c"><div class="lane-label">KLHK · konsultansi</div>
+        <div class="lane-track"><span class="bar" style="--y0:2024.0;--y1:2024.33"><span class="t">SPARING &amp; CEMS</span></span></div></div>
+      <div class="lane ac-y"><div class="lane-label">Penanda</div>
+        <div class="lane-track">
+          <span class="moment ac-y" style="--y:2024.18"><i></i><span class="t">FRAMES rilis · 7 Mar</span></span>
+          <span class="moment ac-c" style="--y:2024.48"><i></i><span class="t">BRI PDC · 25 Jun</span></span>
+        </div></div>
+    </div>
+
+    <div class="pos" style="--x:110px;--y:684px;--w:1700px">
+      <div class="listrow ac-t rv d6"><div class="n">01</div><div class="t">
+        <b>QLOLA by BRI.</b> Platform digital wholesale banking untuk nasabah korporasi. Membuka jalur transaksi baru
+        lewat integrasi dengan Perum Bulog.</div></div>
+      <div class="listrow ac-c rv d7"><div class="n">02</div><div class="t">
+        <b>FRAMES, FKUI.</b> Aplikasi penilaian risiko kelelahan untuk awak penerbangan, bersama Garuda Indonesia Training Center.
+        Diluncurkan 7 Maret 2024 — commit pertama dua hari sebelumnya.</div></div>
+      <div class="listrow ac-y rv d8"><div class="n">03</div><div class="t">
+        <b>Product Development Conference BRI × Tech in Asia.</b> 25 Juni 2024. Dari sini saya mulai serius
+        belajar peran product owner, bukan cuma sisi tekniknya.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 09 — BAB 5 ===== -->
+<section class="slide" data-sect="Bab 5 · 2024–2025" data-sid="bab5">
+  <div class="layer">
+    <div class="eyebrow ac-y pos rv d1" style="--x:110px;--y:196px">
+      <span class="tick"></span><span class="t">Bab 5 · 2024–2025</span>
+    </div>
+    <h2 class="head-sm pos rv d2" style="--x:110px;--y:248px;--w:1700px">
+      Senior di dua tempat sekaligus.
+    </h2>
+    <div class="rail ac-y pos rv d3" style="--x:110px;--y:344px;--w:1700px" data-on="4"></div>
+
+    <div class="lanes compact ac-y pos" style="--x:110px;--y:470px;--w:1700px;--from:2024.45;--to:2026.45">
+      <div class="lanes-axis">
+        <span class="yr" style="--y:2024.583">Ags 2024</span>
+        <span class="yr" style="--y:2025.167">Mar 2025</span>
+        <span class="yr" style="--y:2025.75">Okt 2025</span>
+        <span class="yr" style="--y:2026.333">Mei 2026</span>
+      </div>
+      <div class="lanes-grid"><i style="--y:2025"></i><i style="--y:2025.5"></i><i style="--y:2026"></i></div>
+      <div class="lane ac-y"><div class="lane-label">Telkom · fulltime</div>
+        <div class="lane-track"><span class="bar" style="--y0:2024.58;--y1:2025.0"><span class="t">Senior SWE — OCA</span></span></div></div>
+      <div class="lane ac-t"><div class="lane-label">BRI · onsite</div>
+        <div class="lane-track">
+          <span class="bar" style="--y0:2024.92;--y1:2025.92"><span class="t">Senior SWE — NDS</span></span>
+          <span class="moment ac-c" style="--y:2025.18"><i></i></span>
+        </div></div>
+      <div class="lane ac-n"><div class="lane-label">Mastah · paruh waktu</div>
+        <div class="lane-track"><span class="bar" style="--y0:2025.5;--y1:2026.333"><span class="t">Engineering Manager</span></span></div></div>
+    </div>
+
+    <div class="pos" style="--x:110px;--y:718px;--w:1700px">
+      <div class="listrow ac-y rv d7"><div class="n">01</div><div class="t">
+        <b>Telkom OCA.</b> Memangkas biaya operasional hingga 60% lewat migrasi backend NestJS ke Golang —
+        saya yang mengusulkan dari analisis biaya infrastruktur, merencanakan, lalu memimpin eksekusinya.</div></div>
+      <div class="listrow ac-c rv d8"><div class="n">02</div><div class="t">
+        <b>Peringkat 1 kategori Supporter, periode Maret 2025.</b> Program "Support System" dalam acara
+        "The Great Appventure" di BRI, skor 10/10.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10 — BAB 6 ===== -->
+<section class="slide" data-sect="Bab 6 · 2025–2026" data-sid="bab6">
+  <div class="layer">
+    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:196px">
+      <span class="tick"></span><span class="t">Bab 6 · 2025–2026</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:240px;--w:1700px">
+      Juni 2026: berhenti jadi tamu di produk orang lain.
+    </h2>
+    <div class="rail ac-t pos rv d3" style="--x:110px;--y:352px;--w:1700px" data-on="5"></div>
+
+    <div class="cards n3 pos" style="--x:110px;--y:486px">
+      <div class="card ac-y rvbox d4">
+        <div class="card-num sm">Jul 2025</div>
+        <div class="card-rule"></div>
+        <div class="card-title">Mastah Digital</div>
+        <div class="card-text">Engineering Manager, Juli 2025 sampai Mei 2026. Menjalankan ritme Scrum penuh dengan Jira
+          sebagai satu-satunya sumber kebenaran untuk kapasitas dan alokasi tim.</div>
+      </div>
+      <div class="card ac-c rvbox d5">
+        <div class="card-num sm">Jun 2026 →</div>
+        <div class="card-rule"></div>
+        <div class="card-title">Skolain</div>
+        <div class="card-text">Tech Founder &amp; Product Owner. Produk pertama yang saya dirikan sendiri —
+          discovery, roadmap, prioritas rilis, acceptance criteria, sampai memimpin tim lintas fungsi ke production.</div>
+      </div>
+      <div class="card ac-t rvbox d6">
+        <div class="card-num sm">8 Ags 2026</div>
+        <div class="card-rule"></div>
+        <div class="card-title">Lulus Binus</div>
+        <div class="card-text">S.Kom. Sistem Informasi, IPK 3,85, Magna Cum Laude.
+          Empat tahun kuliah tanpa pernah berhenti bekerja.</div>
+      </div>
+    </div>
+
+    <div class="annot pos rv d7" style="--x:110px;--y:876px;--w:1400px">
+      Titik baliknya bukan pindah kerja. Titik baliknya waktu saya sadar keputusan tentang <b>apa</b> yang dibangun jauh lebih menentukan hasil daripada seberapa rapi membangunnya.
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11 — WISUDA ===== -->
+<section class="slide" data-sect="Bab 6 · 2025–2026" data-sid="wisuda">
+  <div class="layer">
+    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">8 Agustus 2026</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:228px;--w:1000px">
+      Empat tahun kuliah sambil kerja penuh waktu.
+    </h2>
+
+    <div class="hbox glow ac-t pos rvbox d3" style="--x:110px;--y:432px;--w:1000px">
+      <div class="hbox-tag good">sarjana</div>
+      <div class="tx-l mt-16">S.Kom. — <span class="mark-t">Sistem Informasi</span></div>
+      <div class="hbox-text">Binus Online Learning · 2022–2026 · IPK 3,85, Magna Cum Laude</div>
+    </div>
+
+    <div class="tx-l pos rv d4" style="--x:110px;--y:660px;--w:1000px">
+      Dari SMKN 26 Jakarta sampai hari ini, tidak pernah ada tahun yang saya lewati tanpa mengerjakan sesuatu.
+    </div>
+
+    <div class="annot pos rv d6" style="--x:110px;--y:830px;--w:900px">
+      <span class="arw"></span>
+      itu nama saya di layar besar
+    </div>
+
+    <div class="photoframe pos rvbox d5" style="--x:1240px;--y:190px;--pw:470px;--ph:740px;--rot:1.6deg">
+      <span class="tape"></span>
+      <video src="assets/wisuda.mp4" poster="assets/wisuda-poster.jpg"
+             muted loop playsinline preload="metadata"
+             style="width:470px;height:740px;object-fit:cover;border-radius:3px;max-width:none;max-height:none;display:block"></video>
+      <span class="cap">prosesi wisuda Binus</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= C · PRODUK ================= -->
+
+<!-- ===== 12 — DELAPAN PRODUK ===== -->
+<section class="slide" data-sect="Produk" data-sid="produk">
+  <div class="layer">
+    <div class="eyebrow ac-y pos rv d1" style="--x:110px;--y:168px">
+      <span class="tick"></span><span class="t">Produk</span>
+    </div>
+    <h2 class="head-sm pos rv d2" style="--x:110px;--y:212px;--w:1700px">
+      Sepuluh produk. Sepuluh peran yang berbeda.
+    </h2>
+
+    <div class="maptable dense x10 pos rv d3" style="--x:110px;--y:296px;--w:1700px">
+      <div class="map-head">
+        <div class="h a">Produk</div><div class="h"></div><div class="h b">Peran saya</div>
+      </div>
+      <div class="map-row"><div class="map-a">Skolain</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Tech Founder &amp; Product Owner — dari nol</div></div>
+      <div class="map-row"><div class="map-a">Dashboard keanggotaan asosiasi dokter</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Product Owner</div></div>
+      <div class="map-row"><div class="map-a">New Delivery System — BRI</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Backend lalu Senior Engineer, tiga penugasan</div></div>
+      <div class="map-row"><div class="map-a">QLOLA — BRI</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Backend Developer, integrasi mitra</div></div>
+      <div class="map-row"><div class="map-a">PrimaSejahtera — PT PKSS</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Arsitektur dari nol + infrastruktur on-premises</div></div>
+      <div class="map-row"><div class="map-a">HSE — Siloam International Hospitals</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Software Architect, memimpin 6 engineer</div></div>
+      <div class="map-row"><div class="map-a">FRAMES — FKUI</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Produk sekaligus yang membangun aplikasinya</div></div>
+      <div class="map-row"><div class="map-a">Prima Super App — Infobit</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Technical Lead, tiga fase mayor</div></div>
+      <div class="map-row"><div class="map-a">NU CARE — Nahdlatul Ulama</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Memimpin end-to-end &amp; technical direction</div></div>
+      <div class="map-row"><div class="map-a">LinkIT360</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Memimpin tim engineering &amp; roadmap teknis</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 13 — SKOLAIN: SEBELUM/SESUDAH ===== -->
+<section class="slide" data-sect="Skolain" data-sid="skolain-cmp">
+  <div class="layer">
+    <div class="eyebrow ac-c pos rv d1" style="--x:110px;--y:168px">
+      <span class="tick"></span><span class="t">Skolain · temuan lapangan</span>
+    </div>
+    <h2 class="head-sm pos rv d2" style="--x:110px;--y:212px;--w:1700px">
+      Rekap nilai berhari-hari. Data yang sama diinput dua kali.
+    </h2>
+
+    <div class="cmp pos rv d3" style="--x:110px;--y:308px">
+      <div class="cmp-head">
+        <div class="h label"></div><div class="h a">Sebelum</div><div class="h b">Sesudah</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-label">Rekap nilai</div>
+        <div class="cmp-a tone-bad">Hitungan hari, dikumpulkan manual dari banyak file.</div>
+        <div class="cmp-b tone-good">Real-time. Penilaian KBM harian dan ujian sudah tersistem.</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-label">Ujian</div>
+        <div class="cmp-a tone-bad">Kertas, digandakan, dijaga, lalu dikoreksi satu-satu.</div>
+        <div class="cmp-b tone-good">CBT dengan anti-contek dan penilaian otomatis.</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-label">Absensi</div>
+        <div class="cmp-a tone-bad">Google Form dan Excel, direkap ulang tiap akhir bulan.</div>
+        <div class="cmp-b tone-good">Modul kehadiran yang langsung masuk ke satu alur kerja.</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-label">Data pokok</div>
+        <div class="cmp-a tone-bad">Diinput dua kali — sekali di Dapodik, sekali di sistem sekolah.</div>
+        <div class="cmp-b tone-good">Integrasi Dapodik, satu sumber data.</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-label">e-Rapor</div>
+        <div class="cmp-a tone-bad">Ekspor manual, format sering tidak cocok.</div>
+        <div class="cmp-b tone-good">Modul kompatibel e-Rapor — ini yang bikin sekolah bertahan pakai.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 14 — SKOLAIN: ANGKA & MODUL ===== -->
+<section class="slide" data-sect="Skolain" data-sid="skolain">
+  <div class="layer">
+    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">Skolain · hari ini</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
+      Lima modul jadi satu alur kerja sekolah.
+    </h2>
+
+    <div class="cards n5 pos" style="--x:110px;--y:346px">
+      <div class="card ac-t rvbox d3"><div class="card-num sm">01</div><div class="card-rule"></div>
+        <div class="card-title sm">CBT</div>
+        <div class="card-text">Ujian berbasis komputer dengan anti-contek dan penilaian otomatis.</div></div>
+      <div class="card ac-y rvbox d4"><div class="card-num sm">02</div><div class="card-rule"></div>
+        <div class="card-title sm">LMS</div>
+        <div class="card-text">Materi, tugas, dan penilaian harian dalam satu tempat.</div></div>
+      <div class="card ac-c rvbox d5"><div class="card-num sm">03</div><div class="card-rule"></div>
+        <div class="card-title sm">Kehadiran</div>
+        <div class="card-text">Absensi guru dan siswa yang langsung terekap.</div></div>
+      <div class="card ac-t rvbox d6"><div class="card-num sm">04</div><div class="card-rule"></div>
+        <div class="card-title sm">Manajemen Sekolah</div>
+        <div class="card-text">Data pokok dengan integrasi Dapodik.</div></div>
+      <div class="card ac-y rvbox d7"><div class="card-num sm">05</div><div class="card-rule"></div>
+        <div class="card-title sm">E-Learning</div>
+        <div class="card-text">Belajar mandiri di luar jam tatap muka.</div></div>
+    </div>
+
+    <div class="hbox ac-t rot-0 pos rvbox d8" style="--x:110px;--y:652px;--w:1700px">
+      <div class="hstack gap-64">
+        <div class="fixed-w" style="width:470px">
+          <div class="hbox-tag good">adopsi</div>
+          <div class="tx-l mt-16">1.600+ pengguna aktif</div>
+          <div class="hbox-text">Guru, siswa, dan operator — bukan berhenti di akun admin.</div>
+        </div>
+        <div class="fixed-w" style="width:470px">
+          <div class="hbox-tag">mitra pengembangan</div>
+          <div class="tx-l mt-16">SMK Jakarta Pusat 1</div>
+          <div class="hbox-text">Sekolah tempat produk ini dibangun dan diuji langsung di kelas.</div>
+        </div>
+        <div class="grow">
+          <div class="hbox-tag good">klien berlangganan</div>
+          <div class="tx-l mt-16">SMKS YP 17 Baradatu, Lampung</div>
+          <div class="hbox-text">Menemukan Skolain lewat media sosial kami, lalu berlangganan sampai sekarang.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="annot pos rv d9" style="--x:110px;--y:928px;--w:1700px">
+      Arsitektur multi-tenant yang saya rancang sendiri menjaga biaya tetap stabil sekalipun beban puncak ujian serentak.
+    </div>
+  </div>
+</section>
+
+<!-- ===== 15 — SKOLAIN: CARA KERJA PO ===== -->
+<section class="slide" data-sect="Skolain" data-sid="skolain-po">
+  <div class="layer">
+    <div class="eyebrow ac-y pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">Skolain · peran saya</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
+      Dari keluhan guru sampai rilis.
+    </h2>
+
+    <div class="flow pos" style="--x:110px;--y:376px;--w:1700px">
+      <div class="stepbox ac-c rvbox d3"><div class="step-num"><span class="n">01</span><span class="dot"></span></div>
+        <div class="step-title">Discovery</div>
+        <div class="step-text">Duduk bareng guru, operator, dan kepala sekolah. Cari keluhan yang paling sering, bukan yang paling nyaring.</div></div>
+      <div class="flow-arrow"><span class="arrow"></span></div>
+      <div class="stepbox ac-y rvbox d4"><div class="step-num"><span class="n">02</span><span class="dot"></span></div>
+        <div class="step-title">User story &amp; acceptance criteria</div>
+        <div class="step-text">Temuan diubah jadi keputusan scope yang siap dieksekusi tim, dituangkan di Jira.</div></div>
+      <div class="flow-arrow"><span class="arrow"></span></div>
+      <div class="stepbox ac-t rvbox d5"><div class="step-num"><span class="n">03</span><span class="dot"></span></div>
+        <div class="step-title">Alur &amp; sequence</div>
+        <div class="step-text">User flow dan sequence diagram di Mermaid, supaya tidak ada bagian yang ditebak sendiri-sendiri.</div></div>
+      <div class="flow-arrow"><span class="arrow"></span></div>
+      <div class="stepbox ac-y rvbox d6"><div class="step-num"><span class="n">04</span><span class="dot"></span></div>
+        <div class="step-title">Rilis</div>
+        <div class="step-text">Prioritas rilis, onboarding, dan pelatihan guru sampai produknya benar-benar dipakai.</div></div>
+      <div class="flow-arrow"><span class="arrow"></span></div>
+      <div class="stepbox ac-c rvbox d7"><div class="step-num"><span class="n">05</span><span class="dot"></span></div>
+        <div class="step-title">Ukur</div>
+        <div class="step-text">Feedback lapangan jadi bahan iterasi kuartal berikutnya.</div></div>
+    </div>
+
+    <div class="loopback pos rv d8" style="--x:110px;--y:706px">
+      <div class="t">Prioritas berbasis dampak, bukan berbasis permintaan yang paling nyaring saat demo.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 16 — PRIMASEJAHTERA ===== -->
+<section class="slide" data-sect="Produk" data-sid="primasejahtera">
+  <div class="layer">
+    <div class="eyebrow ac-c pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">PrimaSejahtera · PT PKSS</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
+      50.000 karyawan absen di jam yang sama.
+    </h2>
+    <p class="lead pos rv d3" style="--x:110px;--y:340px;--w:1500px">
+      Sistem HRIS berskala nasional yang harus tetap tenang justru di menit ketika semua orang memakainya sekaligus.
+    </p>
+
+    <div class="cards n3 pos" style="--x:110px;--y:470px">
+      <div class="card ac-c rvbox d4"><div class="card-num sm">Arsitektur</div><div class="card-rule"></div>
+        <div class="card-title">Dari nol</div>
+        <div class="card-text">Domain model, API design, dan strategi scaling untuk trafik high-concurrency.
+          Dibangun dengan Rust dan Flutter.</div></div>
+      <div class="card ac-y rvbox d5"><div class="card-num sm">Infrastruktur</div><div class="card-rule"></div>
+        <div class="card-title">On-premises, saya setup sendiri</div>
+        <div class="card-text">KVM virtualization berisi 15 virtual machine, diorkestrasi Rancher dan RKE2 Kubernetes.</div></div>
+      <div class="card ac-t rvbox d6"><div class="card-num sm">Observability</div><div class="card-rule"></div>
+        <div class="card-title">LGTM Stack</div>
+        <div class="card-text">Loki, Grafana, Tempo, Mimir sebagai platform pemantauan seluruh service.</div></div>
+    </div>
+
+    <div class="annot pos rv d7" style="--x:110px;--y:838px;--w:1500px">
+      <span class="arw"></span>
+      Puncak trafiknya bukan sepanjang hari — cuma beberapa menit tiap pagi, dan justru di menit itu sistemnya tidak boleh goyah.
+    </div>
+  </div>
+</section>
+
+<!-- ===== 17 — HSE SILOAM ===== -->
+<section class="slide" data-sect="Produk" data-sid="siloam">
+  <div class="layer">
+    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">HSE · Siloam International Hospitals</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
+      Sistem keselamatan untuk semua unit rumah sakit.
+    </h2>
+
+    <div class="linkcard pos" style="--x:110px;--y:376px;--w:1700px">
+      <div class="thumb md rvbox d3">
+        <video src="assets/siloam-hse.mp4" poster="assets/siloam-hse-poster.jpg"
+               muted loop playsinline preload="metadata"></video>
+      </div>
+      <div class="grow rv d4">
+        <div class="link-kicker">Health, Safety &amp; Environment</div>
+        <div class="items lg mt-16">
+          <div class="item"><span class="bx"></span><span class="tx">Dipakai seluruh unit rumah sakit dan head office, <b>500+ pengguna harian</b>.</span></div>
+          <div class="item"><span class="bx"></span><span class="tx">Sebagai Software Architect, <b>memimpin 6 engineer</b> dan memegang keputusan arsitektur, code review, dan delivery timeline.</span></div>
+          <div class="item"><span class="bx"></span><span class="tx">Backend Rust; frontend Bun, Vite, React.</span></div>
+          <div class="item"><span class="bx"></span><span class="tx">Seluruh infrastruktur di AWS — ECS, ECR, RDS PostgreSQL, CloudWatch, S3, ALB, VPC, IAM.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot rv d6">
+      <span class="mk"></span>
+      <span class="ft">Konteks rumah sakit itu <b>mission-critical</b> — <em>sistem mati berarti insiden tidak tercatat.</em></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 18 — QLOLA ===== -->
+<section class="slide" data-sect="Produk" data-sid="qlola">
+  <div class="layer">
+    <div class="eyebrow ac-y pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">QLOLA by BRI</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
+      Satu integrasi yang membuka jalur transaksi baru.
+    </h2>
+    <p class="lead pos rv d3" style="--x:110px;--y:340px;--w:1500px">
+      QLOLA adalah platform digital wholesale banking BRI untuk nasabah korporasi. Saya di sisi backend, pada fase integrasi mitra.
+    </p>
+
+    <div class="cards n3 pos" style="--x:110px;--y:470px">
+      <div class="card ac-y rvbox d4"><div class="card-num sm">01</div><div class="card-rule"></div>
+        <div class="card-title">Integrasi Perum Bulog</div>
+        <div class="card-text">Membuka jalur transaksi baru bagi nasabah korporasi lewat integrasi dengan salah satu mitra strategis berskala nasional.</div></div>
+      <div class="card ac-t rvbox d5"><div class="card-num sm">02</div><div class="card-rule"></div>
+        <div class="card-title">Otomasi Rundeck</div>
+        <div class="card-text">Mengurangi intervensi manual tim operasional pada proses harian lewat otomasi dan orkestrasi.</div></div>
+      <div class="card ac-c rvbox d6"><div class="card-num sm">03</div><div class="card-rule"></div>
+        <div class="card-title">Uji beban Locust</div>
+        <div class="card-text">Memastikan kesiapan sistem sebelum rilis, sesuai tuntutan keandalan layanan nasabah korporasi.</div></div>
+    </div>
+
+    <div class="foot rv d7">
+      <span class="mk"></span>
+      <span class="ft">Yang saya bawa dari sini bukan cuma tekniknya — <em>tapi bagaimana produk bank disusun, diuji, dan dirilis.</em></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 19 — TELKOM OCA ===== -->
+<section class="slide" data-sect="Produk" data-sid="oca">
+  <div class="layer">
+    <div class="eyebrow ac-c pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">Telkom · Omni Communication Assistant</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
+      Biaya operasional turun sampai <span class="circled">60%</span>.
+    </h2>
+
+    <div class="flow pos" style="--x:110px;--y:382px;--w:1180px">
+      <div class="stepbox ac-c rvbox d3"><div class="step-num"><span class="n">01</span><span class="dot"></span></div>
+        <div class="step-title">Saya usulkan</div>
+        <div class="step-text">Dari analisis biaya infrastruktur, bukan dari keinginan ganti bahasa.</div></div>
+      <div class="flow-arrow"><span class="arrow"></span></div>
+      <div class="stepbox ac-y rvbox d4"><div class="step-num"><span class="n">02</span><span class="dot"></span></div>
+        <div class="step-title">Saya rencanakan</div>
+        <div class="step-text">Migrasi backend NestJS ke Golang, bertahap, tanpa menghentikan layanan.</div></div>
+      <div class="flow-arrow"><span class="arrow"></span></div>
+      <div class="stepbox ac-t rvbox d5"><div class="step-num"><span class="n">03</span><span class="dot"></span></div>
+        <div class="step-title">Saya pimpin</div>
+        <div class="step-text">Eksekusinya bersama tim, sampai angkanya benar-benar turun.</div></div>
+    </div>
+
+    <div class="items lg pos rv d6" style="--x:1360px;--y:390px;--w:450px">
+      <div class="item"><span class="bx"></span><span class="tx">Kanal pelanggan baru: <b>Jatis</b>, <b>Meta</b> (WhatsApp, Messenger), <b>TikTok</b>.</span></div>
+      <div class="item"><span class="bx"></span><span class="tx">Observability Prometheus, LGTM Stack, Datadog.</span></div>
+      <div class="item"><span class="bx"></span><span class="tx">Microservices event-driven berbasis Kafka dan CDC dari MongoDB, di Alibaba Cloud.</span></div>
+    </div>
+
+    <div class="annot pos rv d8" style="--x:110px;--y:790px;--w:1180px">
+      <span class="arw"></span>
+      Ini pertama kalinya saya mengusulkan sesuatu berdasarkan ongkos, bukan berdasarkan selera teknis. Ternyata itu yang didengar.
+    </div>
+  </div>
+</section>
+
+<!-- ===== 20 — TIGA KALI BRI ===== -->
+<section class="slide" data-sect="Produk" data-sid="bri">
+  <div class="layer">
+    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">BRI · tiga penugasan</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
+      Tiga kali dikontrak bank yang sama.
+    </h2>
+
+    <div class="lanes ac-t pos" style="--x:110px;--y:352px;--w:1700px;--from:2022.8;--to:2026.1;--gutter:200px;--track:1500px">
+      <div class="lanes-axis">
+        <span class="yr" style="--y:2023">2023</span>
+        <span class="yr" style="--y:2024">2024</span>
+        <span class="yr" style="--y:2025">2025</span>
+        <span class="yr" style="--y:2026">2026</span>
+      </div>
+      <div class="lanes-grid"><i style="--y:2023"></i><i style="--y:2024"></i><i style="--y:2025"></i><i style="--y:2026"></i></div>
+      <div class="lane ac-t"><div class="lane-label">Kontrak</div>
+        <div class="lane-track">
+          <span class="bar" style="--y0:2022.92;--y1:2023.92"><span class="t">NDS · Backend Developer</span></span>
+          <span class="bar" style="--y0:2023.92;--y1:2024.58"><span class="t">QLOLA</span></span>
+          <span class="bar" style="--y0:2024.92;--y1:2025.92"><span class="t">NDS · Senior SWE</span></span>
+        </div></div>
+    </div>
+
+    <div class="pos" style="--x:110px;--y:512px;--w:1700px">
+      <div class="listrow ac-t rv d5"><div class="n">01</div><div class="t">
+        <b>Des 2022 – Des 2023 · NDS.</b> Membangun dan menjaga aplikasi layanan frontliner unit kerja,
+        microservices di atas OpenShift. Mempersingkat waktu penelusuran masalah produksi lewat ELK Stack, Kafka, dan Jaeger.</div></div>
+      <div class="listrow ac-y rv d6"><div class="n">02</div><div class="t">
+        <b>Des 2023 – Ags 2024 · QLOLA.</b> Pindah ke sisi wholesale banking. Bekerja dalam siklus rilis perbankan
+        yang menuntut verifikasi berjenjang sebelum production.</div></div>
+      <div class="listrow ac-c rv d7"><div class="n">03</div><div class="t">
+        <b>Des 2024 – Des 2025 · NDS, kembali sebagai Senior.</b> Menahan penurunan kualitas kode lewat code review
+        dan penegakan coding standard, sekaligus menjadi rujukan teknis bagi engineer lain. SAST, DAST, dan SonarQube
+        jadi bagian siklus rilis, bukan pemeriksaan di akhir.</div></div>
+    </div>
+
+    <div class="annot pos rv d9" style="--x:110px;--y:880px;--w:1500px">
+      Dipanggil balik itu penilaian yang tidak bisa saya tulis sendiri di CV.
+    </div>
+  </div>
+</section>
+
+<!-- ===== 21 — NU CARE & PEMERINTAHAN ===== -->
+<section class="slide" data-sect="Produk" data-sid="nucare">
+  <div class="layer">
+    <div class="eyebrow ac-y pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">Filantropi &amp; pemerintahan</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
+      Zakat, data kementerian, dan layanan warga.
+    </h2>
+
+    <div class="cards n3 pos" style="--x:110px;--y:376px">
+      <div class="card ac-y rvbox d3"><div class="card-num sm">NU CARE</div><div class="card-rule"></div>
+        <div class="card-title">Platform ZISWAF Nahdlatul Ulama</div>
+        <div class="card-text">Aplikasi mobile pengumpulan zakat, infaq, sedekah, dan wakaf yang mendukung digitalisasi
+          filantropi berskala nasional — dan harus tetap andal 24 jam, termasuk saat lonjakan donasi Ramadan.</div>
+        <div class="card-foot">memimpin end-to-end development dan menentukan technical direction dari konsep hingga production
+          (Golang, Flutter, microservices, RKE2, LGTM)</div></div>
+      <div class="card ac-t rvbox d4"><div class="card-num sm">Kemendagri</div><div class="card-rule"></div>
+        <div class="card-title">Executive Information System</div>
+        <div class="card-text">Backend agregasi data dan endpoint dashboard, menyediakan data analitik siap pakai
+          untuk pengambilan keputusan eksekutif.</div></div>
+      <div class="card ac-c rvbox d5"><div class="card-num sm">E-Database</div><div class="card-rule"></div>
+        <div class="card-title">Permintaan data, dirapikan</div>
+        <div class="card-text">Alur permintaan data internal maupun publik dengan role-based access control
+          dan pipeline pengolahan data.</div></div>
+    </div>
+
+    <div class="foot rv d7">
+      <span class="mk"></span>
+      <span class="ft">Yang paling mahal di sini <b>bukan downtime-nya</b> — <em>tapi kepercayaannya.</em></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 22 — LINKIT360 & PRIMA SUPER APP ===== -->
+<section class="slide" data-sect="Produk" data-sid="linkit">
+  <div class="layer">
+    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">LinkIT360 &amp; Prima Super App</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
+      Jutaan transaksi, dan satu aplikasi yang bertahan tiga fase.
+    </h2>
+
+    <div class="cards n2 pos" style="--x:110px;--y:376px">
+      <div class="card ac-t rvbox d3"><div class="card-num sm">LinkIT360</div><div class="card-rule"></div>
+        <div class="card-title">Value-Added Services</div>
+        <div class="card-text">Ekosistem produk hiburan digital — game dan konten interaktif — yang menangani
+          <b>jutaan transaksi per bulan</b>. Memimpin tim engineering dan memegang technical roadmap,
+          performance optimization, serta integrasi dengan mitra konten dan payment gateway.</div>
+        <div class="card-foot">Node.js, Golang, arsitektur event-driven, PostgreSQL</div></div>
+      <div class="card ac-y rvbox d4"><div class="card-num sm">Prima Super App</div><div class="card-rule"></div>
+        <div class="card-title">Tiga fase mayor, tanpa putus</div>
+        <div class="card-text">Mengantar produk dari V1 hingga V3 sebagai Technical Lead. Menaikkan throughput
+          sekaligus memangkas penggunaan resource lewat migrasi backend ke Golang beserta perombakan state management
+          seluruh modul di fase V3.</div>
+        <div class="card-foot">absensi tetap bisa dilakukan di lokasi berkonektivitas terbatas lewat offline mode —
+          menjawab keluhan lapangan terbesar klien</div></div>
+    </div>
+
+    <div class="annot pos rv d6" style="--x:110px;--y:846px;--w:1600px">
+      Tiga tahun di produk yang sama mengajarkan hal yang tidak diajarkan proyek pendek: apa yang terjadi pada keputusan arsitektur setelah dua tahun dipakai orang.
+    </div>
+  </div>
+</section>
+
+<!-- ===== 23 — STACK ===== -->
+<section class="slide" data-sect="Produk" data-sid="stack">
+  <div class="layer">
+    <div class="eyebrow ac-c pos rv d1" style="--x:110px;--y:168px">
+      <span class="tick"></span><span class="t">Bekal teknis</span>
+    </div>
+    <h2 class="head-sm pos rv d2" style="--x:110px;--y:212px;--w:1700px">
+      Yang benar-benar saya pakai di produksi.
+    </h2>
+
+    <div class="maptable dense pos rv d3" style="--x:110px;--y:300px">
+      <div class="map-head">
+        <div class="h a">Bidang</div><div class="h"></div><div class="h b">Yang dipakai di produksi</div>
+      </div>
+      <div class="map-row"><div class="map-a">Bahasa &amp; framework</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Golang, Rust, React, NextJS, Vite, Bun, Node.js, Flutter</div></div>
+      <div class="map-row"><div class="map-a">Arsitektur</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Microservices, event-driven, domain-driven, multi-tenant</div></div>
+      <div class="map-row"><div class="map-a">Data &amp; antrean</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">PostgreSQL, MySQL, MongoDB, Amazon RDS · RabbitMQ, Kafka, Redis</div></div>
+      <div class="map-row"><div class="map-a">Cloud &amp; on-premises</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">AWS, Alibaba Cloud, KVM virtualization, infrastruktur on-premises</div></div>
+      <div class="map-row"><div class="map-a">Container &amp; orkestrasi</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Docker, OpenShift, RKE2, K3s, Rancher</div></div>
+      <div class="map-row"><div class="map-a">Observability</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Jaeger, OpenTelemetry, Prometheus, LGTM Stack, Datadog, ELK Stack</div></div>
+      <div class="map-row"><div class="map-a">Kualitas &amp; rilis</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">GitLab CI/CD, Jenkins, SonarQube, SAST, DAST, Rundeck · ghz, Locust</div></div>
+      <div class="map-row"><div class="map-a">Alat kerja produk</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Jira, Notion, Figma, Metabase · Mermaid, PlantUML, ERD, sequence diagram</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= D · DI LUAR KANTOR ================= -->
+
+<!-- ===== 24 — BEAT ===== -->
+<section class="slide" data-sect="Di luar kantor" data-sid="jeda-luar">
+  <div class="layer">
+    <div class="q-veil"></div>
+    <div class="qmark">?</div>
+    <div class="qblock mid">
+      <div class="eyebrow ac-y rv d1"><span class="tick"></span><span class="t">Di luar kantor</span></div>
+      <h2 class="qhead two-line rv d2">Yang tidak muat<br>di CV.</h2>
+      <div class="qrule rv d3"><i></i><i></i></div>
+      <p class="qsub rv d4">
+        Sebagian yang paling saya banggakan tidak punya kolom di CV — bukan jabatan, bukan kontrak penuh waktu.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 25 — FRAMES ===== -->
+<section class="slide" data-sect="FRAMES" data-sid="frames">
+  <div class="layer">
+    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:170px">
+      <span class="tick"></span><span class="t">FRAMES · 7 Maret 2024</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:214px;--w:1700px">
+      Aplikasi ukur kelelahan untuk awak penerbangan.
+    </h2>
+
+    <div class="linkcard pos" style="--x:110px;--y:352px;--w:1700px">
+      <div class="thumb md rvbox d3">
+        <img src="assets/frames-launch-01.jpg" alt="Peluncuran FRAMES di Fakultas Kedokteran Universitas Indonesia">
+      </div>
+      <div class="grow rv d4">
+        <div class="link-kicker">Fatigue Risk Assessment with MEdical adviceS</div>
+        <div class="tx-m mt-24" style="line-height:1.44">
+          Diluncurkan Program Studi Spesialis Kedokteran Penerbangan, Departemen Ilmu Kedokteran Komunitas,
+          <b>Fakultas Kedokteran Universitas Indonesia</b> — dikembangkan berkolaborasi dengan
+          <b>Garuda Indonesia Training Center</b> dan para pakar kedokteran.
+        </div>
+        <div class="tx-m mt-24" style="line-height:1.44">
+          Menilai risiko kelelahan, tingkat aktivitas fisik, dan kebiasaan tidur awak penerbangan,
+          dan dirancang agar bisa diintegrasikan ke sistem maskapai maupun penerbangan militer.
+        </div>
+        <div class="credit mt-24">Peran saya: memegang produk sekaligus membangun aplikasinya</div>
+      </div>
+    </div>
+
+    <div class="foot rv d6">
+      <span class="mk"></span>
+      <span class="ft">Kelelahan awak pesawat itu <b>isu keselamatan</b>, <em>dan sebelum ini penilaiannya belum ada yang mandiri.</em></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 26 — FRAMES: ISI ===== -->
+<section class="slide" data-sect="FRAMES" data-sid="frames-detail">
+  <div class="layer">
+    <div class="eyebrow ac-y pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">FRAMES · yang saya bangun</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1030px">
+      Dari instrumen dokter jadi kuesioner yang bisa diisi sendiri.
+    </h2>
+
+    <div class="items lg pos rv d3" style="--x:110px;--y:396px;--w:1000px">
+      <div class="item"><span class="bx"></span><span class="tx">Mesin kuesioner dengan riwayat penilaian per pengguna — hasilnya bisa dibandingkan antar-waktu, bukan sekali pakai.</span></div>
+      <div class="item"><span class="bx"></span><span class="tx">Pertanyaan <b>kebiasaan tidur</b> dan <b>aktivitas fisik</b> punya alur dan layar detailnya sendiri, karena cara menilainya memang berbeda.</span></div>
+      <div class="item"><span class="bx"></span><span class="tx">Profil penerbang: jam terbang, nomor lisensi, tipe pesawat, rating, dan maskapai — supaya hasil penilaian terbaca dalam konteks operasional.</span></div>
+      <div class="item"><span class="bx"></span><span class="tx">Pengingat terjadwal lewat <b>Firebase Cloud Messaging</b>, dan penyimpanan lokal <b>Room</b> supaya penilaian tetap bisa diisi tanpa koneksi.</span></div>
+    </div>
+
+    <div class="caveat ac-y pos rvbox d4" style="--x:110px;--y:812px;--w:1000px">
+      <b>catatan</b>
+      Kotlin, arsitektur MVVM, 108 berkas. Commit pertama 5 Maret 2024 — dua hari sebelum acara peluncuran.
+    </div>
+
+    <div class="phones pos" style="--x:1232px;--y:236px">
+      <div class="phone-slot rvbox d5">
+        <div class="phone ph-sm">
+          <span class="notch"></span>
+          <div class="phone-screen">
+            <video src="assets/frames-acara-01.mp4" poster="assets/frames-acara-01-poster.jpg"
+                   muted loop playsinline preload="metadata"></video>
+          </div>
+          <span class="home"></span>
+        </div>
+        <div class="phone-caption">acara peluncuran di FKUI</div>
+      </div>
+      <div class="phone-slot rvbox d6">
+        <div class="phone ph-sm">
+          <span class="notch"></span>
+          <div class="phone-screen">
+            <video src="assets/frames-acara-02.mp4" poster="assets/frames-acara-02-poster.jpg"
+                   muted loop playsinline preload="metadata"></video>
+          </div>
+          <span class="home"></span>
+        </div>
+        <div class="phone-caption">disiarkan hibrida ke peserta</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 27 — KLHK ===== -->
+<section class="slide" data-sect="KLHK" data-sid="klhk">
+  <div class="layer">
+    <div class="eyebrow ac-c pos rv d1" style="--x:110px;--y:170px">
+      <span class="tick"></span><span class="t">KLHK · Januari–April 2024</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:214px;--w:1700px">
+      Ikut menyusun aturan pemantauan lingkungan nasional.
+    </h2>
+
+    <div class="linkcard pos" style="--x:110px;--y:382px;--w:1700px">
+      <div class="thumb md rvbox d3">
+        <video src="assets/klhk-sparing.mp4" poster="assets/klhk-sparing-poster.jpg"
+               muted loop playsinline preload="metadata"></video>
+      </div>
+      <div class="grow rv d4">
+        <div class="link-kicker">Kementerian Lingkungan Hidup dan Kehutanan</div>
+        <div class="items lg mt-16">
+          <div class="item"><span class="bx"></span><span class="tx">Terlibat dalam sesi penyusunan aturan teknis <b>SPARING</b> dan <b>CEMS</b> — ketentuan nasional tentang bagaimana industri wajib memantau dan melaporkan buangannya secara terus-menerus.</span></div>
+          <div class="item"><span class="bx"></span><span class="tx"><b>SPARING</b> untuk <b>mutu air limbah</b>: COD, BOD, pH, TSS, dan debit.</span></div>
+          <div class="item"><span class="bx"></span><span class="tx"><b>CEMS</b> untuk <b>emisi udara dari cerobong</b>: SO<sub>2</sub>, NO<sub>x</sub>, O<sub>2</sub>, dan partikulat.</span></div>
+          <div class="item"><span class="bx"></span><span class="tx">Membangun platform yang mengirim data pemantauan ke sistem nasional secara otomatis dan terjadwal, dengan jalur pelaporan manual sebagai cadangan saat pengiriman gagal.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot rv d6">
+      <span class="mk"></span>
+      <span class="ft">Dua medium yang berbeda, <em>dan sering dikira satu hal yang sama.</em></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 28 — DASHBOARD DOKTER ===== -->
+<section class="slide" data-sect="Asosiasi dokter" data-sid="dokter">
+  <div class="layer">
+    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">Asosiasi dokter nasional</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1090px">
+      Dashboard keanggotaan untuk 150.000 dokter umum.
+    </h2>
+
+    <div class="pill ac-t pos rv d3" style="--x:110px;--y:410px">sudah rilis</div>
+
+    <div class="items lg pos rv d4" style="--x:110px;--y:462px;--w:1000px">
+      <div class="item"><span class="bx"></span><span class="tx">Sebagai <b>Product Owner</b>: memegang discovery, penentuan lingkup, dan prioritas rilis.</span></div>
+      <div class="item"><span class="bx"></span><span class="tx">Keanggotaan berskala nasional — dilingkup sampai <b>150.000 pengguna dokter umum</b> di seluruh Indonesia.</span></div>
+      <div class="item"><span class="bx"></span><span class="tx">Diskusi kebutuhan dilakukan langsung bersama badan kedokterannya, bukan lewat perantara.</span></div>
+    </div>
+
+    <div class="caveat ac-n pos rvbox d5" style="--x:110px;--y:790px;--w:1000px">
+      <b>yang tidak saya klaim</b>
+      Angka 150.000 itu lingkup rancangan, bukan jumlah pengguna aktif hari ini.
+      Nama organisasinya saya tahan sampai boleh disebut.
+    </div>
+
+    <div class="phones pos" style="--x:1260px;--y:200px">
+      <div class="phone-slot rvbox d6">
+        <div class="phone ph-md">
+          <span class="notch"></span>
+          <div class="phone-screen">
+            <video src="assets/kedokteran-01.mp4" poster="assets/kedokteran-01-poster.jpg"
+                   muted loop playsinline preload="metadata"></video>
+          </div>
+          <span class="home"></span>
+        </div>
+        <div class="phone-caption">hari diskusi kebutuhan</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 29 — ADVISORY: COACH RHEO ===== -->
+<section class="slide" data-sect="Advisory" data-sid="advisory">
+  <div class="layer">
+    <div class="eyebrow ac-y pos rv d1" style="--x:110px;--y:176px">
+      <span class="tick"></span><span class="t">Pendampingan privat · 2026</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:220px;--w:1700px">
+      Guru AI privat untuk satu pemilik usaha.
+    </h2>
+
+    <p class="lead pos rv d3" style="--x:110px;--y:344px;--w:740px">
+      Coach Rheo menjalankan doatrto.com dan beberapa unit bisnis lain.
+      Saya mendampinginya memakai AI untuk operasional sehari-hari.
+    </p>
+
+    <div class="items lg pos rv d4" style="--x:110px;--y:500px;--w:740px">
+      <div class="item"><span class="bx"></span><span class="tx">Memilih kasus pakai yang benar-benar berdampak, bukan yang paling ramai dibicarakan.</span></div>
+      <div class="item"><span class="bx"></span><span class="tx">Menyusun alur kerja berbantuan AI untuk pekerjaan yang berulang tiap hari.</span></div>
+      <div class="item"><span class="bx"></span><span class="tx">Mendampingi langsung sampai timnya bisa jalan tanpa saya.</span></div>
+    </div>
+
+    <div class="annot pos rv d5" style="--x:110px;--y:872px;--w:740px">
+      Sesi satu-satu, bukan pelatihan kelas. Materinya menyesuaikan masalah bisnisnya hari itu.
+    </div>
+
+    <div class="photostrip pos" style="--x:900px;--y:350px;--w:910px">
+      <div class="photoframe rvbox d6" style="--pw:250px;--ph:445px">
+        <span class="tape"></span>
+        <img src="assets/caezar-01.jpg" alt="Sesi pendampingan AI bersama Coach Rheo">
+        <span class="cap">sesi kerja</span></div>
+      <div class="photoframe rvbox d7" style="--pw:250px;--ph:445px">
+        <span class="tape"></span>
+        <img src="assets/caezar-03.jpg" alt="Membedah kasus pakai AI">
+        <span class="cap">bedah kasus pakai</span></div>
+      <div class="photoframe rvbox d8" style="--pw:250px;--ph:445px">
+        <span class="tape"></span>
+        <img src="assets/caezar-02.jpg" alt="Coach Rheo dan Rochman Ramadhani">
+        <span class="cap">doatrto.com</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 30 — ADVISORY: HEGEMONI GROUP ===== -->
+<section class="slide" data-sect="Advisory" data-sid="hegemoni">
+  <div class="layer">
+    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:176px">
+      <span class="tick"></span><span class="t">Hegemoni Group · Mei 2026</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:220px;--w:1000px">
+      Konsultan IT dan mitra teknologi.
+    </h2>
+
+    <p class="lead pos rv d3" style="--x:110px;--y:400px;--w:1000px">
+      Mendampingi keputusan teknologi dan arah implementasi sistem internal Hegemoni Group.
+    </p>
+
+    <div class="items lg pos rv d4" style="--x:110px;--y:534px;--w:1000px">
+      <div class="item"><span class="bx"></span><span class="tx">Menilai ongkos sebuah pilihan teknis sejak awal, bukan setelah tim terlanjur mengerjakannya.</span></div>
+      <div class="item"><span class="bx"></span><span class="tx">Menerjemahkan kebutuhan bisnis jadi lingkup yang bisa dieksekusi dan diperkirakan waktunya.</span></div>
+    </div>
+
+    <div class="annot pos rv d5" style="--x:110px;--y:800px;--w:1000px">
+      <span class="arw"></span>
+      Peran yang mirip dengan di Mastah — bedanya di sini saya datang dari luar.
+    </div>
+
+    <div class="photoframe pos rvbox d6" style="--x:1252px;--y:170px;--pw:420px;--ph:747px;--rot:1.4deg">
+      <span class="tape"></span>
+      <img src="assets/hegemoni-01.jpg" alt="Pertemuan bersama tim Hegemoni Group">
+      <span class="cap">pertemuan di Cikarang</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 30 — SEMINAR ===== -->
+<section class="slide" data-sect="Mengajar" data-sid="seminar">
+  <div class="layer">
+    <div class="eyebrow ac-c pos rv d1" style="--x:110px;--y:170px">
+      <span class="tick"></span><span class="t">12–13 Agustus 2026</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:214px;--w:1700px">
+      Enam jam di depan siswa SMK.
+    </h2>
+
+    <div class="linkcard pos" style="--x:110px;--y:352px;--w:1700px">
+      <div class="thumb md rvbox d3">
+        <img src="assets/seminar-smkjp1-poster.jpg" alt="Poster seminar Unlocking the Future di SMK Jakarta Pusat 1"
+             style="object-fit:contain;background:#0D1712">
+      </div>
+      <div class="grow rv d4">
+        <div class="link-kicker">SMK Jakarta Pusat 1 × TechPedia</div>
+        <div class="link-title tx-xl mt-16" style="font-weight:700">
+          “Unlocking the Future: Koding, AI &amp; Personal Branding untuk Generasi Digital”
+        </div>
+        <div class="items mt-24">
+          <div class="item"><span class="bx"></span><span class="tx">Seminar dua hari, Rabu–Kamis, Jl. Abdul Muis No. 44.</span></div>
+          <div class="item"><span class="bx"></span><span class="tx">Sesi saya: Rabu 07.30–11.30 dan Kamis 07.30–09.30 — sekitar enam jam.</span></div>
+          <div class="item"><span class="bx"></span><span class="tx">Tampil sebagai Tech Founder, Skolain. Bersama Rifka Syafina, Founder Imaji Social Media.</span></div>
+        </div>
+        <a class="btn ac-c" href="https://www.instagram.com/p/Db5Z11pz7Nb/" target="_blank" rel="noopener">
+          Lihat dokumentasinya <span class="ar"></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="foot rv d6">
+      <span class="mk"></span>
+      <span class="ft">Saya juga lulusan SMK. <em>Materinya saya susun untuk versi saya yang dulu.</em></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 31 — BRI PDC ===== -->
+<section class="slide" data-sect="Belajar" data-sid="pdc">
+  <div class="layer">
+    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:170px">
+      <span class="tick"></span><span class="t">25 Juni 2024</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:214px;--w:1700px">
+      Belajar produk, bukan cuma kode.
+    </h2>
+
+    <div class="linkcard pos" style="--x:110px;--y:352px;--w:1700px">
+      <div class="thumb md rvbox d3">
+        <img src="assets/bri-pdc-01.jpg" alt="Panggung BRI Product Development Conference bersama Tech in Asia">
+      </div>
+      <div class="grow rv d4">
+        <div class="link-kicker">Product Development Conference · BRI × Tech in Asia</div>
+        <div class="tx-m mt-24" style="line-height:1.46">
+          Saya ikut di sela penugasan QLOLA. Yang dibahas persis pertanyaan yang belum bisa saya jawab waktu itu:
+          bagaimana mempercepat go-to-market, menjaga konsistensi produk lintas pasar, menekan ongkos teknis,
+          dan memberi tujuan yang cukup jelas supaya tim bisa memutuskan sendiri.
+        </div>
+        <div class="credit mt-24">bukan sertifikat — tapi titik di mana arah karier saya berbelok</div>
+      </div>
+    </div>
+
+    <div class="annot pos rv d6" style="--x:110px;--y:906px;--w:1600px">
+      Setahun setelah ini saya berhenti melihat backlog sebagai daftar tugas, dan mulai melihatnya sebagai daftar taruhan.
+    </div>
+  </div>
+</section>
+
+<!-- ===== 32 — PERINGKAT 1 ===== -->
+<section class="slide" data-sect="Penghargaan" data-sid="peringkat">
+  <div class="layer">
+    <div class="eyebrow ac-y pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">BRI · periode Maret 2025</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
+      Peringkat satu kategori Supporter.
+    </h2>
+
+    <div class="cards n3 pos" style="--x:110px;--y:376px">
+      <div class="card stat ac-y rvbox d3">
+        <div class="n">1</div><div class="u">peringkat</div>
+        <div class="c">Kategori Supporter, program “Support System” dalam acara “The Great Appventure”.</div></div>
+      <div class="card stat ac-t rvbox d4">
+        <div class="n">10<span style="font-size:.5em">/10</span></div><div class="u">skor</div>
+        <div class="c">Peringkat 2 memperoleh 8, peringkat 3 memperoleh 6.</div></div>
+      <div class="card stat ac-c rvbox d5">
+        <div class="n">3</div><div class="u">penilai</div>
+        <div class="c">Ketua tim, kepala fungsi, dan kepala departemen.</div></div>
+    </div>
+
+    <div class="caveat ac-n pos rvbox d6" style="--x:110px;--y:700px;--w:1700px">
+      <b>supaya jelas</b>
+      Satu periode, bukan satu tahun. Saya pernah menuliskannya lebih besar dari yang sebenarnya di materi lain,
+      dan itu sudah saya perbaiki. Papan peringkat aslinya memuat nama dan foto rekan kerja saya, jadi tidak saya tampilkan di sini.
+    </div>
+
+    <div class="foot rv d8">
+      <span class="mk"></span>
+      <span class="ft">Angka yang benar <b>lebih berguna</b> <em>daripada angka yang mengesankan.</em></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 33 — REFERENSI ===== -->
+<section class="slide" data-sect="Referensi" data-sid="referensi">
+  <div class="layer">
+    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">Yang orang ingat</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
+      Yang mereka bilang setelah saya tidak lagi di sana.
+    </h2>
+    <p class="lead pos rv d3" style="--x:110px;--y:352px;--w:1600px">
+      Pesan-pesan ini dari mantan rekan kerja di BRI. Bukan lamaran kerja — mereka yang menghubungi duluan.
+    </p>
+
+    <div class="hstack gap-48 pos" style="--x:110px;--y:472px;--w:1700px">
+      <div class="chatshot rvbox d4" style="--cw:520px;--ch:250px">
+        <img src="assets/chat-01-balik.png" alt="Pesan: masih minat tidak kembali ke NDS">
+        <span class="cap">mereka mengajak saya kembali</span>
+      </div>
+      <div class="chatshot rvbox d5" style="--cw:520px;--ch:250px">
+        <img src="assets/chat-05-sounding.png" alt="Pesan: CV sudah disubmit dan disounding tanpa diminta">
+        <span class="cap">rekan lain membantu tanpa diminta</span>
+      </div>
+      <div class="chatshot rvbox d6" style="--cw:520px;--ch:250px">
+        <img src="assets/chat-06-nointerview.png" alt="Pesan: kalau dari sana tidak usah interview lagi">
+        <span class="cap">tidak perlu wawancara lagi — cukup karena ada yang menjamin</span>
+      </div>
+    </div>
+
+    <div class="annot pos rv d8" style="--x:110px;--y:790px;--w:1600px">
+      Nama dan nomor pengirimnya saya potong sebelum dipasang di sini.
+    </div>
+
+    <div class="foot rv d9">
+      <span class="mk"></span>
+      <span class="ft">Ukuran yang paling jujur: <em>apakah orang mau bekerja lagi dengan kita.</em></span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= E · CARA KERJA ================= -->
+
+<!-- ===== 34 — MEMIMPIN PRODUK ===== -->
+<section class="slide" data-sect="Cara kerja" data-sid="carakerja">
+  <div class="layer">
+    <div class="eyebrow ac-y pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">Cara kerja</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
+      Lima langkah yang sama di setiap produk.
+    </h2>
+
+    <div class="flow pos" style="--x:110px;--y:376px;--w:1700px">
+      <div class="stepbox ac-c rvbox d3"><div class="step-num"><span class="n">01</span><span class="dot"></span></div>
+        <div class="step-title">Pahami masalahnya</div>
+        <div class="step-text">Discovery bersama pengguna aslinya. Keluhan yang paling sering, bukan yang paling nyaring.</div></div>
+      <div class="flow-arrow"><span class="arrow"></span></div>
+      <div class="stepbox ac-y rvbox d4"><div class="step-num"><span class="n">02</span><span class="dot"></span></div>
+        <div class="step-title">Buat keputusannya eksplisit</div>
+        <div class="step-text">User story dan acceptance criteria. Kalau tidak bisa ditulis, berarti belum diputuskan.</div></div>
+      <div class="flow-arrow"><span class="arrow"></span></div>
+      <div class="stepbox ac-t rvbox d5"><div class="step-num"><span class="n">03</span><span class="dot"></span></div>
+        <div class="step-title">Negosiasikan lingkupnya</div>
+        <div class="step-text">Scope, estimasi, dan timeline yang disepakati dua pihak — supaya perubahan di tengah jalan punya dasar.</div></div>
+      <div class="flow-arrow"><span class="arrow"></span></div>
+      <div class="stepbox ac-y rvbox d6"><div class="step-num"><span class="n">04</span><span class="dot"></span></div>
+        <div class="step-title">Rilis kecil-kecil</div>
+        <div class="step-text">Definition of done yang sama untuk semua orang, code review, CI/CD.</div></div>
+      <div class="flow-arrow"><span class="arrow"></span></div>
+      <div class="stepbox ac-c rvbox d7"><div class="step-num"><span class="n">05</span><span class="dot"></span></div>
+        <div class="step-title">Ukur, lalu ulangi</div>
+        <div class="step-text">Yang tidak dipakai orang, dicabut. Yang dipakai, diperdalam.</div></div>
+    </div>
+
+    <div class="loopback pos rv d8" style="--x:110px;--y:706px">
+      <div class="t">Hasil yang meleset itu petunjuk — biasanya ada satu bagian yang tidak pernah benar-benar diputuskan.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 35 — SCRUM & JIRA ===== -->
+<section class="slide" data-sect="Cara kerja" data-sid="delivery">
+  <div class="layer">
+    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">Delivery</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
+      Scrum penuh, Jira satu-satunya sumber kebenaran.
+    </h2>
+
+    <div class="cards n4 pos" style="--x:110px;--y:376px">
+      <div class="card ac-t rvbox d3"><div class="card-num sm">01</div><div class="card-rule"></div>
+        <div class="card-title sm">Ritme utuh</div>
+        <div class="card-text">Sprint planning, refinement, review, retrospective. Tidak dipilih sebagian.</div></div>
+      <div class="card ac-y rvbox d4"><div class="card-num sm">02</div><div class="card-rule"></div>
+        <div class="card-title sm">Kapasitas terlihat</div>
+        <div class="card-text">Jira jadi acuan tunggal kapasitas dan alokasi tim — tidak ada versi lain di spreadsheet.</div></div>
+      <div class="card ac-c rvbox d5"><div class="card-num sm">03</div><div class="card-rule"></div>
+        <div class="card-title sm">Kualitas bukan soal orang</div>
+        <div class="card-text">Standar tim yang saya tetapkan: code review, CI/CD, testing strategy, definition of done.</div></div>
+      <div class="card ac-t rvbox d6"><div class="card-num sm">04</div><div class="card-rule"></div>
+        <div class="card-title sm">Risiko dinilai di depan</div>
+        <div class="card-text">Technical assessment untuk tiap project baru — memastikan yang dijanjikan ke klien realistis.</div></div>
+    </div>
+
+    <div class="foot rv d8">
+      <span class="mk"></span>
+      <span class="ft">Perubahan permintaan itu wajar. <em>Yang tidak wajar: tidak punya dasar untuk menegosiasikannya.</em></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 36 — AI ===== -->
+<section class="slide" data-sect="Cara kerja" data-sid="ai">
+  <div class="layer">
+    <div class="eyebrow ac-c pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">AI-driven development</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
+      Tim saya kerja bareng AI, terang-terangan.
+    </h2>
+
+    <div class="cards n4 pos" style="--x:110px;--y:376px">
+      <div class="card ac-y rvbox d3"><div class="card-title">Claude Code</div>
+        <div class="card-text">Alat harian saya sendiri, termasuk untuk menyusun dokumen dan materi seperti ini.</div></div>
+      <div class="card ac-t rvbox d4"><div class="card-title">OpenAI Codex</div>
+        <div class="card-text">Dipakai tim untuk mempercepat bagian yang berulang.</div></div>
+      <div class="card ac-c rvbox d5"><div class="card-title">GitHub Copilot</div>
+        <div class="card-text">Pendamping di dalam editor, bukan pengganti review.</div></div>
+      <div class="card ac-y rvbox d6"><div class="card-title">Cursor</div>
+        <div class="card-text">Untuk perubahan yang menyentuh banyak berkas sekaligus.</div></div>
+    </div>
+
+    <div class="hbox ac-n rot-0 pos rvbox d7" style="--x:110px;--y:666px;--w:1700px">
+      <div class="hstack gap-64">
+        <div class="grow">
+          <div class="hbox-tag good">yang saya dorong</div>
+          <div class="hbox-text">Adopsi merata lewat mentoring rutin, supaya kecepatannya tidak cuma dimiliki satu-dua orang.</div>
+        </div>
+        <div class="grow">
+          <div class="hbox-tag bad">yang tidak berubah</div>
+          <div class="hbox-text">Code review, testing, dan definition of done tetap berlaku sama. AI mempercepat menulisnya,
+            bukan menggantikan tanggung jawab atas hasilnya.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="annot pos rv d9" style="--x:110px;--y:918px;--w:1700px">
+      Yang menentukan tetap sama: tahu mau membangun apa, untuk siapa, dan kenapa.
+    </div>
+  </div>
+</section>
+
+<!-- ===== 37 — EMPAT HAL ===== -->
+<section class="slide" data-sect="Cara kerja" data-sid="prinsip">
+  <div class="layer">
+    <div class="eyebrow ac-y pos rv d1" style="--x:110px;--y:180px">
+      <span class="tick"></span><span class="t">Prinsip</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
+      Empat hal yang tidak saya tawar.
+    </h2>
+
+    <div class="pos" style="--x:110px;--y:376px;--w:1700px">
+      <div class="listrow ac-t rv d3"><div class="n">01</div><div class="t">
+        <b>Ketersediaan dulu, baru fitur.</b> Di bank dan rumah sakit, sistem yang mati berarti layanan berhenti dan
+        insiden tidak tercatat. Fitur baru tidak pernah lebih penting dari itu.</div></div>
+      <div class="listrow ac-c rv d4"><div class="n">02</div><div class="t">
+        <b>Keamanan masuk siklus rilis, bukan pemeriksaan di akhir.</b> SAST, DAST, dan SonarQube berjalan tiap rilis —
+        celah yang ketemu di akhir selalu lebih mahal.</div></div>
+      <div class="listrow ac-y rv d5"><div class="n">03</div><div class="t">
+        <b>Observability sejak hari pertama.</b> Kalau isu produksi baru ketahuan dari laporan pengguna, berarti sudah telat.
+        ELK, Jaeger, OpenTelemetry, Prometheus, LGTM.</div></div>
+      <div class="listrow ac-t rv d6"><div class="n">04</div><div class="t">
+        <b>Uji beban sebelum dipakai orang banyak.</b> ghz dan Locust. Menebak kapasitas itu keputusan produk yang paling mudah dihindari.</div></div>
+    </div>
+
+    <div class="foot rv d8">
+      <span class="mk"></span>
+      <span class="ft">Empat-empatnya <b>keputusan produk</b>, <em>bukan preferensi teknis.</em></span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= F · PENUTUP ================= -->
+
+<!-- ===== 38 — CV + KONTAK ===== -->
+<section class="slide" data-sect="Kontak" data-sid="kontak">
+  <div class="layer">
+    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:170px">
+      <span class="tick"></span><span class="t">Penutup</span>
+    </div>
+    <h2 class="head-md pos rv d2" style="--x:110px;--y:214px;--w:1700px">
+      Dua dokumen, satu cerita.
+    </h2>
+
+    <div class="maptable tight pos rv d3" style="--x:110px;--y:334px">
+      <div class="map-head"><div class="h a">Dokumen</div><div class="h"></div><div class="h b">Isinya</div></div>
+      <div class="map-row"><div class="map-a">CV — tiga halaman</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Hasil, angka, dan apa saja yang saya kerjakan.</div></div>
+      <div class="map-row"><div class="map-a">Deck ini</div>
+        <div class="map-link"><span class="arrow"></span></div>
+        <div class="map-b">Buktinya, ceritanya, dan artefaknya.</div></div>
+    </div>
+
+    <a class="btn solid ac-y pos rv d4" style="--x:110px;--y:566px"
+       href="assets/CV_Rochman_Ramadhani_Product_Owner.pdf" target="_blank" rel="noopener">
+      Unduh CV (PDF) <span class="ar"></span>
+    </a>
+
+    <div class="cards n4 pos" style="--x:110px;--y:686px">
+      <div class="card ac-t rvbox d5"><div class="card-title sm">Email</div>
+        <div class="card-text">rochmanramadhani12<br>@gmail.com</div></div>
+      <div class="card ac-y rvbox d6"><div class="card-title sm">LinkedIn</div>
+        <div class="card-text">@rochmanramadhani</div></div>
+      <div class="card ac-c rvbox d7"><div class="card-title sm">GitHub</div>
+        <div class="card-text">@rochmanramadhani</div></div>
+      <div class="card ac-t rvbox d8"><div class="card-title sm">Instagram</div>
+        <div class="card-text">@rochmanramadhanii<br><span class="dim" style="font-size:20px">yang ini dua huruf i</span></div></div>
+    </div>
+
+    <div class="cover-by rv d9" style="top:928px;width:1700px">
+      <span class="name">Rochman Ramadhani Chiefto Irawan, S.Kom.</span>
+      <span class="sep"></span>
+      <span class="role">Product Owner &amp; Tech Founder, Skolain</span>
+    </div>
+  </div>
+</section>
+
+
+</div>
+</div>
+
+<div class="edit-hotzone" id="editHotzone" aria-hidden="true"></div>
+<button class="edit-toggle" id="editToggle" type="button">Edit</button>
+
+<script>
+(function(){
+'use strict';
+
+var STAGE_W = 1920, STAGE_H = 1080;
+
+/* Kunci localStorage deck lama adalah 'papan-tulis:' + slideIndex + ':' + elIndex —
+   tanpa identitas deck sama sekali. Dua deck di satu origin akan saling menimpa isi
+   editnya secara diam-diam. Segmen versi di sini supaya penataan ulang slide di masa
+   depan bisa dibatalkan dengan menaikkan ke v2, bukan dengan menyuruh orang
+   menghapus site data. */
+var STORE_PREFIX = 'portofolio-rrci:v1:';
+
+/* Alias deep-link. CV mencetak '#oca', bukan '#19': hash posisional putus begitu ada
+   satu slide disisipkan, sementara PDF CV yang sudah beredar tidak bisa ditarik lagi.
+   Nilai = indeks berbasis 0. */
+var ALIASES = {
+  peta:2, angka:3, wisuda:10,
+  produk:11, skolain:13, primasejahtera:15, siloam:16, qlola:17, oca:18,
+  bri:19, nucare:20, linkit:21, stack:22,
+  frames:24, klhk:26, dokter:27, advisory:28, hegemoni:29, seminar:30, pdc:31, peringkat:32,
+  carakerja:34, cv:38, kontak:38
+};
+
+var stage    = document.getElementById('deckStage');
+var hotzone  = document.getElementById('editHotzone');
+var toggleBtn= document.getElementById('editToggle');
+var slides   = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+var idx = 0;
+var enteredByAlias = false;
+
+/* ---------- fixed-stage scaling ---------- */
+function fit(){
+  var f = Math.min(window.innerWidth / STAGE_W, window.innerHeight / STAGE_H);
+  var tx = (window.innerWidth  - STAGE_W * f) / 2;
+  var ty = (window.innerHeight - STAGE_H * f) / 2;
+  stage.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + f + ')';
+}
+fit();
+window.addEventListener('resize', fit);
+
+/* ---------- video control ---------- */
+function videosIn(el){ return Array.prototype.slice.call(el.querySelectorAll('video')); }
+
+function syncVideos(){
+  for (var k = 0; k < slides.length; k++){
+    var vids = videosIn(slides[k]);
+    for (var j = 0; j < vids.length; j++){
+      var v = vids[j];
+      if (k === idx){
+        try {
+          v.muted = true;
+          var p = v.play();
+          if (p && typeof p.catch === 'function'){ p.catch(function(){}); }
+        } catch (e) {}
+      } else {
+        try { v.pause(); v.currentTime = 0; } catch (e2) {}
+      }
+    }
+  }
+}
+
+/* ---------- navigation ---------- */
+function show(n, writeHash){
+  if (!slides.length) return;
+  idx = Math.max(0, Math.min(n, slides.length - 1));
+  for (var k = 0; k < slides.length; k++){
+    var on = (k === idx);
+    slides[k].classList.toggle('active', on);
+    slides[k].classList.toggle('visible', on);
+  }
+  syncVideos();
+  /* Kalau deck dibuka lewat alias (…/#oca), biarkan alias itu tetap di address bar
+     selama pembaca belum berpindah slide — link yang dia bagikan ulang tetap stabil. */
+  if (writeHash === false || enteredByAlias){ enteredByAlias = false; return; }
+  var h = '#' + (idx + 1);
+  if (location.hash !== h){
+    if (history && history.replaceState){ history.replaceState(null, '', h); }
+    else { location.hash = h; }
+  }
+}
+function next(){ show(idx + 1); }
+function prev(){ show(idx - 1); }
+
+function hashIndex(){
+  var raw = (location.hash || '').replace('#', '').trim().toLowerCase();
+  if (Object.prototype.hasOwnProperty.call(ALIASES, raw)){
+    enteredByAlias = true;
+    return ALIASES[raw];
+  }
+  var n = parseInt(raw, 10);
+  if (isNaN(n)) return -1;
+  return n - 1;
+}
+window.addEventListener('hashchange', function(){
+  var n = hashIndex();
+  if (n >= 0 && n !== idx){ show(n, false); }
+});
+
+/* ---------- editing guards ---------- */
+function isTyping(ev){
+  var t = (ev && ev.target) || document.activeElement;
+  if (!t) return false;
+  if (t.isContentEditable) return true;
+  var tag = (t.tagName || '').toLowerCase();
+  return tag === 'input' || tag === 'textarea' || tag === 'select';
+}
+
+/* ---------- keyboard ---------- */
+window.addEventListener('keydown', function(e){
+  if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S')){
+    e.preventDefault();
+    exportHTML();
+    return;
+  }
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+
+  if ((e.key === 'e' || e.key === 'E') && !isTyping(e)){
+    e.preventDefault();
+    setEditMode(!editMode);
+    return;
+  }
+  if (isTyping(e)) return;
+
+  switch (e.key){
+    case 'ArrowRight': case 'PageDown': case ' ': case 'Spacebar':
+      e.preventDefault(); next(); break;
+    case 'ArrowLeft': case 'PageUp':
+      e.preventDefault(); prev(); break;
+    case 'Home':
+      e.preventDefault(); show(0); break;
+    case 'End':
+      e.preventDefault(); show(slides.length - 1); break;
+    default: break;
+  }
+});
+
+/* ---------- wheel (debounced ~600ms) ---------- */
+var wheelLock = 0;
+window.addEventListener('wheel', function(e){
+  if (isTyping(e)) return;
+  var now = Date.now();
+  if (now - wheelLock < 600) return;
+  var d = Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+  if (Math.abs(d) < 12) return;
+  wheelLock = now;
+  if (d > 0){ next(); } else { prev(); }
+}, { passive: true });
+
+/* ---------- touch swipe ---------- */
+var tx0 = 0, ty0 = 0, tActive = false;
+window.addEventListener('touchstart', function(e){
+  if (!e.touches || e.touches.length !== 1){ tActive = false; return; }
+  tActive = true; tx0 = e.touches[0].clientX; ty0 = e.touches[0].clientY;
+}, { passive: true });
+window.addEventListener('touchend', function(e){
+  if (!tActive) return;
+  tActive = false;
+  if (isTyping(e)) return;
+  var t = (e.changedTouches && e.changedTouches[0]);
+  if (!t) return;
+  var dx = t.clientX - tx0, dy = t.clientY - ty0;
+  if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)){
+    if (dx < 0){ next(); } else { prev(); }
+  }
+}, { passive: true });
+
+/* ============================================================
+   INLINE EDITING
+   ============================================================ */
+var EDITABLE_SELECTOR = [
+  '[data-edit]',
+  '.chip .txt', '.chrome-top .sect',
+  '.kick .t', 'h1.head', '.head-lg', '.head-md', '.head-sm',
+  '.subhead', '.lead', '.tx-s', '.tx-m', '.tx-l', '.tx-xl',
+  '.eyebrow .t', '.tag', '.pill', '.qnum', '.qhead', '.qsub', '.qprompt .t',
+  '.statement', '.closing-sub',
+  '.cover-lead', '.cover-by .name', '.cover-by .role',
+  '.cat-label', '.item .tx', '.listrow .t', '.listrow .n', '.listrow .side',
+  '.hbox-title', '.hbox-tag', '.hbox-quote', '.hbox-text', '.hbox-res', '.hbox-note', '.hbox-badge',
+  '.card-num', '.card-title', '.card-text', '.card-foot',
+  '.map-head .h', '.map-a', '.map-b',
+  '.cmp-head .h', '.cmp-label', '.cmp-a', '.cmp-b',
+  '.step-num .n', '.step-title', '.step-text', '.loopback .t',
+  '.quote-text', '.quote-src', '.quote-side .h',
+  '.link-kicker', '.link-title', '.link-desc', '.link-url', '.btn',
+  '.phone-caption', '.thumb .dur',
+  '.annot', '.foot .ft',
+  '.lane-label', '.bar .t', '.moment .t', '.stat .n', '.stat .u', '.stat .c',
+  '.photoframe .cap', '.chatshot .cap', '.cover-head-xl', '.credit', '.caveat'
+  /* .pageno .n / .d sengaja TIDAK di sini: sekarang diturunkan dari indeks slide.
+     Kalau tetap editable, nilai basi di localStorage bisa menimpa nomor yang benar. */
+].join(',');
+
+var editMode = false;
+
+function editablesOf(slide){
+  return Array.prototype.slice.call(slide.querySelectorAll(EDITABLE_SELECTOR));
+}
+/* Kunci berbasis data-sid, bukan indeks slide. Skema indeks di deck lama menggeser
+   seluruh edit slide berikutnya begitu satu slide disisipkan — di deck 38 slide yang
+   masih terus diedit, itu bukan skenario hipotetis. */
+function storeKey(slide, slideIndex, elIndex){
+  return STORE_PREFIX + (slide.getAttribute('data-sid') || ('i' + slideIndex)) + ':' + elIndex;
+}
+function safeGet(k){ try { return window.localStorage.getItem(k); } catch (e) { return null; } }
+function safeSet(k, v){ try { window.localStorage.setItem(k, v); } catch (e) {} }
+
+function restoreEdits(){
+  for (var s = 0; s < slides.length; s++){
+    var els = editablesOf(slides[s]);
+    for (var i2 = 0; i2 < els.length; i2++){
+      var saved = safeGet(storeKey(slides[s], s, i2));
+      if (saved !== null && saved !== undefined){ els[i2].innerHTML = saved; }
+    }
+  }
+}
+
+function persistFrom(el){
+  for (var s = 0; s < slides.length; s++){
+    if (!slides[s].contains(el)) continue;
+    var els = editablesOf(slides[s]);
+    var i2 = els.indexOf(el);
+    if (i2 >= 0){ safeSet(storeKey(slides[s], s, i2), el.innerHTML); }
+    return;
+  }
+}
+
+function setEditMode(on){
+  editMode = !!on;
+  document.body.classList.toggle('edit-mode', editMode);
+  if (toggleBtn){
+    toggleBtn.classList.toggle('is-on', editMode);
+    toggleBtn.textContent = editMode ? 'Editing · E' : 'Edit';
+  }
+  for (var s = 0; s < slides.length; s++){
+    var els = editablesOf(slides[s]);
+    for (var i2 = 0; i2 < els.length; i2++){
+      if (editMode){ els[i2].setAttribute('contenteditable', 'true'); }
+      else { els[i2].removeAttribute('contenteditable'); }
+    }
+  }
+  if (editMode){ showToggle(true); }
+}
+
+document.addEventListener('input', function(e){
+  if (!editMode) return;
+  var t = e.target;
+  if (t && t.isContentEditable){ persistFrom(t); }
+});
+document.addEventListener('blur', function(e){
+  if (!editMode) return;
+  var t = e.target;
+  if (t && t.isContentEditable){ persistFrom(t); }
+}, true);
+
+/* ---------- hotzone / toggle visibility (JS classes + 400ms grace) ---------- */
+var hideTimer = null;
+function showToggle(force){
+  if (hideTimer){ clearTimeout(hideTimer); hideTimer = null; }
+  if (toggleBtn){ toggleBtn.classList.add('is-visible'); }
+  if (hotzone){ hotzone.classList.add('is-hot'); }
+  if (force === true){ /* keep visible until explicitly hidden */ }
+}
+function scheduleHide(){
+  if (hideTimer){ clearTimeout(hideTimer); }
+  hideTimer = setTimeout(function(){
+    hideTimer = null;
+    if (editMode) return;
+    if (toggleBtn){ toggleBtn.classList.remove('is-visible'); }
+    if (hotzone){ hotzone.classList.remove('is-hot'); }
+  }, 400);
+}
+if (hotzone){
+  hotzone.addEventListener('mouseenter', function(){ showToggle(); });
+  hotzone.addEventListener('mouseleave', scheduleHide);
+}
+if (toggleBtn){
+  toggleBtn.addEventListener('mouseenter', function(){ showToggle(); });
+  toggleBtn.addEventListener('mouseleave', scheduleHide);
+  toggleBtn.addEventListener('click', function(){ setEditMode(!editMode); });
+}
+
+/* ---------- export (Ctrl/Cmd+S) ---------- */
+function exportHTML(){
+  var clone = document.documentElement.cloneNode(true);
+  var i3, list;
+
+  list = clone.querySelectorAll('[contenteditable]');
+  for (i3 = 0; i3 < list.length; i3++){ list[i3].removeAttribute('contenteditable'); }
+
+  list = clone.querySelectorAll('.slide');
+  for (i3 = 0; i3 < list.length; i3++){ list[i3].classList.remove('active', 'visible'); }
+  if (list.length){ list[0].classList.add('active', 'visible'); }
+
+  list = clone.querySelectorAll('.edit-toggle');
+  for (i3 = 0; i3 < list.length; i3++){
+    list[i3].classList.remove('is-visible', 'is-on');
+    list[i3].textContent = 'Edit';
+  }
+  var b = clone.querySelector('body');
+  if (b){ b.classList.remove('edit-mode'); }
+  var st = clone.querySelector('#deckStage');
+  if (st){ st.removeAttribute('style'); }
+
+  var out = '<!DOCTYPE html>\n' + clone.outerHTML;
+  var blob = new Blob([out], { type: 'text/html;charset=utf-8' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'deck-' + new Date().toISOString().slice(0, 10) + '.html';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(function(){
+    URL.revokeObjectURL(url);
+    if (a.parentNode){ a.parentNode.removeChild(a); }
+  }, 800);
+}
+
+/* ---------- click to advance (ignore links/buttons/editing) ---------- */
+stage.addEventListener('click', function(e){
+  if (editMode) return;
+  var t = e.target;
+  while (t && t !== stage){
+    var tag = (t.tagName || '').toLowerCase();
+    if (tag === 'a' || tag === 'button' || tag === 'video' || t.isContentEditable) return;
+    t = t.parentNode;
+  }
+  next();
+});
+
+/* ============================================================
+   GENERATOR CHROME + RAIL
+   .chrome-top / .rule-top / .tray identik byte-per-byte di setiap slide kecuali
+   teks .sect dan nomor halaman. Menulisnya tangan 37x itu ~380 baris duplikasi,
+   dan persis bagian yang paling cepat busuk.
+   ============================================================ */
+var ERAS = [
+  { yr:'2017–2020', nm:'Sekolah & mulai' },
+  { yr:'2020–2022', nm:'Tim pertama' },
+  { yr:'2022–2023', nm:'Masuk bank' },
+  { yr:'2023–2024', nm:'Dua jalur' },
+  { yr:'2024–2025', nm:'Senior & skala' },
+  { yr:'2025–2026', nm:'Founder' }
+];
+
+function buildChrome(){
+  var total = String(slides.length);
+  for (var k = 0; k < slides.length; k++){
+    var s = slides[k];
+    var layer = s.querySelector('.layer') || s;
+
+    if (!s.querySelector('.chrome-top')){
+      var c = document.createElement('div');
+      c.className = 'chrome-top';
+      c.innerHTML = '<div class="chip rv d1"><span class="nub"></span>' +
+                    '<span class="txt">ROCHMAN R.C.I.</span></div>' +
+                    '<div class="sect rv d1">' + (s.getAttribute('data-sect') || '') + '</div>';
+      layer.insertBefore(c, layer.firstChild);
+      var r = document.createElement('div');
+      r.className = 'rule-top';
+      layer.insertBefore(r, c.nextSibling);
+    }
+
+    var tray = s.querySelector('.tray');
+    if (!tray){
+      tray = document.createElement('div');
+      tray.className = 'tray';
+      tray.innerHTML = '<div class="sticks"><span class="stick s1"></span>' +
+                       '<span class="stick s2"></span><span class="stick s3"></span></div>' +
+                       '<div class="pageno"></div>';
+      layer.appendChild(tray);
+    }
+    /* Ditulis ulang TANPA SYARAT tiap boot. Guard "kalau belum ada" bikin generator
+       ini idempoten sekaligus salah: sisipkan satu slide, nomornya tidak ikut berubah. */
+    var pg = tray.querySelector('.pageno');
+    if (pg){
+      pg.innerHTML = '<span class="n">' + (k < 9 ? '0' : '') + (k + 1) + '</span>' +
+                     '<span class="d">/ ' + total + '</span>';
+    }
+  }
+}
+
+function buildRails(){
+  var rails = document.querySelectorAll('.rail');
+  for (var i2 = 0; i2 < rails.length; i2++){
+    var r = rails[i2];
+    var on = parseInt(r.getAttribute('data-on'), 10);
+    if (isNaN(on)) on = -1;
+    var h = '<div class="rail-line"></div>';
+    if (on >= 0){ h += '<div class="rail-done" style="--i:' + on + '"></div>'; }
+    for (var e = 0; e < ERAS.length; e++){
+      h += '<div class="rail-seg' + (e === on ? ' on' : '') + '" style="--i:' + e + '">' +
+           '<span class="yr">' + ERAS[e].yr + '</span><span class="nub"></span>' +
+           '<span class="nm">' + ERAS[e].nm + '</span></div>';
+    }
+    r.innerHTML = h;
+  }
+}
+
+/* Tanpa ini, slide aktif tercetak dengan frame video apa adanya saat itu —
+   PDF jadi tidak deterministik antar-run. */
+window.addEventListener('beforeprint', function(){
+  var vids = document.querySelectorAll('video');
+  for (var i2 = 0; i2 < vids.length; i2++){
+    try { vids[i2].pause(); vids[i2].currentTime = 0; } catch (e) {}
+  }
+});
+
+/* ---------- boot ---------- */
+/* Urutan menanggung beban: buildChrome menyisipkan .chrome-top ke dalam .layer,
+   dan restoreEdits mengunci teks berdasarkan POSISI elemen di editablesOf(slide).
+   Kalau restoreEdits jalan duluan, seluruh kunci bergeser satu. */
+buildChrome();
+buildRails();
+restoreEdits();
+var start = hashIndex();
+show(start >= 0 ? start : 0);
+
+})();
+</script>
+</body>
+</html>
