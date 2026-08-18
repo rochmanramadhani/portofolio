@@ -99,3 +99,15 @@ Slide testimoni sempat memuat tiga screenshot WhatsApp dari mantan rekan kerja. 
 berkasnya ikut dihapus dari repo, bukan sekadar disembunyikan — pesan pribadi dari orang bernama tidak
 perlu tetap ada di server publik selama tidak ditampilkan. Menunggu testimoni yang memang diniatkan
 untuk terbit.
+
+Menghapus berkasnya dari repo ternyata **tidak cukup**. Cloudflare Pages tetap menyajikan ketiganya lewat
+domain kustom meski tidak ada di deployment mana pun — bertahan melewati purge per-URL, `purge_everything`,
+deploy ulang, bahkan Development Mode (`cf-cache-status: DYNAMIC` tapi tetap mengembalikan PNG asli).
+Deployment lama juga menyajikannya lewat URL `*.pages.dev` masing-masing.
+
+Jadi ada dua lapis penanganan, dan keduanya perlu dipertahankan:
+
+1. **Deployment lama dihapus.** Snapshot Pages bersifat kekal dan tiap deployment punya URL publik sendiri —
+   menghapus berkas di deployment baru tidak menutup yang lama.
+2. **Aturan WAF di zona `skolain.id`** memblokir `oman-porto.skolain.id/assets/chat-*` dengan status 403.
+   Jangan dihapus. Itu jaring pengaman kalau pemetaan aset basi di sisi Cloudflare muncul lagi.
