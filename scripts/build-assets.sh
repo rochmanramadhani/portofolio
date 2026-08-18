@@ -44,10 +44,9 @@ vid() {
 
 # ---------- 1. salin apa adanya dari deck lama ----------
 say "1/4  Salin dari slide-kka-smk"
-for f in rochman.jpg rochman-avatar.jpg skolain-wordmark.png \
+for f in rochman.jpg \
          klhk-sparing.mp4 klhk-sparing-poster.jpg \
-         siloam-hse.mp4 siloam-hse-poster.jpg \
-         chat-01-balik.png chat-05-sounding.png chat-06-nointerview.png; do
+         siloam-hse.mp4 siloam-hse-poster.jpg; do
   cp "$OLD/$f" "$OUT/$f"
   printf '  %-32s %s\n' "$f" "$(du -h "$OUT/$f" | cut -f1)"
 done
@@ -57,10 +56,16 @@ say "2/4  Re-encode wisuda"
 vid "$OLD/wisuda.mp4" wisuda.mp4 960 30 v 3
 cp "$OLD/wisuda-poster.jpg" "$OUT/wisuda-poster.jpg"
 
+# Sengaja TIDAK disalin:
+#  - rochman-avatar.jpg, skolain-wordmark.png, frames-launch-02.jpg
+#    tersisa dari deck lama, tidak dipakai satu slide pun.
+#  - chat-01/05/06-*.png (screenshot WhatsApp) — slide testimoni dicabut,
+#    dan itu pesan pribadi dari rekan kerja bernama, jadi tidak perlu
+#    ikut terbit selama tidak ditampilkan.
+
 # ---------- 3. foto baru ----------
 say "3/4  Foto baru (sips)"
 img "$DL/frames-1.jpg"            frames-launch-01.jpg      1066   # sumber cuma 1066x711
-img "$DL/frames-2.jpg"            frames-launch-02.jpg      1066
 img "$DL/ig.webp"                 seminar-smkjp1-poster.jpg  900
 img "$DL/IMG_E9087.HEIC"          bri-pdc-01.jpg            1400
 img "$DL/private-1.HEIC"          caezar-01.jpg              820

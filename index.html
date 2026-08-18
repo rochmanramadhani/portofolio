@@ -814,23 +814,6 @@ body.edit-mode [contenteditable="true"]:focus{outline:2px solid var(--yellow);ba
 .stat .c{margin-top:10px;font-size:23px;line-height:1.38;color:var(--chalk-soft);text-shadow:var(--dust);}
 
 /* ============================================================
-   22. CHATSHOT — screenshot percakapan.
-   .phone-screen TIDAK bisa dipakai: dia mengunci object-fit:cover,
-   yang memotong tengah screenshot chat yang tinggi — persis memotong
-   pesan yang mau dibaca. Di sini gambar dipasang lebar penuh dari
-   atas, tingginya mengalir, dan sisanya terpotong di bawah.
-   ============================================================ */
-.chatshot{position:relative;width:var(--cw,440px);height:var(--ch,300px);overflow:hidden;
-  border:3px solid rgba(242,239,228,.34);
-  border-radius:20px 8px 18px 8px/8px 18px 8px 20px;
-  background:var(--board-deep);box-shadow:0 18px 44px rgba(0,0,0,.45);}
-.chatshot img{position:absolute;left:0;top:var(--ct,0);width:100%;height:auto;
-  max-width:none;max-height:none;}
-.chatshot .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 18px 14px;
-  background:linear-gradient(180deg,transparent,rgba(9,16,13,.90) 46%);
-  font-family:var(--hand);font-size:22px;line-height:1.26;color:var(--chalk-soft);}
-
-/* ============================================================
    23. COVER XL — .head-lg 92px terasa kekecilan untuk sampul
    portofolio. 116px x 1.02 = 118px per baris; judul dua baris
    mulai y=238 berakhir y=474, masih lega di atas .cover-lead (706).
@@ -842,7 +825,7 @@ body.edit-mode [contenteditable="true"]:focus{outline:2px solid var(--yellow);ba
    24. PERBAIKAN KASKADE — .pos harus menang
    .pos dideklarasikan di bagian 1, tapi HAMPIR SEMUA arketipe komponen
    (.cards, .maptable, .cmp, .flow, .loopback, .linkcard, .hbox, .card,
-   .quotebox, .stepbox, .rail, .lanes, .photoframe, .chatshot) menyetel
+   .quotebox, .stepbox, .rail, .lanes, .photoframe) menyetel
    position:relative di bagian-bagian setelahnya. Specificity-nya sama,
    jadi yang belakangan menang dan .pos diam-diam kehilangan daya.
    Akibatnya --x/--y berubah arti: bukan lagi koordinat dari tepi slide,
@@ -2090,7 +2073,7 @@ a.card:focus-visible{outline:3px solid var(--yellow);outline-offset:4px;}
   </div>
 </section>
 
-<!-- ===== 30 — SEMINAR ===== -->
+<!-- ===== 31 — SEMINAR ===== -->
 <section class="slide" data-sect="Mengajar" data-sid="seminar">
   <div class="layer">
     <div class="eyebrow ac-c pos rv d1" style="--x:110px;--y:170px">
@@ -2128,7 +2111,7 @@ a.card:focus-visible{outline:3px solid var(--yellow);outline-offset:4px;}
   </div>
 </section>
 
-<!-- ===== 31 — BRI PDC ===== -->
+<!-- ===== 32 — BRI PDC ===== -->
 <section class="slide" data-sect="Belajar" data-sid="pdc">
   <div class="layer">
     <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:170px">
@@ -2159,7 +2142,7 @@ a.card:focus-visible{outline:3px solid var(--yellow);outline-offset:4px;}
   </div>
 </section>
 
-<!-- ===== 32 — PERINGKAT 1 ===== -->
+<!-- ===== 33 — PERINGKAT 1 ===== -->
 <section class="slide" data-sect="Penghargaan" data-sid="peringkat">
   <div class="layer">
     <div class="eyebrow ac-y pos rv d1" style="--x:110px;--y:180px">
@@ -2193,47 +2176,6 @@ a.card:focus-visible{outline:3px solid var(--yellow);outline-offset:4px;}
     </div>
   </div>
 </section>
-
-<!-- ===== 33 — REFERENSI ===== -->
-<section class="slide" data-sect="Referensi" data-sid="referensi">
-  <div class="layer">
-    <div class="eyebrow ac-t pos rv d1" style="--x:110px;--y:180px">
-      <span class="tick"></span><span class="t">Yang orang ingat</span>
-    </div>
-    <h2 class="head-md pos rv d2" style="--x:110px;--y:224px;--w:1700px">
-      Yang mereka bilang setelah saya tidak lagi di sana.
-    </h2>
-    <p class="lead pos rv d3" style="--x:110px;--y:352px;--w:1600px">
-      Pesan-pesan ini dari mantan rekan kerja di BRI. Bukan lamaran kerja — mereka yang menghubungi duluan.
-    </p>
-
-    <div class="hstack gap-48 pos" style="--x:110px;--y:472px;--w:1700px">
-      <div class="chatshot rvbox d4" style="--cw:520px;--ch:250px">
-        <img src="assets/chat-01-balik.png" alt="Pesan: masih minat tidak kembali ke NDS">
-        <span class="cap">mereka mengajak saya kembali</span>
-      </div>
-      <div class="chatshot rvbox d5" style="--cw:520px;--ch:250px">
-        <img src="assets/chat-05-sounding.png" alt="Pesan: CV sudah disubmit dan disounding tanpa diminta">
-        <span class="cap">rekan lain membantu tanpa diminta</span>
-      </div>
-      <div class="chatshot rvbox d6" style="--cw:520px;--ch:250px">
-        <img src="assets/chat-06-nointerview.png" alt="Pesan: kalau dari sana tidak usah interview lagi">
-        <span class="cap">tidak perlu wawancara lagi — cukup karena ada yang menjamin</span>
-      </div>
-    </div>
-
-    <div class="annot pos rv d8" style="--x:110px;--y:790px;--w:1600px">
-      Nama dan nomor pengirimnya saya potong sebelum dipasang di sini.
-    </div>
-
-    <div class="foot rv d9">
-      <span class="mk"></span>
-      <span class="ft">Ukuran yang paling jujur: <em>apakah orang mau bekerja lagi dengan kita.</em></span>
-    </div>
-  </div>
-</section>
-
-<!-- ================= E · CARA KERJA ================= -->
 
 <!-- ===== 34 — MEMIMPIN PRODUK ===== -->
 <section class="slide" data-sect="Cara kerja" data-sid="carakerja">
@@ -2456,7 +2398,7 @@ var ALIASES = {
   produk:11, skolain:13, primasejahtera:15, siloam:16, qlola:17, oca:18,
   bri:19, nucare:20, linkit:21, stack:22,
   frames:24, klhk:26, dokter:27, advisory:28, hegemoni:29, seminar:30, pdc:31, peringkat:32,
-  carakerja:34, cv:38, kontak:38
+  carakerja:33, cv:37, kontak:37
 };
 
 var stage    = document.getElementById('deckStage');
@@ -2637,7 +2579,7 @@ var EDITABLE_SELECTOR = [
   '.phone-caption', '.thumb .dur',
   '.annot', '.foot .ft',
   '.lane-label', '.bar .t', '.moment .t', '.stat .n', '.stat .u', '.stat .c',
-  '.photoframe .cap', '.chatshot .cap', '.cover-head-xl', '.credit', '.caveat'
+  '.photoframe .cap', '.cover-head-xl', '.credit', '.caveat'
   /* .pageno .n / .d sengaja TIDAK di sini: sekarang diturunkan dari indeks slide.
      Kalau tetap editable, nilai basi di localStorage bisa menimpa nomor yang benar. */
 ].join(',');

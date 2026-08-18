@@ -2,7 +2,7 @@
 
 Dua dokumen yang saling menopang:
 
-- **`index.html`** — deck *Sembilan Tahun Berkarya*. 39 slide, satu file HTML, tanpa dependensi.
+- **`index.html`** — deck *Sembilan Tahun Berkarya*. 38 slide, satu file HTML, tanpa dependensi.
   Lapisan dokumentasi: linimasa lengkap 2017–2026, produk yang dipegang, konsultansi, dan bukti kerjanya.
 - **`cv/cv.html`** → **`assets/CV_Rochman_Ramadhani_Product_Owner.pdf`** — CV tiga halaman, fokus ke hasil.
 
@@ -94,4 +94,8 @@ resmi boleh tampil; dokumen internal yang memuat nama, wajah, atau skor rekan ke
 
 Konkretnya: papan peringkat "Support System" Maret 2025 **tidak** ditampilkan sebagai gambar — prestasinya
 tetap diklaim penuh, hanya bentuk buktinya jadi teks. Foto tim BRI dan rekaman acara internal tidak dipakai.
-Screenshot percakapan di slide 34 sudah dipotong sampai nama dan nomor pengirimnya hilang.
+
+Slide testimoni sempat memuat tiga screenshot WhatsApp dari mantan rekan kerja. Slide itu dicabut dan
+berkasnya ikut dihapus dari repo, bukan sekadar disembunyikan — pesan pribadi dari orang bernama tidak
+perlu tetap ada di server publik selama tidak ditampilkan. Menunggu testimoni yang memang diniatkan
+untuk terbit.
