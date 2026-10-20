@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://oman-porto.skolain.id/sitemap.xml
+Sitemap: https://omanlabs.tech/sitemap.xml

@@ -9,7 +9,10 @@ Dua dokumen yang saling menopang:
 Aturan yang mengikat keduanya: **CV menyebut angkanya, deck menunjukkan artefaknya.** Tidak boleh ada
 angka di CV yang tidak punya slide pendukung, dan sebaliknya.
 
-Hosting: [oman-porto.skolain.id](https://oman-porto.skolain.id) (Cloudflare Pages).
+Hosting: [omanlabs.tech](https://omanlabs.tech) (Cloudflare Pages, proyek `rochman-ramadhani` di akun yang
+sama dengan zona `omanlabs.tech`). Domain lama `oman-porto.skolain.id` (proyek `oman-porto` di akun lain)
+dialihkan ke sini. Deploy: `git archive main` ke folder sementara, lalu `wrangler pages deploy . --project-name
+rochman-ramadhani --branch main`.
 
 ## Menjalankan
 
@@ -110,4 +113,5 @@ Jadi ada dua lapis penanganan, dan keduanya perlu dipertahankan:
 1. **Deployment lama dihapus.** Snapshot Pages bersifat kekal dan tiap deployment punya URL publik sendiri —
    menghapus berkas di deployment baru tidak menutup yang lama.
 2. **Aturan WAF di zona `skolain.id`** memblokir `oman-porto.skolain.id/assets/chat-*` dengan status 403.
-   Jangan dihapus. Itu jaring pengaman kalau pemetaan aset basi di sisi Cloudflare muncul lagi.
+   Jangan dihapus. Itu jaring pengaman kalau pemetaan aset basi di sisi Cloudflare muncul lagi. Proyek baru
+   `rochman-ramadhani` tidak pernah menerima berkas itu, jadi `omanlabs.tech` tidak mewarisi masalahnya.

@@ -51,7 +51,7 @@ PRODUCT OWNER & TECH FOUNDER
 rochmanramadhani12@gmail.com
 linkedin.com/in/rochmanrmdhn
 github.com/rochmanramadhani
-oman-porto.skolain.id
+omanlabs.tech
 PENGALAMAN PROFESIONAL
 PENDIDIKAN
 Peringkat 1 — kategori Supporter
@@ -74,7 +74,7 @@ for m in re.finditer(rb'stream\r?\n', raw):
     except Exception: data = raw[s:e]
     found |= {u.decode('latin1') for u in re.findall(rb'/URI\s*\((.*?)\)', data, re.S)}
 found |= {u.decode('latin1') for u in re.findall(rb'/URI\s*\((.*?)\)', raw, re.S)}
-harus = ['mailto:', 'wa.me/', 'linkedin.com/in/', 'github.com/', 'oman-porto.skolain.id']
+harus = ['mailto:', 'wa.me/', 'linkedin.com/in/', 'github.com/', 'omanlabs.tech']
 gagal = [w for w in harus if not any(w in f for f in found)]
 for w in harus:
     print(('  ok   tautan ' if w not in gagal else '  GAGAL tautan ') + w)
