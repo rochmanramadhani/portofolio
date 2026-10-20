@@ -119,3 +119,9 @@ Jadi ada dua lapis penanganan, dan keduanya perlu dipertahankan:
 2. **Aturan WAF di zona `skolain.id`** memblokir `oman-porto.skolain.id/assets/chat-*` dengan status 403.
    Jangan dihapus. Itu jaring pengaman kalau pemetaan aset basi di sisi Cloudflare muncul lagi. Proyek baru
    `rochman-ramadhani` tidak pernah menerima berkas itu, jadi `omanlabs.tech` tidak mewarisi masalahnya.
+
+Masalah yang sama muncul lagi di `omanlabs.tech` saat aset bernama klien diganti nama (Oktober 2026): berkas
+lamanya tetap tersaji lewat domain kustom setelah deploy baru dan `purge_everything`. Penanganannya sama:
+deployment lama dihapus, dan **aturan WAF di zona `omanlabs.tech`** ("Blokir aset lama bernama klien")
+memblokir awalan nama berkas lama itu dengan status 403. Jangan dihapus. Saat mengganti nama aset lagi,
+tambahkan awalan lamanya ke aturan itu.
