@@ -49,7 +49,7 @@ Rochman Ramadhani Chiefto Irawan
 PRODUCT OWNER & TECH FOUNDER
 +62 813 8103 9158
 rochmanramadhani12@gmail.com
-linkedin.com/in/rochmanramadhani
+linkedin.com/in/rochmanrmdhn
 github.com/rochmanramadhani
 oman-porto.skolain.id
 PENGALAMAN PROFESIONAL
