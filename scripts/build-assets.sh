@@ -45,9 +45,15 @@ vid() {
 # ---------- 1. salin apa adanya dari deck lama ----------
 say "1/4  Salin dari slide-kka-smk"
 for f in rochman.jpg \
-         klhk-sparing.mp4 klhk-sparing-poster.jpg \
-         siloam-hse.mp4 siloam-hse-poster.jpg; do
+         klhk-sparing.mp4 klhk-sparing-poster.jpg; do
   cp "$OLD/$f" "$OUT/$f"
+  printf '  %-32s %s\n' "$f" "$(du -h "$OUT/$f" | cut -f1)"
+done
+# Nama sumber HSE di deck lama memuat nama klien (<klien>-hse.*); nama terbitnya
+# netral, dan nama klien sengaja tidak ditulis di repo ini — makanya pakai glob.
+cp "$OLD"/*-hse.mp4        "$OUT/hse-rs.mp4"
+cp "$OLD"/*-hse-poster.jpg "$OUT/hse-rs-poster.jpg"
+for f in hse-rs.mp4 hse-rs-poster.jpg; do
   printf '  %-32s %s\n' "$f" "$(du -h "$OUT/$f" | cut -f1)"
 done
 
@@ -67,7 +73,7 @@ cp "$OLD/wisuda-poster.jpg" "$OUT/wisuda-poster.jpg"
 say "3/4  Foto baru (sips)"
 img "$DL/frames-1.jpg"            frames-launch-01.jpg      1066   # sumber cuma 1066x711
 img "$DL/ig.webp"                 seminar-smkjp1-poster.jpg  900
-img "$DL/IMG_E9087.HEIC"          bri-pdc-01.jpg            1400
+img "$DL/IMG_E9087.HEIC"          pdc-01.jpg                1400
 img "$DL/private-1.HEIC"          caezar-01.jpg              820
 img "$DL/private-2.JPG"           caezar-02.jpg              820
 img "$DL/private-3.HEIC"          caezar-03.jpg              820

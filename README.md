@@ -2,7 +2,7 @@
 
 Dua dokumen yang saling menopang:
 
-- **`index.html`** — deck *Sembilan Tahun Berkarya*. 38 slide, satu file HTML, tanpa dependensi.
+- **`index.html`** — deck *6+ Tahun Berkarya*. 38 slide, satu file HTML, tanpa dependensi.
   Lapisan dokumentasi: linimasa lengkap 2017–2026, produk yang dipegang, konsultansi, dan bukti kerjanya.
 - **`cv/cv.html`** → **`assets/CV_Rochman_Ramadhani_Product_Owner.pdf`** — CV tiga halaman, fokus ke hasil.
 
@@ -29,7 +29,7 @@ Perubahan tersimpan di `localStorage`; `Ctrl/⌘+S` mengekspor salinan HTML baru
 Nomor slide tersimpan di hash URL (`#15`), tapi untuk ditulis di CV pakai **alias**, bukan angka:
 
 ```
-#peta  #angka  #skolain  #primasejahtera  #siloam  #qlola  #oca  #bri
+#peta  #angka  #skolain  #hris  #rumahsakit  #wholesale  #omnichannel  #bank
 #frames  #klhk  #dokter  #advisory  #hegemoni  #seminar  #pdc  #peringkat  #carakerja  #kontak
 ```
 
@@ -96,7 +96,11 @@ Deck ini publik, jadi aturannya sama seperti deck KKA SMK: **dokumentasi yang me
 resmi boleh tampil; dokumen internal yang memuat nama, wajah, atau skor rekan kerja tidak.**
 
 Konkretnya: papan peringkat "Support System" Maret 2025 **tidak** ditampilkan sebagai gambar — prestasinya
-tetap diklaim penuh, hanya bentuk buktinya jadi teks. Foto tim BRI dan rekaman acara internal tidak dipakai.
+tetap diklaim penuh, hanya bentuk buktinya jadi teks. Foto tim di kantor bank dan rekaman acara internal tidak dipakai.
+
+Klien dan pemberi kerja korporat besar tidak disebut namanya — di teks, alt, komentar, alias deep-link, maupun
+nama berkas aset. Cara menyebutnya mengikuti tabel di `PROFIL.md`. Logo yang terekam di dalam foto atau video
+(mis. panggung di `pdc-01.jpg`) tidak disunting.
 
 Slide testimoni sempat memuat tiga screenshot WhatsApp dari mantan rekan kerja. Slide itu dicabut dan
 berkasnya ikut dihapus dari repo, bukan sekadar disembunyikan — pesan pribadi dari orang bernama tidak
