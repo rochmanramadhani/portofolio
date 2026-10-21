@@ -35,10 +35,15 @@ Alias deep-link deck: `#bank`, `#wholesale`, `#omnichannel`, `#rumahsakit`, `#hr
 - Nama lengkap: Rochman Ramadhani Chiefto Irawan, S.Kom. Panggilan: Oman. Jakarta. Lahir 12 Desember 2001.
 - Posisi: Forward Deployed Engineer — membantu pemilik bisnis Indonesia tumbuh dengan AI dan sistem.
 - Peran sekarang: Founder Skolain (PT Inovasi Mitra Konsultan); Technology Partner, Hegemoni Group;
-  AI Advisor untuk pemilik bisnis.
+  AI Learning Partner untuk pemilik bisnis (Coach Rheo, sejak Agustus 2026).
+- Kerja bareng Coach Rheo disebut **AI Learning Partner** / "belajar AI bareng", bukan "AI Advisor", "AI Coaching",
+  atau "AI Training": kesannya kolaborasi sesama, bukan menggurui.
 - Hub tautan: **omanlabs.tech**. Email rochmanramadhani12@gmail.com · WhatsApp +62 813 8103 9158.
-- Handle: `rochmanrmdhn` di semua platform kecuali Facebook (`rochmanrmdhnn`) dan GitHub (`rochmanramadhani`).
-  Target akhir semuanya `rochmanrmdhnn`, setelah kunci username TikTok lepas (±19 November 2026).
+- Handle (21 Oktober 2026):
+  - `rochmanrmdhnn`: X, Instagram, Threads, Facebook, YouTube, Pinterest, GitLab.
+  - `rochmanrmdhn`: LinkedIn (custom URL belum bisa diganti), TikTok (terkunci sampai 19 November 2026),
+    lynk.id (username tidak bisa diganti dari dasbor).
+  - GitHub tetap `rochmanramadhani` sampai rename di Multica OL-861.
 
 ## Linimasa
 
@@ -63,10 +68,10 @@ Alias deep-link deck: `#bank`, `#wholesale`, `#omnichannel`, `#rumahsakit`, `#hr
 | Agt 2024 – Jan 2025 | Telko — platform komunikasi omnichannel; biaya operasional turun 60% | Senior Software Engineer |
 | Des 2024 – Des 2025 | Bank — platform layanan frontliner, kembali | Senior Software Engineer |
 | Jul 2025 – Mei 2026 | PT Mastah Digital Teknologi | Engineering Manager, paruh waktu |
-| Jul 2025 – sekarang | AI Advisor untuk pemilik bisnis (Coach Rheo, doatrto.com) | AI Advisor |
 | 2026 | Dashboard keanggotaan asosiasi dokter nasional (150.000 dokter) | Product Owner |
 | Mei 2026 – sekarang | Hegemoni Group | Technology Partner |
 | Jun 2026 – sekarang | Skolain | Founder & Product Owner |
+| Agt 2026 – sekarang | Belajar AI bareng pemilik bisnis (Coach Rheo, doatrto.com) | AI Learning Partner |
 | 12–13 Agt 2026 | Seminar SMK Jakarta Pusat 1 × TechPedia | Pemateri |
 
 Sistem HSE rumah sakit (Software Architect, 6 engineer, 500+ pengguna harian) dan HRIS 50.000+ pengguna belum
@@ -117,7 +122,7 @@ About:
 > • Took Skolain, my school platform, from zero to 1,600+ active users
 > • Grew an engineering team from 7 to 30+
 >
-> Today I'm the founder of Skolain, Technology Partner at Hegemoni Group, and an AI advisor to business owners: picking the use cases that actually pay off, building AI-assisted workflows, and staying until the team runs them on its own.
+> Today I'm the founder of Skolain, Technology Partner at Hegemoni Group, and an AI learning partner to business owners: we find the use cases that actually pay off, build AI-assisted workflows together, and I stay until the team runs them on its own.
 >
 > It started at vocational school: 1st place at Kamp Kreatif SMK Indonesia 2019 (Ministry of Education) with Ngajar, a two-way classroom app, and 1st place at PermataYouthPreneur 2020 with Bayar, a fintech app.
 >

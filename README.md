@@ -2,7 +2,11 @@
 
 Dua dokumen yang saling menopang:
 
-- **`index.html`** — deck *6+ Tahun Berkarya*. 38 slide, satu file HTML, tanpa dependensi.
+- **`index.html`** — deck *6+ Tahun Berkarya*. 39 slide, satu file HTML, tanpa dependensi. Ini hub tautan
+  (omanlabs.tech) yang dituju semua bio media sosial, jadi sampul, slide kenalan, dan penutupnya membuka dengan
+  posisi sekarang: Forward Deployed Engineer yang membantu pemilik bisnis tumbuh dengan AI dan sistem — Founder
+  Skolain, Technology Partner di Hegemoni Group, AI Learning Partner. Slide `#bisnis` merangkum yang dikerjakan
+  untuk pemilik bisnis, dan slide kontak menaruh WhatsApp paling depan.
   Lapisan dokumentasi: linimasa lengkap 2017–2026, produk yang dipegang, konsultansi, dan bukti kerjanya.
 - **`cv/cv.html`** → **`assets/CV_Rochman_Ramadhani_Product_Owner.pdf`** — CV tiga halaman, fokus ke hasil.
 
@@ -30,7 +34,7 @@ Nomor slide tersimpan di hash URL (`#15`), tapi untuk ditulis di CV pakai **alia
 
 ```
 #peta  #angka  #skolain  #hris  #rumahsakit  #wholesale  #omnichannel  #bank
-#frames  #klhk  #dokter  #advisory  #hegemoni  #seminar  #pdc  #peringkat  #carakerja  #kontak
+#frames  #klhk  #dokter  #advisory  #hegemoni  #seminar  #pdc  #peringkat  #carakerja  #bisnis  #kontak
 ```
 
 Hash posisional putus begitu ada satu slide disisipkan, sementara PDF CV yang sudah beredar tidak bisa
