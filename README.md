@@ -8,7 +8,9 @@ Dua dokumen yang saling menopang:
   Skolain, Technology Partner di Hegemoni Group, AI Learning Partner. Slide `#bisnis` merangkum yang dikerjakan
   untuk pemilik bisnis, dan slide kontak menaruh WhatsApp paling depan.
   Lapisan dokumentasi: linimasa lengkap 2017–2026, produk yang dipegang, konsultansi, dan bukti kerjanya.
-- **`cv/cv.html`** → **`assets/CV_Rochman_Ramadhani_Product_Owner.pdf`** — CV tiga halaman, fokus ke hasil.
+- **`cv/cv.html`** → **`assets/CV_Rochman_Ramadhani_Product_Engineer.pdf`** — CV Product Engineer tiga halaman,
+  fokus ke hasil. Nama lama `CV_Rochman_Ramadhani_Product_Owner.pdf` dialihkan 301 ke sini lewat `_redirects`
+  (Cloudflare Pages), karena tautan ke PDF lama masih beredar.
 
 Aturan yang mengikat keduanya: **CV menyebut angkanya, deck menunjukkan artefaknya.** Tidak boleh ada
 angka di CV yang tidak punya slide pendukung, dan sebaliknya.
@@ -17,6 +19,10 @@ Hosting: [omanlabs.tech](https://omanlabs.tech) (Cloudflare Pages, proyek `rochm
 sama dengan zona `omanlabs.tech`). Domain lama `oman-porto.skolain.id` (proyek `oman-porto` di akun lain)
 dialihkan ke sini. Deploy: `git archive main` ke folder sementara, lalu `wrangler pages deploy . --project-name
 rochman-ramadhani --branch main`.
+
+SEO/AEO/GEO: `<head>` deck memuat satu blok JSON-LD `Person` (nama, alias, jabatan, penghargaan, `sameAs` ke
+semua profil sosial). `llms.txt` (bahasa Inggris, format llmstxt.org) merangkum profil untuk mesin jawaban.
+`sitemap.xml` mendaftar deck, `PROFIL.md`, dan `llms.txt`; naikkan `lastmod`-nya tiap ada perubahan isi.
 
 ## Menjalankan
 
@@ -36,6 +42,10 @@ Nomor slide tersimpan di hash URL (`#15`), tapi untuk ditulis di CV pakai **alia
 #peta  #angka  #skolain  #hris  #rumahsakit  #wholesale  #omnichannel  #bank
 #frames  #klhk  #dokter  #advisory  #hegemoni  #seminar  #pdc  #peringkat  #carakerja  #bisnis  #kontak
 ```
+
+Alias lama dari sebelum Oktober 2026 tetap hidup dan menunjuk ke slide yang sama, karena tautannya masih
+beredar: `#primasejahtera` (= `#hris`), `#siloam` (= `#rumahsakit`), `#qlola` (= `#wholesale`),
+`#oca` (= `#omnichannel`), `#bri` (= `#bank`).
 
 Hash posisional putus begitu ada satu slide disisipkan, sementara PDF CV yang sudah beredar tidak bisa
 ditarik lagi. Alias tidak ikut bergeser.
@@ -100,11 +110,11 @@ Deck ini publik, jadi aturannya sama seperti deck KKA SMK: **dokumentasi yang me
 resmi boleh tampil; dokumen internal yang memuat nama, wajah, atau skor rekan kerja tidak.**
 
 Konkretnya: papan peringkat "Support System" Maret 2025 **tidak** ditampilkan sebagai gambar — prestasinya
-tetap diklaim penuh, hanya bentuk buktinya jadi teks. Foto tim di kantor bank dan rekaman acara internal tidak dipakai.
+tetap diklaim penuh, hanya bentuk buktinya jadi teks. Foto tim di kantor BRI dan rekaman acara internal tidak dipakai.
 
-Klien dan pemberi kerja korporat besar tidak disebut namanya — di teks, alt, komentar, alias deep-link, maupun
-nama berkas aset. Cara menyebutnya mengikuti tabel di `PROFIL.md`. Logo yang terekam di dalam foto atau video
-(mis. panggung di `pdc-01.jpg`) tidak disunting.
+Nama klien dan produknya (BRI, QLOLA, NDS, Telkom OCA, Siloam, PT PKSS, Kolegium Dokter) **boleh dan memang
+disebut** di deck, CV, dan `PROFIL.md`. Yang tetap umum hanya bio media sosial dan README profil GitHub; cara
+menyebutnya mengikuti tabel di `PROFIL.md`. Nama berkas aset tetap netral (`hse-rs.mp4`, `pdc-01.jpg`, …).
 
 Slide testimoni sempat memuat tiga screenshot WhatsApp dari mantan rekan kerja. Slide itu dicabut dan
 berkasnya ikut dihapus dari repo, bukan sekadar disembunyikan — pesan pribadi dari orang bernama tidak
@@ -123,9 +133,3 @@ Jadi ada dua lapis penanganan, dan keduanya perlu dipertahankan:
 2. **Aturan WAF di zona `skolain.id`** memblokir `oman-porto.skolain.id/assets/chat-*` dengan status 403.
    Jangan dihapus. Itu jaring pengaman kalau pemetaan aset basi di sisi Cloudflare muncul lagi. Proyek baru
    `rochman-ramadhani` tidak pernah menerima berkas itu, jadi `omanlabs.tech` tidak mewarisi masalahnya.
-
-Masalah yang sama muncul lagi di `omanlabs.tech` saat aset bernama klien diganti nama (Oktober 2026): berkas
-lamanya tetap tersaji lewat domain kustom setelah deploy baru dan `purge_everything`. Penanganannya sama:
-deployment lama dihapus, dan **aturan WAF di zona `omanlabs.tech`** ("Blokir aset lama bernama klien")
-memblokir awalan nama berkas lama itu dengan status 403. Jangan dihapus. Saat mengganti nama aset lagi,
-tambahkan awalan lamanya ke aturan itu.

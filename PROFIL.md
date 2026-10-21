@@ -8,37 +8,53 @@ lain, berkas ini yang benar.
 
 - **Pengalaman: "6+ tahun" / "6+ yrs".** Dihitung dari magang pertama (Juli 2020), bukan dari masuk SMK (2017).
   Deck boleh tetap bercerita sejak 2017, tapi angka pengalamannya 6+.
-- **Klien dan pemberi kerja korporat besar tidak disebut namanya**, begitu juga nama produk internal mereka
-  yang langsung menunjuk ke perusahaannya. Pakai deskripsi sektor dan skala di tabel bawah. Berlaku untuk
-  bio, README, deck, CV, nama berkas aset, dan alias deep-link.
-- Institusi pemerintah, kampus, sekolah, mitra advisory, dan startup tetap boleh disebut.
+- **Nama asli klien dan produknya dipakai** di LinkedIn, CV, deck (omanlabs.tech), dan berkas ini: BRI (NDS,
+  QLOLA), Telkom Indonesia (OCA), Siloam International Hospitals, PT PKSS (PrimaSejahtera), Kolegium Dokter,
+  Hegemoni Group. Di deck, CV, dan berkas ini Hegemoni Group diberi keterangan "grup kecantikan multi-brand"
+  kalau ada tempatnya.
+- **Versi umum** (tanpa nama klien maupun nama produk) hanya untuk **bio media sosial** dan **README profil GitHub**.
+  Detailnya cukup ditunjuk ke LinkedIn atau omanlabs.tech. Di README GitHub, Hegemoni ditulis
+  "Technology Partner at a multi-brand beauty group". Cara menyebutnya mengikuti tabel di bawah.
+- Nama berkas aset tetap netral (`hse-rs.mp4`, `pdc-01.jpg`, …); yang memuat nama asli hanya teks, alt, dan keterangan.
+- **Peran Oman sendiri: Product Engineer, bukan Product Owner** — Skolain (Founder & Product Engineer), FRAMES,
+  dan Kolegium Dokter. Istilah keterampilan umum seperti "product discovery" tetap boleh.
+- **Migrasi Telkom OCA tidak diberi angka.** Tidak ada persentase penghematan maupun angka benchmark; pakai
+  kalimat kualitatif di bagian "Kalimat baku" di bawah.
+- Institusi pemerintah, kampus, sekolah, mitra advisory, dan startup boleh disebut di mana pun.
 - Bio dan deskripsi platform berbahasa Inggris. Ajakan penutup: "DM me to chat 👇", bukan bahasa Indonesia.
 - Bendera 🇮🇩🇵🇸 ditaruh di nama tampilan (X, Instagram, Threads, YouTube, Pinterest). LinkedIn tidak menerima
   emoji di nama, jadi benderanya di akhir headline; Facebook di awal bio; TikTok di bio selama nickname terkunci.
 
-### Cara menyebut klien yang disamarkan
+### Nama asli ↔ versi umum
 
-| Konteks | Bahasa Indonesia | English |
+| Nama asli (LinkedIn, CV, deck) | Versi umum — Indonesia (bio) | Versi umum — English (bio, README GitHub) |
 |---|---|---|
-| Bank (tiga kontrak, 2022–2025) | salah satu bank terbesar di Indonesia | one of Indonesia's largest banks |
-| — aplikasi layanan konter | platform layanan frontliner (teller & CS) | branch frontliner platform |
-| — platform korporasi | platform digital wholesale banking | wholesale digital banking platform |
-| Telko (Agt 2024 – Jan 2025) | salah satu perusahaan telekomunikasi terbesar di Indonesia | one of Indonesia's largest telcos |
-| — produknya | platform komunikasi omnichannel | omnichannel communication platform |
-| Rumah sakit (sistem HSE) | salah satu jaringan rumah sakit swasta terbesar di Indonesia | one of Indonesia's largest private hospital networks |
-| HRIS 50.000+ pengguna | perusahaan jasa SDM nasional | a national HR services company |
+| PT Bank Rakyat Indonesia (BRI), tiga kontrak 2022–2025 | salah satu bank terbesar di Indonesia | one of Indonesia's largest banks |
+| — New Delivery System (NDS) | platform layanan frontliner (teller & CS) | branch frontliner platform |
+| — QLOLA by BRI | platform digital wholesale banking | wholesale digital banking platform |
+| — Perum Bulog (mitra integrasi QLOLA) | sebuah BUMN pangan | a state-owned food company |
+| Telkom Indonesia (Agt 2024 – Jan 2025) | salah satu perusahaan telekomunikasi terbesar di Indonesia | one of Indonesia's largest telcos |
+| — Omni Communication Assistant (OCA) | platform komunikasi omnichannel | omnichannel communication platform |
+| Siloam International Hospitals (sistem HSE) | salah satu jaringan rumah sakit swasta terbesar di Indonesia | one of Indonesia's largest private hospital networks |
+| PT PKSS — PrimaSejahtera (HRIS 50.000+ pengguna) | perusahaan jasa SDM nasional | a national HR services company |
+| Kolegium Dokter (dashboard keanggotaan) | kolegium dokter nasional | a national doctors' college |
+| Hegemoni Group | grup kecantikan multi-brand | a multi-brand beauty group |
 
-Alias deep-link deck: `#bank`, `#wholesale`, `#omnichannel`, `#rumahsakit`, `#hris`.
+Alias deep-link deck — umum: `#bank`, `#wholesale`, `#omnichannel`, `#rumahsakit`, `#hris`; nama asli (alias
+lama, tetap hidup): `#bri`, `#qlola`, `#oca`, `#siloam`, `#primasejahtera`. Pasangan yang sama menunjuk ke slide
+yang sama. Di README GitHub pakai alias umum.
 
 ## Identitas
 
 - Nama lengkap: Rochman Ramadhani Chiefto Irawan, S.Kom. Panggilan: Oman. Jakarta. Lahir 12 Desember 2001.
 - Posisi: Forward Deployed Engineer — membantu pemilik bisnis Indonesia tumbuh dengan AI dan sistem.
-- Peran sekarang: Founder Skolain (PT Inovasi Mitra Konsultan); Technology Partner, Hegemoni Group;
-  AI Learning Partner untuk pemilik bisnis (Coach Rheo, sejak Agustus 2026).
+- Peran sekarang: Founder & Product Engineer, Skolain (PT Inovasi Mitra Konsultan); Technology Partner,
+  Hegemoni Group (grup kecantikan multi-brand); AI Learning Partner untuk pemilik bisnis (Coach Rheo, sejak
+  Agustus 2026).
 - Kerja bareng Coach Rheo disebut **AI Learning Partner** / "belajar AI bareng", bukan "AI Advisor", "AI Coaching",
   atau "AI Training": kesannya kolaborasi sesama, bukan menggurui.
 - Hub tautan: **omanlabs.tech**. Email rochmanramadhani12@gmail.com · WhatsApp +62 813 8103 9158.
+- CV: `assets/CV_Rochman_Ramadhani_Product_Engineer.pdf` (nama lama `…_Product_Owner.pdf` dialihkan 301).
 - Handle (21 Oktober 2026):
   - `rochmanrmdhnn`: X, Instagram, Threads, Facebook, YouTube, Pinterest, GitLab, LinkedIn.
   - `rochmanrmdhn`: TikTok (terkunci sampai 19 November 2026), lynk.id (username tidak bisa diganti dari dasbor).
@@ -49,45 +65,61 @@ Alias deep-link deck: `#bank`, `#wholesale`, `#omnichannel`, `#rumahsakit`, `#hr
 | Waktu | Apa | Peran |
 |---|---|---|
 | 2017 – 2021 | SMK Negeri 26 Jakarta, Sistem Informatika Jaringan dan Aplikasi | Siswa |
-| Jan 2019 | SEAMEO SEAMOLEC Southeast Asia Creative Camp batch 3 (IoT) — penyiram tanaman pintar | Juara 1 |
+| Jan 2019 | SEAMEO SEAMOLEC Southeast Asia Creative Camp batch 3 (IoT) — **Smart Green Garden**, penyiram tanaman pintar otomatis | Juara 1 |
 | Agt 2019 | Parade Cinta Tanah Air, Kemhan — *Smart Growth*, irigasi pintar | Juara 2 |
 | Agt 2019 | Work Ready, British Council | Juara 3 |
 | Sep – Nov 2019 | **Ngajar** — LMS kelas dua arah (Laravel, Kotlin); Juara 1 Kamp Kreatif SMK Indonesia 2019 (Des 2019), Kemendikbud, tema Smart School Technology | Developer, tim bersama Muhammad Luthfi Arifin |
 | Mei – Jun 2020 | **Bayar** — aplikasi fintech (Kotlin); Juara 1 PermataYouthPreneur 2020, PermataBank | Developer |
 | Jul – Sep 2020 | PT Multi Cipta Manajemen | Software Developer, magang 3 bulan |
 | Okt 2020 – Des 2022 | PT Lumos Inisiatif Indonesia (Lumoshive) — tim 7 → 30+; ERP, SCM, CRM; LinkIT360 (Gemezz, Dream League, Goaly, Emagz); LAZISNU | Software Engineer, lalu Lead Software Engineer sejak Apr 2021 |
-| Okt – Des 2020 | FRAMES v1 — aplikasi Android penilaian kelelahan pilot (Laravel, Kotlin) | Developer |
+| Okt – Des 2020 | FRAMES v1 — aplikasi Android penilaian kelelahan pilot (Laravel, Kotlin) | Product Engineer |
 | Jun 2022 – Agt 2026 | Binus Online Learning, S.Kom. Sistem Informasi, IPK 3,85, Magna Cum Laude | Mahasiswa |
-| Des 2022 – Des 2023 | Bank — platform layanan frontliner | Backend Developer |
+| Des 2022 – Des 2023 | BRI — New Delivery System (NDS) | Backend Developer |
 | Des 2022 – Feb 2026 | PT Infobit Unixa Komputasi — Prima Super App | Technical Lead, freelance paruh waktu |
 | Feb 2023 – Feb 2024 | PT Prima Avza Solusindo — EIS Kemendagri, E-Database, ZISWAF | Backend Engineer, freelance paruh waktu |
-| Des 2023 – Agt 2024 | Bank — platform digital wholesale banking | Backend Developer |
+| Des 2023 – Agt 2024 | BRI — QLOLA (wholesale digital banking), integrasi Perum Bulog | Backend Developer |
 | Jan – Apr 2024 | KLHK — SPARING & CEMS | Konsultan teknis |
-| Mar 2024 | FRAMES v2 — FKUI × Garuda Indonesia Training Center, rilis 7 Maret 2024 | Product Owner & Developer |
-| Agt 2024 – Jan 2025 | Telko — platform komunikasi omnichannel; biaya operasional turun 60% | Senior Software Engineer |
-| Des 2024 – Des 2025 | Bank — platform layanan frontliner, kembali | Senior Software Engineer |
-| Jul 2025 – Mei 2026 | PT Mastah Digital Teknologi | Engineering Manager, paruh waktu |
-| 2026 | Dashboard keanggotaan asosiasi dokter nasional (150.000 dokter) | Product Owner |
-| Mei 2026 – sekarang | Hegemoni Group | Technology Partner |
-| Jun 2026 – sekarang | Skolain | Founder & Product Owner |
+| Mar 2024 | FRAMES v2 — FKUI × Garuda Indonesia Training Center, rilis 7 Maret 2024 (Kotlin, MVVM) | Product Engineer |
+| Agt 2024 – Jan 2025 | Telkom Indonesia — Omni Communication Assistant (OCA); migrasi backend NestJS → Go yang ia usulkan, rencanakan, dan pimpin | Senior Software Engineer |
+| Des 2024 – Des 2025 | BRI — New Delivery System (NDS), kembali | Senior Software Engineer |
+| Jul 2025 – Mei 2026 | PT Mastah Digital Teknologi | Engineering Manager, paruh waktu (part-time), hybrid |
+| 2026 | Kolegium Dokter — dashboard keanggotaan (dilingkup 150.000 dokter umum) | Product Engineer |
+| Mei 2026 – sekarang | Hegemoni Group — grup kecantikan multi-brand | Technology Partner |
+| Jun 2026 – sekarang | Skolain | Founder & Product Engineer |
 | Agt 2026 – sekarang | Belajar AI bareng pemilik bisnis (Coach Rheo, doatrto.com) | AI Learning Partner |
 | 12–13 Agt 2026 | Seminar SMK Jakarta Pusat 1 × TechPedia | Pemateri |
 
-Sistem HSE rumah sakit (Software Architect, 6 engineer, 500+ pengguna harian) dan HRIS 50.000+ pengguna belum
-bertanggal di CV maupun deck.
+Sistem HSE Siloam International Hospitals (Software Architect, 6 engineer, 500+ pengguna harian) dan HRIS
+PrimaSejahtera untuk PT PKSS (50.000+ pengguna) belum bertanggal di CV maupun deck.
 
 ## Angka yang boleh dikutip
 
 Semua punya slide pendukung di deck.
 
 - 6+ tahun pengalaman.
-- Biaya operasional turun hingga 60% — migrasi NestJS → Go di telko.
-- 50.000+ pengguna aktif — HRIS nasional.
+- 50.000+ pengguna aktif — HRIS PrimaSejahtera, PT PKSS.
 - 1.600+ pengguna aktif — Skolain.
-- 500+ pengguna harian, memimpin 6 engineer — sistem HSE rumah sakit.
+- 500+ pengguna harian, memimpin 6 engineer — sistem HSE Siloam International Hospitals.
 - Tim 7 → 30+ — Lumos.
-- Tiga kontrak di bank yang sama, naik ke Senior Software Engineer.
-- Peringkat 1 kategori Supporter, program internal "Support System" bank, periode Maret 2025, skor 10/10.
+- Tiga kontrak di BRI (dua di NDS, satu di QLOLA), naik ke Senior Software Engineer.
+- Peringkat 1 kategori Supporter, program "Support System" BRI, periode Maret 2025, skor 10/10.
+
+Telkom OCA **tidak** punya angka. Pakai kalimat baku di bawah.
+
+## Kalimat baku
+
+Migrasi Go di Telkom OCA:
+
+- ID: Mengusulkan, merencanakan, dan memimpin migrasi backend NestJS ke Go (Golang) di Telkom Indonesia, Omni
+  Communication Assistant. Go memakai CPU dan memori jauh lebih efisien di bawah trafik puncak — concurrency
+  multi-core lewat goroutine, bukan event loop Node yang satu thread, dan kode terkompilasi untuk kerja berat CPU —
+  sehingga platform tetap stabil di jam puncak, dengan ruang untuk tumbuh dan kebutuhan infrastruktur yang lebih ringan.
+- EN: Proposed, planned and led the NestJS → Go migration of Telkom Indonesia's Omni Communication Assistant. Go uses
+  CPU and memory far more efficiently under peak traffic (goroutines use every core instead of Node's single-threaded
+  event loop, and compiled code handles CPU-heavy work better), so the platform stays stable at peak with room to grow
+  and lower infrastructure needs.
+- Versi umum (bio, README GitHub): "led a NestJS → Go migration at one of Indonesia's largest telcos so the platform
+  stays stable at peak traffic with lower infrastructure needs".
 
 ## Bio (v4)
 
@@ -104,6 +136,8 @@ Batas karakter: IG/Threads 150, X 160, TikTok 80, Facebook 101, GitHub 160. Semu
 
 ### LinkedIn
 
+LinkedIn boleh menyebut nama klien.
+
 Headline:
 
 > Forward Deployed Engineer | I help Indonesian business owners grow with AI & systems | Founder, Skolain | Technology Partner, Hegemoni Group | 6+ yrs across banking, healthcare, gov & education 🇮🇩 🇵🇸
@@ -112,17 +146,17 @@ About:
 
 > I help Indonesian business owners grow with AI and well-built systems.
 >
-> For 6+ years I've built software that a lot of people depend on: one of Indonesia's largest banks (three separate contracts), one of its largest telcos, one of its largest private hospital networks, a national HR services company, government ministries, and schools. I came up through engineering (Go, Rust, cloud and on-prem infrastructure), so I can tell a business owner what a decision really costs before anyone builds it.
+> For 6+ years I've built software that a lot of people depend on: BRI (three separate contracts, on NDS and QLOLA), Telkom Indonesia, Siloam International Hospitals, PT PKSS, government ministries, and schools. I came up through engineering (Go, Rust, cloud and on-prem infrastructure), so I can tell a business owner what a decision really costs before anyone builds it.
 >
 > What that looks like in practice:
-> • Cut operational cost by up to 60% on a telco's omnichannel platform by proposing and leading a NestJS → Go migration
-> • Architected a national HRIS that stays up when 50,000+ employees clock in at the same time
-> • Led 6 engineers on a hospital-wide Health, Safety & Environment system used by 500+ people every day
+> • Proposed, planned and led the NestJS → Go migration of Telkom Indonesia's omnichannel platform (OCA). Go uses CPU and memory far more efficiently under peak traffic, so the platform stays stable at peak with room to grow and lower infrastructure needs
+> • Architected PrimaSejahtera, PT PKSS's national HRIS, which stays up when 50,000+ employees clock in at the same time
+> • Led 6 engineers on the Health, Safety & Environment system of Siloam International Hospitals, used by 500+ people every day
 > • Took Skolain, my school platform, from zero to 1,600+ active users
 > • Grew an engineering team from 7 to 30+
 >
-> Today I'm the founder of Skolain, Technology Partner at Hegemoni Group, and an AI learning partner to business owners: we find the use cases that actually pay off, build AI-assisted workflows together, and I stay until the team runs them on its own.
+> Today I'm the founder and product engineer of Skolain, Technology Partner at Hegemoni Group, a multi-brand beauty group, and an AI learning partner to business owners: we find the use cases that actually pay off, build AI-assisted workflows together, and I stay until the team runs them on its own.
 >
-> It started at vocational school: 1st place at Kamp Kreatif SMK Indonesia 2019 (Ministry of Education) with Ngajar, a two-way classroom app, and 1st place at PermataYouthPreneur 2020 with Bayar, a fintech app.
+> It started at vocational school: 1st place at the SEAMEO SEAMOLEC Southeast Asia Creative Camp 2019 with Smart Green Garden, an automatic IoT plant-watering system; 1st place at Kamp Kreatif SMK Indonesia 2019 (Ministry of Education) with Ngajar, a two-way classroom app; and 1st place at PermataYouthPreneur 2020 with Bayar, a fintech app.
 >
 > Running a business and wondering where AI actually fits? DM me to chat, or see the work at omanlabs.tech.
