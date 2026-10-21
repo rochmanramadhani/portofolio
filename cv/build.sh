@@ -9,7 +9,7 @@ set -euo pipefail
 
 CV="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-OUT="$CV/../assets/CV_Rochman_Ramadhani_Product_Owner.pdf"
+OUT="$CV/../assets/CV_Rochman_Ramadhani_Product_Engineer.pdf"
 
 [ -x "$CHROME" ] || { echo "Google Chrome tidak ditemukan di $CHROME" >&2; exit 1; }
 
@@ -46,10 +46,10 @@ while IFS= read -r probe; do
   fi
 done <<'PROBES'
 Rochman Ramadhani Chiefto Irawan
-PRODUCT OWNER & TECH FOUNDER
+PRODUCT ENGINEER & TECH FOUNDER
 +62 813 8103 9158
 rochmanramadhani12@gmail.com
-linkedin.com/in/rochmanrmdhn
+linkedin.com/in/rochmanrmdhnn
 github.com/rochmanramadhani
 omanlabs.tech
 PENGALAMAN PROFESIONAL

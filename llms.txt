@@ -1,0 +1,39 @@
+# Rochman Ramadhani Chiefto Irawan
+
+> Rochman Ramadhani Chiefto Irawan, S.Kom. ("Oman") is a Forward Deployed Engineer in Jakarta, Indonesia who helps Indonesian business owners grow with AI and well-built systems. He is the Founder of Skolain, a school management platform, Technology Partner at Hegemoni Group (a multi-brand beauty group), and an AI Learning Partner to business owners. He has 6+ years (since July 2020) of experience building production systems for banking, healthcare, government and education.
+
+Key facts, each documented on a slide of the portfolio deck:
+
+- Founder & Product Engineer, Skolain (since June 2026): five school modules in one workflow, 1,600+ active users.
+- Contracted three times by PT Bank Rakyat Indonesia (BRI): Backend Developer on New Delivery System (NDS) and QLOLA (wholesale digital banking), then Senior Software Engineer on NDS (December 2022 – December 2025).
+- Senior Software Engineer, Telkom Indonesia, Omni Communication Assistant (OCA), August 2024 – January 2025: proposed, planned and led the NestJS → Go migration so the platform stays stable at peak traffic with lower infrastructure needs.
+- Architected PrimaSejahtera, a national HRIS for PT PKSS with 50,000+ active users.
+- Software Architect leading 6 engineers on the Health, Safety & Environment system of Siloam International Hospitals, 500+ daily users.
+- Product Engineer on FRAMES (Faculty of Medicine Universitas Indonesia × Garuda Indonesia Training Center): v1 October–December 2020, v2 released 7 March 2024.
+- Product Engineer on the Kolegium Dokter membership dashboard, scoped for 150,000 general practitioners.
+- Engineering Manager (part-time, hybrid), PT Mastah Digital Teknologi, July 2025 – May 2026. Lead Software Engineer at PT Lumos Inisiatif Indonesia, team grown from 7 to 30+.
+- Awards: 1st place, SEAMEO SEAMOLEC Southeast Asia Creative Camp batch 3 (January 2019) with Smart Green Garden, an automatic IoT plant-watering system; 1st place, Kamp Kreatif SMK Indonesia 2019 with Ngajar; 1st place, PermataYouthPreneur 2020 with Bayar.
+- Education: B.Sc. (S.Kom.) Information Systems, BINUS Online Learning, 3.85 GPA, Magna Cum Laude (August 2026); SMK Negeri 26 Jakarta (2017–2021).
+
+## Portfolio
+
+- [Portfolio deck (Indonesian)](https://omanlabs.tech/): 39-slide deck with the full 2017–2026 timeline, products, consulting work and the evidence for every claim.
+- [Profile source of truth (Indonesian)](https://omanlabs.tech/PROFIL.md): canonical facts, timeline, quotable numbers and bios.
+- [CV, PDF (Indonesian)](https://omanlabs.tech/assets/CV_Rochman_Ramadhani_Product_Engineer.pdf): three-page Product Engineer CV.
+
+## Deck sections
+
+- [Timeline map](https://omanlabs.tech/#peta)
+- [Results in numbers](https://omanlabs.tech/#angka)
+- [Skolain](https://omanlabs.tech/#skolain)
+- [Telkom OCA: NestJS → Go migration](https://omanlabs.tech/#oca)
+- [Three contracts at BRI](https://omanlabs.tech/#bri)
+- [For business owners](https://omanlabs.tech/#bisnis)
+- [Contact](https://omanlabs.tech/#kontak)
+
+## Contact
+
+- [LinkedIn](https://www.linkedin.com/in/rochmanrmdhnn/)
+- [GitHub](https://github.com/rochmanramadhani)
+- Email: rochmanramadhani12@gmail.com
+- WhatsApp: +62 813 8103 9158
