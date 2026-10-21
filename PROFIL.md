@@ -10,8 +10,8 @@ lain, berkas ini yang benar.
   Deck boleh tetap bercerita sejak 2017, tapi angka pengalamannya 6+.
 - **Nama asli klien dan produknya dipakai** di LinkedIn, CV, deck (omanlabs.tech), dan berkas ini: BRI (NDS,
   QLOLA), Telkom Indonesia (OCA), Siloam International Hospitals, PT PKSS (PrimaSejahtera), Kolegium Dokter,
-  Hegemoni Group. Di deck, CV, dan berkas ini Hegemoni Group diberi keterangan "grup kecantikan multi-brand"
-  kalau ada tempatnya.
+  Hegemoni Group. Khusus grup kecantikan, deck dan ringkasan profil tetap memakai "grup kecantikan multi-brand";
+  nama perusahaan boleh ada di rincian pengalaman profesional dan CV.
 - **Versi umum** (tanpa nama klien maupun nama produk) hanya untuk **bio media sosial** dan **README profil GitHub**.
   Detailnya cukup ditunjuk ke LinkedIn atau omanlabs.tech. Di README GitHub, Hegemoni ditulis
   "Technology Partner at a multi-brand beauty group". Cara menyebutnya mengikuti tabel di bawah.
@@ -138,7 +138,7 @@ LinkedIn boleh menyebut nama klien.
 
 Headline:
 
-> Forward Deployed Engineer | I help Indonesian business owners grow with AI & systems | Founder, Skolain | Technology Partner, Hegemoni Group | 6+ yrs across banking, healthcare, gov & education 🇮🇩 🇵🇸
+> Forward Deployed Engineer | I help Indonesian business owners grow with AI & systems | Founder, Skolain | Technology Partner, a multi-brand beauty group | 6+ yrs in banking, health, gov & education 🇮🇩🇵🇸
 
 About:
 
@@ -153,7 +153,7 @@ About:
 > • Took Skolain, my school platform, from zero to 1,600+ active users
 > • Grew an engineering team from 7 to 30+
 >
-> Today I'm the founder and product engineer of Skolain, Technology Partner at Hegemoni Group, a multi-brand beauty group, and an AI learning partner to business owners: we find the use cases that actually pay off, build AI-assisted workflows together, and I stay until the team runs them on its own.
+> Today I'm the founder and product engineer of Skolain, Technology Partner at a multi-brand beauty group, and an AI learning partner to business owners: we find the use cases that actually pay off, build AI-assisted workflows together, and I stay until the team runs them on its own.
 >
 > It started at vocational school: 1st place at the SEAMEO SEAMOLEC Southeast Asia Creative Camp 2019 with Smart Green Garden, an automatic IoT plant-watering system; 1st place at Kamp Kreatif SMK Indonesia 2019 (Ministry of Education) with Ngajar, a two-way classroom app; and 1st place at PermataYouthPreneur 2020 with Bayar, a fintech app.
 >
