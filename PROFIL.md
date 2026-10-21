@@ -48,7 +48,7 @@ Alias deep-link deck: `#bank`, `#wholesale`, `#omnichannel`, `#rumahsakit`, `#hr
 | Jan 2019 | SEAMEO SEAMOLEC Southeast Asia Creative Camp batch 3 (IoT) — penyiram tanaman pintar | Juara 1 |
 | Agt 2019 | Parade Cinta Tanah Air, Kemhan — *Smart Growth*, irigasi pintar | Juara 2 |
 | Agt 2019 | Work Ready, British Council | Juara 3 |
-| Sep – Des 2019 | **Ngajar** — LMS kelas dua arah (Laravel, Kotlin); Juara 1 Kamp Kreatif SMK Indonesia 2019, Kemendikbud, tema Smart School Technology | Developer, tim bersama Muhammad Luthfi Arifin |
+| Sep – Nov 2019 | **Ngajar** — LMS kelas dua arah (Laravel, Kotlin); Juara 1 Kamp Kreatif SMK Indonesia 2019 (Des 2019), Kemendikbud, tema Smart School Technology | Developer, tim bersama Muhammad Luthfi Arifin |
 | Mei – Jun 2020 | **Bayar** — aplikasi fintech (Kotlin); Juara 1 PermataYouthPreneur 2020, PermataBank | Developer |
 | Jul – Sep 2020 | PT Multi Cipta Manajemen | Software Developer, magang 3 bulan |
 | Okt 2020 – Des 2022 | PT Lumos Inisiatif Indonesia (Lumoshive) — tim 7 → 30+; ERP, SCM, CRM; LinkIT360 (Gemezz, Dream League, Goaly, Emagz); LAZISNU | Software Engineer, lalu Lead Software Engineer sejak Apr 2021 |
