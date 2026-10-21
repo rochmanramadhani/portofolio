@@ -32,7 +32,7 @@ Alias deep-link deck: `#bank`, `#wholesale`, `#omnichannel`, `#rumahsakit`, `#hr
 
 ## Identitas
 
-- Nama lengkap: Rochman Ramadhani Chiefto Irawan, S.Kom. Panggilan: Oman. Jakarta.
+- Nama lengkap: Rochman Ramadhani Chiefto Irawan, S.Kom. Panggilan: Oman. Jakarta. Lahir 12 Desember 2001.
 - Posisi: Forward Deployed Engineer — membantu pemilik bisnis Indonesia tumbuh dengan AI dan sistem.
 - Peran sekarang: Founder Skolain (PT Inovasi Mitra Konsultan); Technology Partner, Hegemoni Group;
   AI Advisor untuk pemilik bisnis.
@@ -51,20 +51,21 @@ Alias deep-link deck: `#bank`, `#wholesale`, `#omnichannel`, `#rumahsakit`, `#hr
 | Sep – Des 2019 | **Ngajar** — LMS kelas dua arah (Laravel, Kotlin); Juara 1 Kamp Kreatif SMK Indonesia 2019, Kemendikbud, tema Smart School Technology | Developer, tim bersama Muhammad Luthfi Arifin |
 | Mei – Jun 2020 | **Bayar** — aplikasi fintech (Kotlin); Juara 1 PermataYouthPreneur 2020, PermataBank | Developer |
 | Jul – Sep 2020 | PT Multi Cipta Manajemen | Software Developer, magang 3 bulan |
-| Okt 2020 – Des 2022 | PT Lumos Inisiatif Indonesia (Lumoshive) — tim 7 → 30+; ERP, SCM, CRM; LinkIT360 (Gemezz, Dream League, Goaly, Emagz); LAZISNU | Lead Fullstack Developer |
+| Okt 2020 – Des 2022 | PT Lumos Inisiatif Indonesia (Lumoshive) — tim 7 → 30+; ERP, SCM, CRM; LinkIT360 (Gemezz, Dream League, Goaly, Emagz); LAZISNU | Software Engineer, lalu Lead Software Engineer sejak Apr 2021 |
+| Okt – Des 2020 | FRAMES v1 — aplikasi Android penilaian kelelahan pilot (Laravel, Kotlin) | Developer |
 | Jun 2022 – Agt 2026 | Binus Online Learning, S.Kom. Sistem Informasi, IPK 3,85, Magna Cum Laude | Mahasiswa |
 | Des 2022 – Des 2023 | Bank — platform layanan frontliner | Backend Developer |
 | Des 2022 – Feb 2026 | PT Infobit Unixa Komputasi — Prima Super App | Technical Lead, freelance paruh waktu |
 | Feb 2023 – Feb 2024 | PT Prima Avza Solusindo — EIS Kemendagri, E-Database, ZISWAF | Backend Engineer, freelance paruh waktu |
 | Des 2023 – Agt 2024 | Bank — platform digital wholesale banking | Backend Developer |
 | Jan – Apr 2024 | KLHK — SPARING & CEMS | Konsultan teknis |
-| Mar 2024 | FRAMES — FKUI × Garuda Indonesia Training Center | Product Owner & Developer |
+| Mar 2024 | FRAMES v2 — FKUI × Garuda Indonesia Training Center, rilis 7 Maret 2024 | Product Owner & Developer |
 | Agt 2024 – Jan 2025 | Telko — platform komunikasi omnichannel; biaya operasional turun 60% | Senior Software Engineer |
 | Des 2024 – Des 2025 | Bank — platform layanan frontliner, kembali | Senior Software Engineer |
 | Jul 2025 – Mei 2026 | PT Mastah Digital Teknologi | Engineering Manager, paruh waktu |
+| Jul 2025 – sekarang | AI Advisor untuk pemilik bisnis (Coach Rheo, doatrto.com) | AI Advisor |
 | 2026 | Dashboard keanggotaan asosiasi dokter nasional (150.000 dokter) | Product Owner |
 | Mei 2026 – sekarang | Hegemoni Group | Technology Partner |
-| 2026 – sekarang | AI Advisor untuk pemilik bisnis (Coach Rheo, doatrto.com) | AI Advisor |
 | Jun 2026 – sekarang | Skolain | Founder & Product Owner |
 | 12–13 Agt 2026 | Seminar SMK Jakarta Pusat 1 × TechPedia | Pemateri |
 
