@@ -110,16 +110,14 @@ Telkom OCA **tidak** punya angka. Pakai kalimat baku di bawah.
 
 Migrasi Go di Telkom OCA:
 
-- ID: Mengusulkan, merencanakan, dan memimpin migrasi backend NestJS ke Go (Golang) di Telkom Indonesia, Omni
-  Communication Assistant. Go memakai CPU dan memori jauh lebih efisien di bawah trafik puncak — concurrency
-  multi-core lewat goroutine, bukan event loop Node yang satu thread, dan kode terkompilasi untuk kerja berat CPU —
-  sehingga platform tetap stabil di jam puncak, dengan ruang untuk tumbuh dan kebutuhan infrastruktur yang lebih ringan.
-- EN: Proposed, planned and led the NestJS → Go migration of Telkom Indonesia's Omni Communication Assistant. Go uses
-  CPU and memory far more efficiently under peak traffic (goroutines use every core instead of Node's single-threaded
-  event loop, and compiled code handles CPU-heavy work better), so the platform stays stable at peak with room to grow
-  and lower infrastructure needs.
-- Versi umum (bio, README GitHub): "led a NestJS → Go migration at one of Indonesia's largest telcos so the platform
-  stays stable at peak traffic with lower infrastructure needs".
+- ID: Mengusulkan, merencanakan, dan memimpin migrasi backend NestJS ke Go (Golang) di Telkom Indonesia,
+  Omni Communication Assistant, untuk meningkatkan efisiensi resource dan ketahanan platform saat trafik puncak.
+- EN: Proposed, planned and led a NestJS → Go backend migration for Telkom Indonesia's Omni Communication
+  Assistant to improve resource efficiency and resilience under peak traffic.
+- Versi umum (bio, README GitHub): "led a NestJS → Go migration at one of Indonesia's largest telcos
+  to improve resource efficiency and resilience under peak traffic".
+- Efisiensi Go vs Node.js bergantung pada beban kerja, implementasi, dan arsitektur. Jangan memublikasikan
+  angka benchmark umum sebagai hasil proyek atau menjanjikan penghematan tanpa pengukuran.
 
 ## Bio (v4)
 
@@ -149,7 +147,7 @@ About:
 > For 6+ years I've built software that a lot of people depend on: BRI (three separate contracts, on NDS and QLOLA), Telkom Indonesia, Siloam International Hospitals, PT PKSS, government ministries, and schools. I came up through engineering (Go, Rust, cloud and on-prem infrastructure), so I can tell a business owner what a decision really costs before anyone builds it.
 >
 > What that looks like in practice:
-> • Proposed, planned and led the NestJS → Go migration of Telkom Indonesia's omnichannel platform (OCA). Go uses CPU and memory far more efficiently under peak traffic, so the platform stays stable at peak with room to grow and lower infrastructure needs
+> • Proposed, planned and led a NestJS → Go backend migration for Telkom Indonesia's omnichannel platform (OCA) to improve resource efficiency and resilience under peak traffic
 > • Architected PrimaSejahtera, PT PKSS's national HRIS, which stays up when 50,000+ employees clock in at the same time
 > • Led 6 engineers on the Health, Safety & Environment system of Siloam International Hospitals, used by 500+ people every day
 > • Took Skolain, my school platform, from zero to 1,600+ active users

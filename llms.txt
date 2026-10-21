@@ -6,7 +6,7 @@ Key facts, each documented on a slide of the portfolio deck:
 
 - Founder & Product Engineer, Skolain (since June 2026): five school modules in one workflow, 1,600+ active users.
 - Contracted three times by PT Bank Rakyat Indonesia (BRI): Backend Developer on New Delivery System (NDS) and QLOLA (wholesale digital banking), then Senior Software Engineer on NDS (December 2022 – December 2025).
-- Senior Software Engineer, Telkom Indonesia, Omni Communication Assistant (OCA), August 2024 – January 2025: proposed, planned and led the NestJS → Go migration so the platform stays stable at peak traffic with lower infrastructure needs.
+- Senior Software Engineer, Telkom Indonesia, Omni Communication Assistant (OCA), August 2024 – January 2025: proposed, planned and led a NestJS → Go backend migration to improve resource efficiency and resilience under peak traffic.
 - Architected PrimaSejahtera, a national HRIS for PT PKSS with 50,000+ active users.
 - Software Architect leading 6 engineers on the Health, Safety & Environment system of Siloam International Hospitals, 500+ daily users.
 - Product Engineer on FRAMES (Faculty of Medicine Universitas Indonesia × Garuda Indonesia Training Center): v1 October–December 2020, v2 released 7 March 2024.
