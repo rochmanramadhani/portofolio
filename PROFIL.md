@@ -40,9 +40,8 @@ Alias deep-link deck: `#bank`, `#wholesale`, `#omnichannel`, `#rumahsakit`, `#hr
   atau "AI Training": kesannya kolaborasi sesama, bukan menggurui.
 - Hub tautan: **omanlabs.tech**. Email rochmanramadhani12@gmail.com · WhatsApp +62 813 8103 9158.
 - Handle (21 Oktober 2026):
-  - `rochmanrmdhnn`: X, Instagram, Threads, Facebook, YouTube, Pinterest, GitLab.
-  - `rochmanrmdhn`: LinkedIn (custom URL belum bisa diganti), TikTok (terkunci sampai 19 November 2026),
-    lynk.id (username tidak bisa diganti dari dasbor).
+  - `rochmanrmdhnn`: X, Instagram, Threads, Facebook, YouTube, Pinterest, GitLab, LinkedIn.
+  - `rochmanrmdhn`: TikTok (terkunci sampai 19 November 2026), lynk.id (username tidak bisa diganti dari dasbor).
   - GitHub tetap `rochmanramadhani` sampai rename di Multica OL-861.
 
 ## Linimasa
