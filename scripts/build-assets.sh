@@ -2,7 +2,7 @@
 # Membangun ulang seluruh aset deck dari sumber aslinya.
 #
 # Sumber ada di dua tempat:
-#   ~/code/github.com/rochmanramadhani/slide-kka-smk/assets/  — aset deck lama
+#   ~/code/github.com/rochmanrmdhnn/slide-kka-smk/assets/  — aset deck lama
 #   ~/Downloads/                                              — foto & video mentah
 #
 # Video sumber 4K HEVC. HEVC tidak jalan di Firefox sama sekali, jadi transcode
@@ -12,7 +12,7 @@ set -euo pipefail
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 OUT="$REPO/assets"
-OLD="$HOME/code/github.com/rochmanramadhani/slide-kka-smk/assets"
+OLD="$HOME/code/github.com/rochmanrmdhnn/slide-kka-smk/assets"
 DL="$HOME/Downloads"
 
 mkdir -p "$OUT"

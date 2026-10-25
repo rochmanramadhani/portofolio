@@ -50,7 +50,7 @@ PRODUCT ENGINEER & TECH FOUNDER
 +62 813 8103 9158
 rochmanramadhani12@gmail.com
 linkedin.com/in/rochmanrmdhnn
-github.com/rochmanramadhani
+github.com/rochmanrmdhnn
 omanlabs.tech
 PENGALAMAN PROFESIONAL
 PENDIDIKAN

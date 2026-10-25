@@ -56,9 +56,8 @@ yang sama. Di README GitHub pakai alias umum.
 - Hub tautan: **omanlabs.tech**. Email rochmanramadhani12@gmail.com · WhatsApp +62 813 8103 9158.
 - CV: `assets/CV_Rochman_Ramadhani_Product_Engineer.pdf` (nama lama `…_Product_Owner.pdf` dialihkan 301).
 - Handle (21 Oktober 2026):
-  - `rochmanrmdhnn`: X, Instagram, Threads, Facebook, YouTube, Pinterest, GitLab, LinkedIn, lynk.id.
+  - `rochmanrmdhnn`: X, Instagram, Threads, Facebook, YouTube, Pinterest, GitLab, LinkedIn, lynk.id, dan GitHub (sejak rename di Multica OL-861).
   - `rochmanrmdhn`: TikTok (terkunci sampai 19 November 2026).
-  - GitHub tetap `rochmanramadhani` sampai rename di Multica OL-861.
 
 - Linktree `linktr.ee/rochmanrmdhnn` (paket Free, 25 Oktober 2026): ikon semua akun ditambah tombol WhatsApp,
   omanlabs.tech, dan LinkedIn. omanlabs.tech tetap tautan pertama di setiap bio; Linktree tautan kedua.
