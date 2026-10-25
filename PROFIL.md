@@ -60,6 +60,17 @@ yang sama. Di README GitHub pakai alias umum.
   - `rochmanrmdhn`: TikTok (terkunci sampai 19 November 2026).
   - GitHub tetap `rochmanramadhani` sampai rename di Multica OL-861.
 
+- Linktree `linktr.ee/rochmanrmdhnn` (paket Free, 25 Oktober 2026): ikon semua akun ditambah tombol WhatsApp,
+  omanlabs.tech, dan LinkedIn. omanlabs.tech tetap tautan pertama di setiap bio; Linktree tautan kedua.
+- Tipe akun (25 Oktober 2026):
+  - Instagram: Professional, tipe Creator, kategori Digital creator. Threads mengikuti Instagram.
+  - X: Professional, tipe Creator, kategori Digital Creator.
+  - Facebook: profil pribadi dengan mode profesional, kategori Digital creator.
+  - Pinterest: Business.
+  - TikTok: tetap Personal (akun Business hanya mendapat Commercial Music Library).
+  - LinkedIn: profil pribadi, Follow sebagai tombol utama.
+  - YouTube: satu kanal.
+
 ## Linimasa
 
 | Waktu | Apa | Peran |
